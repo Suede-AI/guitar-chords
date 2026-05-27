@@ -57,11 +57,19 @@ export function ChordLibrary() {
             letterSpacing: "-0.01em",
           }}
         >
-          {Object.keys(FINGERINGS).length} fingerings.{" "}
-          <span style={{ color: "var(--color-registry-cyan)" }}>
-            Standard tuning.
-          </span>
+          Guitar Chord Chart
         </h1>
+        <p
+          style={{
+            color: "var(--color-text-muted)",
+            fontSize: "var(--text-base)",
+            margin: 0,
+            fontFamily: "var(--font-mono)",
+            letterSpacing: "0.08em",
+          }}
+        >
+          {Object.keys(FINGERINGS).length} fingerings · Standard tuning (EADGBE)
+        </p>
         <p
           style={{
             color: "var(--color-text-muted)",

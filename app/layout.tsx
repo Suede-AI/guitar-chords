@@ -5,37 +5,51 @@ import Link from "next/link";
 export const metadata: Metadata = {
   metadataBase: new URL("https://guitarchords.info"),
   title: {
-    default: "guitarchords.info — Free chords, scales, tuner, metronome",
-    template: "%s · guitarchords.info",
+    default: "Guitar Chords — Free Chord Library, Scales & Tuner | guitarchords.info",
+    template: "%s | guitarchords.info",
   },
   description:
-    "A public reference for guitar players. Chord library, scale trainer, in-browser tuner, and metronome. No sign-up. No tracking. A Suede Labs site.",
+    "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking. A Suede Labs reference site.",
   applicationName: "guitarchords.info",
-  keywords: [
-    "guitar chords",
-    "chord library",
-    "guitar scales",
-    "scale trainer",
-    "guitar tuner",
-    "metronome",
-    "free",
-    "no sign-up",
-  ],
   authors: [{ name: "Suede Labs" }],
+  alternates: { canonical: "https://guitarchords.info" },
   openGraph: {
     type: "website",
-    title: "guitarchords.info",
+    title: "Guitar Chords — Free Chord Library, Scales & Tuner",
     description:
-      "Chord library, scale trainer, tuner, and metronome. Free. No sign-up.",
+      "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
     siteName: "guitarchords.info",
+    url: "https://guitarchords.info",
   },
   twitter: {
     card: "summary_large_image",
-    title: "guitarchords.info",
+    title: "Guitar Chords — Free Chord Library, Scales & Tuner",
     description:
-      "Chord library, scale trainer, tuner, and metronome. Free. No sign-up.",
+      "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
   },
   robots: { index: true, follow: true },
+};
+
+const WEBSITE_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "guitarchords.info",
+  url: "https://guitarchords.info",
+  description:
+    "Free guitar chord chart, scale trainer, chromatic tuner, and metronome.",
+  publisher: {
+    "@type": "Organization",
+    name: "Suede Labs",
+    url: "https://suedeai.ai",
+  },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://guitarchords.info/chords?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 export const viewport: Viewport = {
@@ -53,6 +67,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(WEBSITE_JSON_LD),
+          }}
+        />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
@@ -159,6 +179,23 @@ function SiteFooter() {
           guitarchords.info — a public reference site. No accounts, no
           tracking.
         </span>
+        <nav
+          aria-label="Site links"
+          style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
+        >
+          <Link href="/chords" className="link" style={{ textDecoration: "none" }}>
+            Guitar Chord Chart
+          </Link>
+          <Link href="/scales" className="link" style={{ textDecoration: "none" }}>
+            Scale Trainer
+          </Link>
+          <Link href="/tuner" className="link" style={{ textDecoration: "none" }}>
+            Guitar Tuner
+          </Link>
+          <Link href="/metronome" className="link" style={{ textDecoration: "none" }}>
+            Metronome
+          </Link>
+        </nav>
         <span>
           A <span style={{ color: "var(--color-rights-red)" }}>Suede</span>{" "}
           Labs project.

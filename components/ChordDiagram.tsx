@@ -28,7 +28,7 @@ export function ChordDiagram({ chord }: { chord: string }) {
         {chord}
       </figcaption>
       {fingering ? (
-        <FingeringGrid fingering={fingering} />
+        <FingeringGrid fingering={fingering} chord={chord} />
       ) : (
         <span style={{ fontSize: "0.75rem", color: "var(--color-text-dim)" }}>
           No diagram
@@ -39,7 +39,7 @@ export function ChordDiagram({ chord }: { chord: string }) {
   );
 }
 
-function FingeringGrid({ fingering }: { fingering: Fingering }) {
+function FingeringGrid({ fingering, chord }: { fingering: Fingering; chord: string }) {
   const numericFrets = fingering.frets.filter(
     (f): f is number => typeof f === "number" && f > 0,
   );
@@ -63,7 +63,7 @@ function FingeringGrid({ fingering }: { fingering: Fingering }) {
       height="110"
       viewBox={`0 0 ${W} ${H}`}
       role="img"
-      aria-label="chord fingering"
+      aria-label={`${chord} guitar chord fingering diagram`}
       style={{ maxWidth: "120px" }}
     >
       {/* strings (6 vertical lines, low-E on the left) */}

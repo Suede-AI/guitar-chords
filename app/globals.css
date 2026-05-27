@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Suede Institutional IP Terminal — guitarchords.info
+   Anchor palette:
+     Rights Red    #9f101a
+     Registry Cyan #22d3ee
+     Deep Ink      #050b16
+   Editorial / terminal aesthetic. Not a generic dark Tailwind template.
+   ────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* surfaces */
+  --color-ink: oklch(11% 0.03 260);          /* Deep Ink #050b16 */
+  --color-ink-raised: oklch(15% 0.03 260);
+  --color-ink-hover: oklch(19% 0.03 260);
+  --color-rule: oklch(28% 0.02 260);          /* hairline rules */
+  --color-rule-muted: oklch(22% 0.02 260);
+
+  /* text */
+  --color-text: oklch(96% 0.005 260);
+  --color-text-muted: oklch(72% 0.01 260);
+  --color-text-dim: oklch(52% 0.01 260);
+
+  /* brand */
+  --color-rights-red: #9f101a;
+  --color-rights-red-soft: oklch(55% 0.18 25 / 0.18);
+  --color-registry-cyan: #22d3ee;
+  --color-registry-cyan-soft: oklch(82% 0.13 200 / 0.18);
+
+  /* semantic */
+  --color-accent: var(--color-registry-cyan);
+  --color-signal: var(--color-rights-red);
+
+  /* typography scale (fluid) */
+  --text-xs:    clamp(0.72rem, 0.70rem + 0.05vw, 0.78rem);
+  --text-sm:    clamp(0.82rem, 0.78rem + 0.12vw, 0.92rem);
+  --text-base:  clamp(0.95rem, 0.90rem + 0.20vw, 1.06rem);
+  --text-lg:    clamp(1.10rem, 1.00rem + 0.40vw, 1.35rem);
+  --text-xl:    clamp(1.35rem, 1.10rem + 1.0vw, 1.80rem);
+  --text-2xl:   clamp(1.70rem, 1.30rem + 1.8vw, 2.40rem);
+  --text-hero:  clamp(2.40rem, 1.20rem + 5.6vw, 5.20rem);
+  --text-mono-eyebrow: clamp(0.68rem, 0.66rem + 0.05vw, 0.74rem);
+
+  /* type families */
+  --font-display: ui-serif, "Iowan Old Style", "Apple Garamond", "Baskerville", Georgia, serif;
+  --font-body:    ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
+
+  /* spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-section: clamp(3.5rem, 2.5rem + 4vw, 8rem);
+
+  /* motion */
+  --duration-instant: 80ms;
+  --duration-fast:    160ms;
+  --duration-normal:  280ms;
+  --duration-slow:    520ms;
+  --ease-out-expo:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-cubic:   cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Make tokens visible to the Tailwind v4 utility layer. */
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-ink-raised: var(--color-ink-raised);
+  --color-ink-hover: var(--color-ink-hover);
+  --color-rule: var(--color-rule);
+  --color-rule-muted: var(--color-rule-muted);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-dim: var(--color-text-dim);
+  --color-rights-red: var(--color-rights-red);
+  --color-registry-cyan: var(--color-registry-cyan);
+  --color-accent: var(--color-accent);
+  --color-signal: var(--color-signal);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+html,
+body {
+  background: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle film of registry-cyan + rights-red beneath everything — terminal feel,
+   not a generic dark gradient. */
+body {
+  background-image:
+    radial-gradient(1200px 600px at 85% -10%, oklch(55% 0.18 25 / 0.10), transparent 65%),
+    radial-gradient(900px 500px at -10% 110%, oklch(82% 0.13 200 / 0.08), transparent 70%);
+  background-attachment: fixed;
+}
+
+/* Editorial hairline rule used across the site. */
+.hr-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-rule) 12%,
+    var(--color-rule) 88%,
+    transparent
+  );
+  border: 0;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-mono-eyebrow);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+}
+
+.eyebrow--cyan { color: var(--color-registry-cyan); }
+.eyebrow--red  { color: var(--color-rights-red); }
+
+.terminal-card {
+  background: var(--color-ink-raised);
+  border: 1px solid var(--color-rule-muted);
+  border-radius: 2px; /* terminal feel — not pill-soft */
+  transition: border-color var(--duration-fast) var(--ease-out-cubic),
+              transform var(--duration-fast) var(--ease-out-cubic),
+              background-color var(--duration-fast) var(--ease-out-cubic);
+}
+.terminal-card:hover {
+  border-color: var(--color-registry-cyan);
+  background: var(--color-ink-hover);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-rule);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-out-cubic),
+              color var(--duration-fast) var(--ease-out-cubic),
+              background-color var(--duration-fast) var(--ease-out-cubic);
+}
+.pill:hover { border-color: var(--color-registry-cyan); color: var(--color-text); }
+.pill[aria-selected="true"],
+.pill[aria-pressed="true"] {
+  border-color: var(--color-registry-cyan);
+  background: var(--color-registry-cyan-soft);
+  color: var(--color-text);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.75rem 1.25rem;
+  background: var(--color-rights-red);
+  color: oklch(98% 0 0);
+  border: 1px solid var(--color-rights-red);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: filter var(--duration-fast) var(--ease-out-cubic),
+              transform var(--duration-fast) var(--ease-out-cubic);
+}
+.btn-primary:hover { filter: brightness(1.12); }
+.btn-primary:active { transform: translateY(1px); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.65rem 1rem;
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-rule);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-out-cubic),
+              color var(--duration-fast) var(--ease-out-cubic);
+}
+.btn-ghost:hover { border-color: var(--color-registry-cyan); color: var(--color-text); }
+
+input.field {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--color-rule);
+  border-radius: 2px;
+  padding: 0.7rem 0.9rem;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  outline: none;
+  transition: border-color var(--duration-fast) var(--ease-out-cubic);
+}
+input.field::placeholder { color: var(--color-text-dim); }
+input.field:focus {
+  border-color: var(--color-registry-cyan);
+  box-shadow: 0 0 0 3px var(--color-registry-cyan-soft);
+}
+
+a.link {
+  color: var(--color-registry-cyan);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a.link:hover { color: var(--color-text); }
+
+/* Reduced motion — drop transitions everywhere. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+::selection {
+  background: var(--color-rights-red);
+  color: oklch(98% 0 0);
+}

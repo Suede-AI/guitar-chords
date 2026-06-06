@@ -4,9 +4,10 @@ import { FINGERINGS } from "@/lib/chords/fingerings";
 import { SCALES } from "@/lib/music/scales";
 
 export const metadata: Metadata = {
-  title: "guitarchords.info — public reference for guitar",
+  title: "Guitar Chords — Free Chord Library, Scales & Tuner",
   description:
-    "Chord library, scale trainer, in-browser tuner, and metronome. Free. No sign-up. No tracking. A Suede Labs reference site.",
+    "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
+  alternates: { canonical: "https://guitarchords.info" },
 };
 
 const TOOLS = [

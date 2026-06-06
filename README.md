@@ -1,5 +1,7 @@
 # guitarchords.info
 
+### 🎸 [Open the live tools → **guitarchords.info**](https://guitarchords.info)
+
 A zero-auth public reference site for guitar players — chord library, scale
 trainer, in-browser tuner, and metronome. No accounts, no analytics, no
 backend. Designed in the Suede Institutional IP Terminal language.

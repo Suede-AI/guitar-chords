@@ -30,17 +30,30 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const SUEDE_URL = "https://suedeai.ai";
+const SUEDE_FOUNDER_URL = "https://suedeai.ai/jason-colapietro-images";
+const SUEDE_X_URL = "https://x.com/AISUEDE";
+const FOUNDER_X_URL = "https://x.com/johnnysuede";
+
 const WEBSITE_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "guitarchords.info",
   url: "https://guitarchords.info",
+  inLanguage: "en",
   description:
     "Free guitar chord chart, scale trainer, chromatic tuner, and metronome.",
+  creator: {
+    "@type": "Person",
+    name: "Jason Colapietro",
+    url: SUEDE_FOUNDER_URL,
+    sameAs: [SUEDE_FOUNDER_URL, FOUNDER_X_URL],
+  },
   publisher: {
     "@type": "Organization",
     name: "Suede Labs",
-    url: "https://suedeai.ai",
+    url: SUEDE_URL,
+    sameAs: [SUEDE_URL, SUEDE_X_URL],
   },
   potentialAction: {
     "@type": "SearchAction",
@@ -164,42 +177,101 @@ function SiteFooter() {
     >
       <div
         className="mx-auto max-w-6xl px-6 py-10"
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "1rem",
-          justifyContent: "space-between",
-          color: "var(--color-text-dim)",
-          fontFamily: "var(--font-mono)",
-          fontSize: "0.78rem",
-          letterSpacing: "0.10em",
-        }}
+        style={{ display: "grid", gap: "var(--space-6)" }}
       >
-        <span>
-          guitarchords.info — a public reference site. No accounts, no
-          tracking.
-        </span>
-        <nav
-          aria-label="Site links"
-          style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
+        {/* Row 1 — promise + site links */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "1rem",
+            justifyContent: "space-between",
+            color: "var(--color-text-dim)",
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.78rem",
+            letterSpacing: "0.10em",
+          }}
         >
-          <Link href="/chords" className="link" style={{ textDecoration: "none" }}>
-            Guitar Chord Chart
-          </Link>
-          <Link href="/scales" className="link" style={{ textDecoration: "none" }}>
-            Scale Trainer
-          </Link>
-          <Link href="/tuner" className="link" style={{ textDecoration: "none" }}>
-            Guitar Tuner
-          </Link>
-          <Link href="/metronome" className="link" style={{ textDecoration: "none" }}>
-            Metronome
-          </Link>
-        </nav>
-        <span>
-          A <span style={{ color: "var(--color-rights-red)" }}>Suede</span>{" "}
-          Labs project.
-        </span>
+          <span>
+            guitarchords.info — a public reference site. No accounts, no
+            tracking, no paywall.
+          </span>
+          <nav
+            aria-label="Site links"
+            style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
+          >
+            <Link href="/chords" className="link" style={{ textDecoration: "none" }}>
+              Guitar Chord Chart
+            </Link>
+            <Link href="/scales" className="link" style={{ textDecoration: "none" }}>
+              Scale Trainer
+            </Link>
+            <Link href="/tuner" className="link" style={{ textDecoration: "none" }}>
+              Guitar Tuner
+            </Link>
+            <Link href="/metronome" className="link" style={{ textDecoration: "none" }}>
+              Metronome
+            </Link>
+          </nav>
+        </div>
+
+        <hr className="hr-rule" />
+
+        {/* Row 2 — provenance + credit. Light Suede mention with real links. */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0.4rem 1.25rem",
+            justifyContent: "space-between",
+            alignItems: "baseline",
+            color: "var(--color-text-dim)",
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.78rem",
+            letterSpacing: "0.08em",
+          }}
+        >
+          <span>
+            Chord, scale, and pitch engine ported from{" "}
+            <a
+              className="link"
+              href={SUEDE_URL}
+              target="_blank"
+              rel="noopener"
+              style={{ textDecoration: "none" }}
+            >
+              Suede
+            </a>
+            , creator-ownership infrastructure for AI music.
+          </span>
+          <span>
+            A{" "}
+            <a
+              className="link"
+              href={SUEDE_URL}
+              target="_blank"
+              rel="noopener"
+              style={{ textDecoration: "none" }}
+            >
+              Suede Labs
+            </a>
+            {" project by "}
+            <a
+              className="link"
+              href={SUEDE_FOUNDER_URL}
+              target="_blank"
+              rel="noopener"
+              style={{ textDecoration: "none" }}
+            >
+              Jason Colapietro
+            </a>
+            {" · "}
+            <span style={{ color: "var(--color-rights-red)" }}>
+              Proof of Creation
+            </span>
+            {" for the AI era."}
+          </span>
+        </div>
       </div>
     </footer>
   );

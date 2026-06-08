@@ -162,6 +162,45 @@ export default function HomePage() {
           </ul>
         </div>
       </section>
+
+      {/* PROVENANCE — light, contextual Suede credit (honest, not a funnel) */}
+      <section
+        className="mx-auto max-w-6xl px-6"
+        style={{ paddingTop: "var(--space-12)" }}
+        aria-label="Provenance"
+      >
+        <hr className="hr-rule" />
+        <p
+          style={{
+            maxWidth: "72ch",
+            marginTop: "var(--space-6)",
+            color: "var(--color-text-dim)",
+            fontSize: "var(--text-sm)",
+            lineHeight: 1.65,
+          }}
+        >
+          <span className="eyebrow eyebrow--red" style={{ marginRight: "0.6rem" }}>
+            ◆ Provenance
+          </span>
+          The chord shapes, scale theory, and pitch-detection engine here are
+          ported from{" "}
+          <a className="link" href="https://suedeai.ai" target="_blank" rel="noopener">
+            Suede
+          </a>
+          , the creator-ownership layer for AI-era music: proof of creation,
+          programmable rights, and royalty routing for registered work. Built and
+          maintained by{" "}
+          <a
+            className="link"
+            href="https://suedeai.ai/jason-colapietro-images"
+            target="_blank"
+            rel="noopener"
+          >
+            Jason Colapietro
+          </a>
+          .
+        </p>
+      </section>
     </>
   );
 }

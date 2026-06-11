@@ -10,5 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/scales`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/tuner`, lastModified: now, changeFrequency: "yearly", priority: 0.7 },
     { url: `${BASE}/metronome`, lastModified: now, changeFrequency: "yearly", priority: 0.7 },
+    { url: `${BASE}/fender-stratocaster-lawsuit`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 }

@@ -200,6 +200,22 @@ export default function HomePage() {
           </a>
           .
         </p>
+        <p
+          style={{
+            marginTop: "var(--space-4)",
+            fontFamily: "var(--font-mono)",
+            fontSize: "var(--text-xs)",
+            letterSpacing: "0.06em",
+            color: "var(--color-text-dim)",
+          }}
+        >
+          <span className="eyebrow eyebrow--cyan" style={{ marginRight: "0.6rem" }}>
+            ⊕ Reading
+          </span>
+          <Link className="link" href="/fender-stratocaster-lawsuit">
+            The Fender Stratocaster lawsuit, explained &rarr;
+          </Link>
+        </p>
       </section>
     </>
   );

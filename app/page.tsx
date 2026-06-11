@@ -212,9 +212,13 @@ export default function HomePage() {
           <span className="eyebrow eyebrow--cyan" style={{ marginRight: "0.6rem" }}>
             ⊕ Reading
           </span>
-          <Link className="link" href="/fender-stratocaster-lawsuit">
+          <a className="link" href="https://guitarhub.org/fender-stratocaster-lawsuit" target="_blank" rel="noopener">
             The Fender Stratocaster lawsuit, explained &rarr;
-          </Link>
+          </a>
+          {" · more on "}
+          <a className="link" href="https://guitarhub.org" target="_blank" rel="noopener">
+            GuitarHub
+          </a>
         </p>
       </section>
     </>

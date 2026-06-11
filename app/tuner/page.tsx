@@ -5,7 +5,40 @@ export const metadata: Metadata = {
   title: "Free Online Guitar Tuner — Chromatic, No Download",
   description:
     "Free online chromatic guitar tuner. Works in the browser via Web Audio API — no app download, no sign-up. YIN pitch detection, sub-cent accuracy.",
+  keywords: [
+    "online guitar tuner",
+    "free guitar tuner",
+    "chromatic guitar tuner",
+    "browser guitar tuner",
+    "guitar tuner no download",
+    "YIN pitch detection",
+    "web audio guitar tuner",
+    "tune guitar online",
+    "guitar pitch detector",
+    "chromatic tuner free",
+  ],
   alternates: { canonical: "https://guitarchords.info/tuner" },
+  openGraph: {
+    title: "Free Online Guitar Tuner — Chromatic, No Download",
+    description:
+      "Free online chromatic guitar tuner. Works in the browser via Web Audio API — no app download, no sign-up. YIN pitch detection, sub-cent accuracy.",
+    url: "https://guitarchords.info/tuner",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "guitarchords.info — free chromatic guitar tuner, no download required",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Online Guitar Tuner — Chromatic, No Download",
+    description:
+      "Free online chromatic guitar tuner. Works in the browser via Web Audio API — no app download, no sign-up. YIN pitch detection, sub-cent accuracy.",
+    images: ["/og-image.png"],
+  },
 };
 
 const BREADCRUMB_JSON_LD = {

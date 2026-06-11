@@ -10,24 +10,64 @@ export const metadata: Metadata = {
   },
   description:
     "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking. A Suede Labs reference site.",
+  keywords: [
+    "guitar chords",
+    "guitar chord chart",
+    "guitar fingering diagrams",
+    "guitar scales",
+    "guitar scale trainer",
+    "online guitar tuner",
+    "chromatic tuner",
+    "online metronome",
+    "free guitar tools",
+    "barre chords",
+    "open chords",
+    "guitar modes",
+    "pentatonic scale guitar",
+    "tap tempo metronome",
+    "Suede Labs",
+  ],
   applicationName: "guitarchords.info",
-  authors: [{ name: "Suede Labs" }],
+  authors: [{ name: "Jason Colapietro", url: "https://github.com/JasonColapietro" }],
+  creator: "Jason Colapietro",
+  publisher: "Suede Labs AI",
   alternates: { canonical: "https://guitarchords.info" },
   openGraph: {
     type: "website",
+    locale: "en_US",
     title: "Guitar Chords — Free Chord Library, Scales & Tuner",
     description:
       "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
     siteName: "guitarchords.info",
     url: "https://guitarchords.info",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "guitarchords.info — free chord library, scale trainer, tuner, and metronome",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Guitar Chords — Free Chord Library, Scales & Tuner",
     description:
       "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
+    creator: "@suedeai",
+    images: ["/og-image.png"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 const SUEDE_URL = "https://suedeai.ai";

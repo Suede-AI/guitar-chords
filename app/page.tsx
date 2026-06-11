@@ -7,7 +7,40 @@ export const metadata: Metadata = {
   title: "Guitar Chords — Free Chord Library, Scales & Tuner",
   description:
     "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
+  keywords: [
+    "guitar chords",
+    "guitar chord chart",
+    "guitar scales",
+    "online guitar tuner",
+    "free metronome",
+    "guitar fingering diagrams",
+    "guitar tools",
+    "guitar reference",
+    "free guitar resources",
+    "guitarchords.info",
+  ],
   alternates: { canonical: "https://guitarchords.info" },
+  openGraph: {
+    title: "Guitar Chords — Free Chord Library, Scales & Tuner",
+    description:
+      "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
+    url: "https://guitarchords.info",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "guitarchords.info — free chord library, scale trainer, tuner, and metronome",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Guitar Chords — Free Chord Library, Scales & Tuner",
+    description:
+      "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
+    images: ["/og-image.png"],
+  },
 };
 
 const TOOLS = [

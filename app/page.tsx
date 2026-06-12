@@ -289,6 +289,80 @@ export default function HomePage() {
           .
         </p>
       </section>
+
+      {/* AUTHOR CREDIT — compact footer attribution */}
+      <section
+        className="mx-auto max-w-6xl px-6"
+        style={{
+          paddingTop: "var(--space-8)",
+          paddingBottom: "var(--space-section)",
+        }}
+        aria-label="Author"
+      >
+        <hr className="hr-rule" />
+        <div
+          style={{
+            marginTop: "var(--space-6)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "var(--space-3)",
+          }}
+        >
+          <p
+            style={{
+              margin: 0,
+              color: "var(--color-text-dim)",
+              fontSize: "var(--text-sm)",
+              lineHeight: 1.65,
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.74rem",
+                letterSpacing: "0.10em",
+                color: "var(--color-rights-red)",
+                textTransform: "uppercase",
+                marginRight: "0.6rem",
+              }}
+            >
+              Built by
+            </span>
+            Jason Colapietro — guitarist, author of{" "}
+            <a
+              className="link"
+              href="https://guitar.solutions"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              The Signal Chain
+            </a>
+            .{" "}
+            The Signal Chain is a free book about how electric guitar tone
+            actually works — from pickup to speaker.
+          </p>
+          <p
+            style={{
+              margin: 0,
+              color: "var(--color-text-dim)",
+              fontSize: "var(--text-sm)",
+              lineHeight: 1.65,
+            }}
+          >
+            <a
+              className="link"
+              href="https://suedeai.ai"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              Suede Labs AI
+            </a>{" "}
+            builds creator ownership infrastructure for the AI era.
+          </p>
+        </div>
+      </section>
     </>
   );
 }

@@ -349,7 +349,7 @@ export default function HomePage() {
             >
               Built by
             </span>
-            Jason Colapietro — guitarist, author of{" "}
+            Jason Colapietro — guitarist, founder of Suede Labs AI, author of{" "}
             <a
               className="link"
               href="https://guitar.solutions"
@@ -359,9 +359,47 @@ export default function HomePage() {
             >
               The Signal Chain
             </a>
-            .{" "}
-            The Signal Chain is a free book about how electric guitar tone
-            actually works — from pickup to speaker.
+            {" "}(free at guitar.solutions),{" "}
+            <a
+              className="link"
+              href="https://www.amazon.com/dp/B0GD5FX6N6"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              The Guitar Without a Number
+            </a>
+            ,{" "}
+            <a
+              className="link"
+              href="https://www.amazon.com/dp/B0GD5FX6N6"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              The Human Authenticity Layer
+            </a>
+            ,{" "}
+            <a
+              className="link"
+              href="https://www.amazon.com/dp/B0GMB2VLXQ"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              Proof as Infrastructure
+            </a>
+            , and{" "}
+            <a
+              className="link"
+              href="https://www.amazon.com/dp/B0GRG8LGQQ"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              Stake Your Claim
+            </a>
+            .
           </p>
           <p
             style={{

@@ -31,7 +31,8 @@ export const metadata: Metadata = {
 };
 
 const SUEDE_URL = "https://suedeai.ai";
-const SUEDE_FOUNDER_URL = "https://suedeai.ai/jason-colapietro-images";
+const SUEDE_FOUNDER_URL = "https://suedeai.ai/founder";
+const SIGNAL_CHAIN_URL = "https://guitar.solutions";
 const SUEDE_X_URL = "https://x.com/AISUEDE";
 const FOUNDER_X_URL = "https://x.com/johnnysuede";
 
@@ -266,6 +267,16 @@ function SiteFooter() {
               Jason Colapietro
             </a>
             {" · "}
+            <a
+              className="link"
+              href={SIGNAL_CHAIN_URL}
+              target="_blank"
+              rel="noopener"
+              style={{ textDecoration: "none" }}
+            >
+              The Signal Chain
+            </a>
+            {" free at guitar.solutions · "}
             <span style={{ color: "var(--color-rights-red)" }}>
               Proof of Creation
             </span>

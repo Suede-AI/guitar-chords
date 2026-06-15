@@ -196,6 +196,95 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* SIGNAL CHAIN — cross-promo for the free book */}
+      <section
+        className="mx-auto max-w-6xl px-6"
+        style={{ paddingTop: "var(--space-section)" }}
+        aria-label="Signal Chain book"
+      >
+        <hr className="hr-rule" />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 1fr) minmax(0, 2fr)",
+            gap: "var(--space-8)",
+            marginTop: "var(--space-8)",
+          }}
+        >
+          <div>
+            <span className="eyebrow eyebrow--red">◆&nbsp;&nbsp;From the author</span>
+            <h2
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "var(--text-2xl)",
+                marginTop: "var(--space-3)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.01em",
+              }}
+            >
+              The Signal Chain
+            </h2>
+            <span
+              style={{
+                display: "block",
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.74rem",
+                letterSpacing: "0.10em",
+                color: "var(--color-rights-red)",
+                textTransform: "uppercase",
+                marginTop: "var(--space-2)",
+              }}
+            >
+              46 chapters · 3 editions · free
+            </span>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--space-4)",
+              justifyContent: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "var(--color-text-muted)",
+                fontSize: "var(--text-base)",
+                lineHeight: 1.65,
+                margin: 0,
+                maxWidth: "58ch",
+              }}
+            >
+              A player&rsquo;s history of amplifiers, effects, and the pursuit of
+              electric guitar tone. Forty-six chapters covering the signal path from
+              pickup to speaker — how the gear was designed, why it sounds the way
+              it does, and how working players have used it. Written by the same
+              author who built this tool set.
+            </p>
+            <a
+              className="link"
+              href="https://guitar.solutions"
+              target="_blank"
+              rel="noopener"
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.82rem",
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                color: "var(--color-rights-red)",
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.4rem",
+              }}
+            >
+              Read free at guitar.solutions&nbsp;→
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* PROVENANCE — light, contextual Suede credit (honest, not a funnel) */}
       <section
         className="mx-auto max-w-6xl px-6"
@@ -233,6 +322,138 @@ export default function HomePage() {
           </a>
           .
         </p>
+        <p
+          style={{
+            marginTop: "var(--space-4)",
+            fontFamily: "var(--font-mono)",
+            fontSize: "var(--text-xs)",
+            letterSpacing: "0.06em",
+            color: "var(--color-text-dim)",
+          }}
+        >
+          <span className="eyebrow eyebrow--cyan" style={{ marginRight: "0.6rem" }}>
+            ⊕ Reading
+          </span>
+          <a className="link" href="https://guitarhub.org/fender-stratocaster-lawsuit" target="_blank" rel="noopener">
+            The Fender Stratocaster lawsuit, explained &rarr;
+          </a>
+          {" · more on "}
+          <a className="link" href="https://guitarhub.org" target="_blank" rel="noopener">
+            GuitarHub
+          </a>
+        </p>
+      </section>
+
+      {/* AUTHOR CREDIT — compact footer attribution */}
+      <section
+        className="mx-auto max-w-6xl px-6"
+        style={{
+          paddingTop: "var(--space-8)",
+          paddingBottom: "var(--space-section)",
+        }}
+        aria-label="Author"
+      >
+        <hr className="hr-rule" />
+        <div
+          style={{
+            marginTop: "var(--space-6)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "var(--space-3)",
+          }}
+        >
+          <p
+            style={{
+              margin: 0,
+              color: "var(--color-text-dim)",
+              fontSize: "var(--text-sm)",
+              lineHeight: 1.65,
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.74rem",
+                letterSpacing: "0.10em",
+                color: "var(--color-rights-red)",
+                textTransform: "uppercase",
+                marginRight: "0.6rem",
+              }}
+            >
+              Built by
+            </span>
+            Jason Colapietro — guitarist, founder of Suede Labs AI, author of{" "}
+            <a
+              className="link"
+              href="https://guitar.solutions"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              The Signal Chain
+            </a>
+            {" "}(free at guitar.solutions),{" "}
+            <a
+              className="link"
+              href="https://www.amazon.com/dp/B0GD5FX6N6"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              The Guitar Without a Number
+            </a>
+            ,{" "}
+            <a
+              className="link"
+              href="https://www.amazon.com/dp/B0GD5FX6N6"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              The Human Authenticity Layer
+            </a>
+            ,{" "}
+            <a
+              className="link"
+              href="https://www.amazon.com/dp/B0GMB2VLXQ"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              Proof as Infrastructure
+            </a>
+            , and{" "}
+            <a
+              className="link"
+              href="https://www.amazon.com/dp/B0GRG8LGQQ"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              Stake Your Claim
+            </a>
+            .
+          </p>
+          <p
+            style={{
+              margin: 0,
+              color: "var(--color-text-dim)",
+              fontSize: "var(--text-sm)",
+              lineHeight: 1.65,
+            }}
+          >
+            <a
+              className="link"
+              href="https://suedeai.ai"
+              target="_blank"
+              rel="noopener"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              Suede Labs AI
+            </a>{" "}
+            builds creator ownership infrastructure for the AI era.
+          </p>
+        </div>
       </section>
     </>
   );

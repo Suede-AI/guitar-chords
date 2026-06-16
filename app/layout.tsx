@@ -72,6 +72,8 @@ export const metadata: Metadata = {
 
 const SUEDE_URL = "https://suedeai.ai";
 const SUEDE_FOUNDER_URL = "https://suedeai.ai/founder";
+const SOCIAL_URL =
+  "https://social.suedeai.ai/?utm_source=guitarchords.info&utm_medium=site_nav&utm_campaign=guitar_tools_to_social&utm_content=global_nav";
 const SIGNAL_CHAIN_URL = "https://guitar.solutions";
 const SUEDE_X_URL = "https://x.com/AISUEDE";
 const FOUNDER_X_URL = "https://x.com/johnnysuede";
@@ -144,7 +146,7 @@ function SiteHeader() {
           "linear-gradient(to bottom, var(--color-ink), transparent)",
       }}
     >
-      <div className="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
+      <div className="mx-auto max-w-6xl px-6 py-5 flex flex-wrap items-center justify-between gap-4">
         <Link
           href="/"
           aria-label="guitarchords.info"
@@ -182,7 +184,10 @@ function SiteHeader() {
           aria-label="Primary"
           style={{
             display: "flex",
-            gap: "1.5rem",
+            flexWrap: "wrap",
+            justifyContent: "flex-end",
+            gap: "0.65rem 1rem",
+            minWidth: 0,
             fontFamily: "var(--font-mono)",
             fontSize: "0.75rem",
             letterSpacing: "0.14em",
@@ -202,6 +207,9 @@ function SiteHeader() {
           <Link href="/metronome" className="link" style={{ textDecoration: "none" }}>
             Metronome
           </Link>
+          <a href={SOCIAL_URL} className="link" style={{ textDecoration: "none" }}>
+            Suede Social
+          </a>
         </nav>
       </div>
     </header>
@@ -253,6 +261,9 @@ function SiteFooter() {
             <Link href="/metronome" className="link" style={{ textDecoration: "none" }}>
               Metronome
             </Link>
+            <a href={SOCIAL_URL} className="link" style={{ textDecoration: "none" }}>
+              Join Suede Social
+            </a>
           </nav>
         </div>
 

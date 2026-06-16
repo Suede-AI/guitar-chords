@@ -235,6 +235,55 @@ a.link {
 }
 a.link:hover { color: var(--color-text); }
 
+.social-bridge {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-6);
+  align-items: center;
+  padding: var(--space-6);
+  background:
+    linear-gradient(90deg, var(--color-registry-cyan-soft), transparent 46%),
+    var(--color-ink-raised);
+  border: 1px solid var(--color-rule-muted);
+  border-left: 4px solid var(--color-registry-cyan);
+  border-radius: 2px;
+}
+.social-bridge__copy {
+  display: grid;
+  gap: var(--space-2);
+}
+.social-bridge__copy h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+.social-bridge__copy p {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+.social-bridge__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+@media (max-width: 760px) {
+  .social-bridge {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+  }
+  .social-bridge__actions {
+    justify-content: flex-start;
+  }
+}
+
 /* Reduced motion — drop transitions everywhere. */
 @media (prefers-reduced-motion: reduce) {
   *,

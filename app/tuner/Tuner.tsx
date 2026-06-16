@@ -2,6 +2,7 @@
 
 import { useTuner } from "@/lib/audio/use-tuner";
 import { STANDARD_TUNING } from "@/lib/audio/note";
+import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 
 const IN_TUNE_CENTS = 5;
 const RIGHTS_RED = "#9f101a";
@@ -143,6 +144,15 @@ export function Tuner() {
           ))}
         </ul>
       </footer>
+
+      <SuedeSocialBridge
+        source="tuner"
+        eyebrow="After tuning"
+        title="Put the guitar behind the note on your profile."
+        body="Suede Social profiles are built around real rigs: guitar, pedals, amp, tuning, and the choices that make the sound yours."
+        primary={socialAction("/", "Start my rig", "tuner", "start_rig")}
+        secondary={socialAction("/roast", "Roast my rig", "tuner", "roast")}
+      />
     </section>
   );
 }

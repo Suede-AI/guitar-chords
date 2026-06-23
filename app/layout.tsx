@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: "https://guitarchords.info",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "guitarchords.info — free chord library, scale trainer, tuner, and metronome",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description:
       "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
     creator: "@suedeai",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,

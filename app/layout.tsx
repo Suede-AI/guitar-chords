@@ -32,6 +32,7 @@ export const metadata: Metadata = {
   creator: "Jason Colapietro",
   publisher: "Suede Labs AI",
   alternates: { canonical: "https://guitarchords.info" },
+  verification: { google: "clfDRrM2Zm6t8oKxvMRL-dDL-TSAFjnIEtdDp0N1Mi0" },
   openGraph: {
     type: "website",
     locale: "en_US",

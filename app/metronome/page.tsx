@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://guitarchords.info/metronome",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "guitarchords.info — free online metronome with tap tempo and BPM control",
@@ -37,8 +37,19 @@ export const metadata: Metadata = {
     title: "Free Online Metronome — Tap Tempo, BPM, Time Signatures",
     description:
       "Free online metronome with tap tempo, adjustable BPM, and time signature support. Sample-accurate Web Audio scheduling. No download, no sign-up.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
+};
+
+const SOFTWARE_APP_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Free Online Guitar Metronome",
+  url: "https://guitarchords.info/metronome",
+  applicationCategory: "MusicApplication",
+  operatingSystem: "Web Browser",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  description: "Free online metronome for guitar practice. Tap tempo, adjustable BPM.",
 };
 
 const BREADCRUMB_JSON_LD = {
@@ -56,6 +67,10 @@ export default function MetronomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SOFTWARE_APP_JSON_LD) }}
       />
       <Metronome />
     </>

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://guitarchords.info/tuner",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "guitarchords.info — free chromatic guitar tuner, no download required",
@@ -37,8 +37,19 @@ export const metadata: Metadata = {
     title: "Free Online Guitar Tuner — Chromatic, No Download",
     description:
       "Free online chromatic guitar tuner. Works in the browser via Web Audio API — no app download, no sign-up. YIN pitch detection, sub-cent accuracy.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
+};
+
+const SOFTWARE_APP_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Free Online Guitar Tuner",
+  url: "https://guitarchords.info/tuner",
+  applicationCategory: "MusicApplication",
+  operatingSystem: "Web Browser",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  description: "Free online chromatic guitar tuner. No download required.",
 };
 
 const BREADCRUMB_JSON_LD = {
@@ -56,6 +67,10 @@ export default function TunerPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SOFTWARE_APP_JSON_LD) }}
       />
       <Tuner />
     </>

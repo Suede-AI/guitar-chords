@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "Guitar Chords — Free Chord Library, Scales & Tuner",
     description:
       "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
-    creator: "@suedeai",
+    creator: "@AISUEDE",
     images: ["/opengraph-image"],
   },
   robots: {
@@ -95,14 +95,6 @@ const WEBSITE_JSON_LD = {
     name: "Suede Labs",
     url: SUEDE_URL,
     sameAs: [SUEDE_URL, SUEDE_X_URL],
-  },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://guitarchords.info/chords?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
   },
 };
 
@@ -278,7 +270,7 @@ function SiteFooter() {
               className="link"
               href={SUEDE_URL}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
               Suede
@@ -291,7 +283,7 @@ function SiteFooter() {
               className="link"
               href={SUEDE_URL}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
               Suede Labs
@@ -301,7 +293,7 @@ function SiteFooter() {
               className="link"
               href={SUEDE_FOUNDER_URL}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
               Jason Colapietro
@@ -311,7 +303,7 @@ function SiteFooter() {
               className="link"
               href={SIGNAL_CHAIN_URL}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
               The Signal Chain

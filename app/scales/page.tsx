@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://guitarchords.info/scales",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "guitarchords.info — interactive guitar scale trainer for all 12 keys",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Guitar Scales Chart — All Keys & Modes",
     description:
       "Interactive guitar scale chart for all 12 keys. Major, minor, pentatonics, blues, and all 7 modes. Full neck visualization. Free, no sign-up.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
 };
 

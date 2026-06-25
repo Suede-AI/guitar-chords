@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: "https://guitarchords.info",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "guitarchords.info — free chord library, scale trainer, tuner, and metronome",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Guitar Chords — Free Chord Library, Scales & Tuner",
     description:
       "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
 };
 
@@ -107,9 +107,9 @@ export default function HomePage() {
               maxWidth: "18ch",
             }}
           >
-            Chords. Scales.{" "}
-            <span style={{ color: "var(--color-registry-cyan)" }}>Tuner.</span>{" "}
-            Metronome.
+            Guitar Chords, Scales,{" "}
+            <span style={{ color: "var(--color-registry-cyan)" }}>Tuner</span>{" "}
+            and Metronome.
           </h1>
           <p
             style={{
@@ -266,7 +266,7 @@ export default function HomePage() {
               className="link"
               href="https://guitar.solutions"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{
                 fontFamily: "var(--font-mono)",
                 fontSize: "0.82rem",
@@ -306,7 +306,7 @@ export default function HomePage() {
           </span>
           The chord shapes, scale theory, and pitch-detection engine here are
           ported from{" "}
-          <a className="link" href="https://suedeai.ai" target="_blank" rel="noopener">
+          <a className="link" href="https://suedeai.ai" target="_blank" rel="noopener noreferrer">
             Suede
           </a>
           , the creator-ownership layer for AI-era music: proof of creation,
@@ -314,9 +314,9 @@ export default function HomePage() {
           maintained by{" "}
           <a
             className="link"
-            href="https://suedeai.ai/jason-colapietro-images"
+            href="https://suedeai.ai/founder"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             Jason Colapietro
           </a>
@@ -334,11 +334,11 @@ export default function HomePage() {
           <span className="eyebrow eyebrow--cyan" style={{ marginRight: "0.6rem" }}>
             ⊕ Reading
           </span>
-          <a className="link" href="https://guitarhub.org/fender-stratocaster-lawsuit" target="_blank" rel="noopener">
+          <a className="link" href="https://guitarhub.org/fender-stratocaster-lawsuit" target="_blank" rel="noopener noreferrer">
             The Fender Stratocaster lawsuit, explained &rarr;
           </a>
           {" · more on "}
-          <a className="link" href="https://guitarhub.org" target="_blank" rel="noopener">
+          <a className="link" href="https://guitarhub.org" target="_blank" rel="noopener noreferrer">
             GuitarHub
           </a>
         </p>
@@ -387,7 +387,7 @@ export default function HomePage() {
               className="link"
               href="https://guitar.solutions"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}
             >
               The Signal Chain
@@ -397,7 +397,7 @@ export default function HomePage() {
               className="link"
               href="https://www.amazon.com/dp/B0GD5FX6N6"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}
             >
               The Guitar Without a Number
@@ -405,9 +405,9 @@ export default function HomePage() {
             ,{" "}
             <a
               className="link"
-              href="https://www.amazon.com/dp/B0GD5FX6N6"
+              href="https://www.amazon.com/dp/B0GMBBWHMQ"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}
             >
               The Human Authenticity Layer
@@ -417,7 +417,7 @@ export default function HomePage() {
               className="link"
               href="https://www.amazon.com/dp/B0GMB2VLXQ"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}
             >
               Proof as Infrastructure
@@ -427,7 +427,7 @@ export default function HomePage() {
               className="link"
               href="https://www.amazon.com/dp/B0GRG8LGQQ"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}
             >
               Stake Your Claim
@@ -446,7 +446,7 @@ export default function HomePage() {
               className="link"
               href="https://suedeai.ai"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}
             >
               Suede Labs AI

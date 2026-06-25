@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://guitarchords.info/chords",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "guitarchords.info — free guitar chord chart with fingering diagrams",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Guitar Chord Chart & Library — Free Fingering Diagrams",
     description:
       "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.",
-    images: ["/og-image.png"],
+    images: ["/opengraph-image"],
   },
 };
 

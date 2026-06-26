@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Suede Labs",
   ],
   applicationName: "guitarchords.info",
-  authors: [{ name: "Jason Colapietro", url: "https://github.com/JasonColapietro" }],
+  authors: [{ name: "Jason Colapietro", url: "https://suedeai.ai/founder" }],
   creator: "Jason Colapietro",
   publisher: "Suede Labs AI",
   alternates: { canonical: "https://guitarchords.info" },
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Guitar Chords — Free Chord Library, Scales & Tuner",
     description:
       "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
-    creator: "@AISUEDE",
+    creator: "@johnnysuede",
     images: ["/opengraph-image"],
   },
   robots: {
@@ -74,29 +74,39 @@ export const metadata: Metadata = {
 const SUEDE_URL = "https://suedeai.ai";
 const SUEDE_FOUNDER_URL = "https://suedeai.ai/founder";
 const SIGNAL_CHAIN_URL = "https://guitar.solutions";
-const SUEDE_X_URL = "https://x.com/AISUEDE";
-const FOUNDER_X_URL = "https://x.com/johnnysuede";
+
+// Canonical @ids mirror suedeai.ai/#organization and suedeai.ai/founder#person
+// so crawlers merge guitarchords.info entities into the shared Suede graph.
+const SUEDE_ORG_ID = "https://suedeai.ai/#organization";
+const JASON_PERSON_ID = "https://suedeai.ai/founder#person";
 
 const WEBSITE_JSON_LD = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "guitarchords.info",
-  url: "https://guitarchords.info",
-  inLanguage: "en",
-  description:
-    "Free guitar chord chart, scale trainer, chromatic tuner, and metronome.",
-  creator: {
-    "@type": "Person",
-    name: "Jason Colapietro",
-    url: SUEDE_FOUNDER_URL,
-    sameAs: [SUEDE_FOUNDER_URL, FOUNDER_X_URL],
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Suede Labs",
-    url: SUEDE_URL,
-    sameAs: [SUEDE_URL, SUEDE_X_URL],
-  },
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://guitarchords.info/#website",
+      name: "guitarchords.info",
+      url: "https://guitarchords.info",
+      inLanguage: "en",
+      description: "Free guitar chord chart, scale trainer, chromatic tuner, and metronome.",
+      creator: { "@id": JASON_PERSON_ID },
+      publisher: { "@id": SUEDE_ORG_ID },
+    },
+    {
+      "@type": "Organization",
+      "@id": SUEDE_ORG_ID,
+      name: "Suede Labs AI",
+      url: SUEDE_URL,
+    },
+    {
+      "@type": "Person",
+      "@id": JASON_PERSON_ID,
+      name: "Jason Colapietro",
+      alternateName: "Johnny Suede",
+      url: SUEDE_FOUNDER_URL,
+    },
+  ],
 };
 
 export const viewport: Viewport = {

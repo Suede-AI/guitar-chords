@@ -2,6 +2,8 @@
 
 ### 🎸 [Open the live tools → **guitarchords.info**](https://guitarchords.info)
 
+> **A free tool by [Suede Labs AI](https://suedeai.ai) · Built by [Jason Colapietro](https://suedeai.ai/founder)**
+
 A zero-auth public reference site for guitar players — chord library, scale
 trainer, in-browser tuner, and metronome. No accounts, no analytics, no
 backend. Designed in the Suede Institutional IP Terminal language.

@@ -392,20 +392,10 @@ export default function HomePage() {
             >
               The Signal Chain
             </a>
-            {" "}(free at guitar.solutions),{" "}
+            {" "}(free at guitar.solutions), The Guitar Without a Number,{" "}
             <a
               className="link"
               href="https://www.amazon.com/dp/B0GD5FX6N6"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "var(--color-registry-cyan)" }}
-            >
-              The Guitar Without a Number
-            </a>
-            ,{" "}
-            <a
-              className="link"
-              href="https://www.amazon.com/dp/B0GMBBWHMQ"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}

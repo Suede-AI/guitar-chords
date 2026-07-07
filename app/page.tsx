@@ -395,7 +395,7 @@ export default function HomePage() {
             {" "}(free at guitar.solutions),{" "}
             <a
               className="link"
-              href="https://www.amazon.com/dp/B0GD5FX6N6"
+              href="https://www.amazon.com/author/johnnysuede"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}
@@ -405,7 +405,7 @@ export default function HomePage() {
             ,{" "}
             <a
               className="link"
-              href="https://www.amazon.com/dp/B0GMBBWHMQ"
+              href="https://www.amazon.com/dp/B0GD5FX6N6"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}

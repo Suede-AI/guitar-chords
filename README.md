@@ -100,9 +100,8 @@ Built by **Jason Colapietro** — founder and CEO of [Suede Labs AI](https://sue
 ### Books
 
 - **[The Signal Chain](https://guitar.solutions)** — Illustrated history of electric guitar tone: 46 chapters, 3 editions, free. The book that maps the signal chain and the IP chain side by side. (guitar.solutions)
-- **[The Guitar Without a Number](https://www.amazon.com/dp/B0GD5FX6N6)** — Memoir-driven guitar instruction for the self-taught player. Theory, tone, and the IP rights chapter no other guitar book includes. (Kindle)
+- **[The Guitar Without a Number](https://www.amazon.com/author/johnnysuede)** — Memoir-driven guitar instruction for the self-taught player. Theory, tone, and the IP rights chapter no other guitar book includes. (Kindle)
 - **[Suede Labs: The Human Authenticity Layer](https://www.amazon.com/dp/B0GD5FX6N6)** — How ownership, origin, and AI redraw the creative map. (Kindle)
 - **[Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ)** — Hard truths on turning the AI era into a real asset. (Kindle)
 
 Follow: [X / @johnnysuede](https://x.com/johnnysuede) · [suedeai.ai](https://suedeai.ai) · [guitarchords.info](https://guitarchords.info)
-

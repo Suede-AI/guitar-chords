@@ -1,0 +1,3 @@
+{
+  "ignoreCommand": "[ \"$VERCEL_ENV\" != \"production\" ] && exit 0 || exit 1"
+}

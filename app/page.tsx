@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FINGERINGS } from "@/lib/chords/fingerings";
 import { SCALES } from "@/lib/music/scales";
+import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 
 export const metadata: Metadata = {
   title: "Guitar Chords — Free Chord Library, Scales & Tuner",
@@ -150,6 +151,21 @@ export default function HomePage() {
             <ToolTile key={t.href} tool={t} index={idx} />
           ))}
         </div>
+      </section>
+
+      <section
+        className="mx-auto max-w-6xl px-6"
+        style={{ paddingTop: "var(--space-12)" }}
+        aria-label="Join Suede Social"
+      >
+        <SuedeSocialBridge
+          source="home"
+          eyebrow="From reference to room"
+          title="Turn the chord chart into a guitarist profile."
+          body="Use the tools here for free, then claim a Suede Social handle when you want to save your rig, ask the forum, or get your board roasted by the room."
+          primary={socialAction("/", "Claim your handle", "home", "claim_handle")}
+          secondary={socialAction("/roast", "Roast my rig", "home", "roast")}
+        />
       </section>
 
       {/* MANIFESTO ROW */}

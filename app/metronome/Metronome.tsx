@@ -2,6 +2,7 @@
 
 import { useMemo } from "react";
 import { useMetronome, makeTapTempo } from "@/lib/audio/use-metronome";
+import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 
 const MIN_BPM = 30;
 const MAX_BPM = 280;
@@ -165,6 +166,15 @@ export function Metronome() {
           />
         </div>
       </div>
+
+      <SuedeSocialBridge
+        source="metronome"
+        eyebrow="Practice leaves a trace"
+        title="Turn the click into a session note."
+        body="Use the metronome here, then claim a Suede Social profile when you want to log what you are practicing and ask the room how to make it feel better."
+        primary={socialAction("/", "Claim your handle", "metronome", "claim_handle")}
+        secondary={socialAction("/forum", "Ask the forum", "metronome", "forum")}
+      />
     </section>
   );
 }

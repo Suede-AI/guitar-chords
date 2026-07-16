@@ -8,6 +8,7 @@ import {
   type ChordCategory,
 } from "@/lib/chords/fingerings";
 import { ChordDiagram } from "@/components/ChordDiagram";
+import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 
 export function ChordLibrary() {
   const [query, setQuery] = useState("");
@@ -149,6 +150,15 @@ export function ChordLibrary() {
           ))}
         </ul>
       )}
+
+      <SuedeSocialBridge
+        source="chords"
+        eyebrow="Save the shape"
+        title="Found a grip worth keeping?"
+        body="Claim a Suede Social handle and turn chord shapes, progressions, and tone questions into posts the guitar room can answer."
+        primary={socialAction("/", "Claim your handle", "chords", "claim_handle")}
+        secondary={socialAction("/forum", "Post a chord question", "chords", "forum")}
+      />
     </section>
   );
 }

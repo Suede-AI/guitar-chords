@@ -10,6 +10,7 @@ import {
   type Note,
 } from "@/lib/music/scales";
 import { Fretboard } from "@/components/Fretboard";
+import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 
 export function ScaleTrainer() {
   const [root, setRoot] = useState<Note>("A");
@@ -210,6 +211,15 @@ export function ScaleTrainer() {
           Root in solid cyan · scale tones outlined.
         </p>
       </div>
+
+      <SuedeSocialBridge
+        source="scales"
+        eyebrow="Ask the room"
+        title={`Working in ${root} ${scale.name}?`}
+        body="Bring the key, the scale, and the sound you are chasing into Suede Social. The forum is built for guitarists who talk in rigs, tunings, and real playing problems."
+        primary={socialAction("/forum", "Ask a scale question", "scales", "forum")}
+        secondary={socialAction("/", "Claim your handle", "scales", "claim_handle")}
+      />
     </section>
   );
 }

@@ -4,6 +4,7 @@
   "private": true,
   "description": "Zero-auth public chord, scale, tuner, and metronome reference. A Suede Labs site for guitarchords.info.",
   "scripts": {
+    "test": "node --test",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

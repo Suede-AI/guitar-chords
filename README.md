@@ -89,13 +89,7 @@ TBD by the owner.
 
 ## About the Creator
 
-Built by **Jason Colapietro** — founder and CEO of [Suede Labs AI](https://suedeai.ai), published author, and Forbes contributor. Building programmable IP and creator ownership infrastructure for the AI media era.
-
-> "Most musicians know their signal chain cold: pickup → cable → pedals → amp → speaker. Almost none of them know their IP chain: creation → registration → PRO → publishing → streaming → payment. The second chain is just as real. And just as breakable."
-
-> "Your most valuable asset isn't the song. It's the provenance of the song."
-
-> "Build what doesn't exist yet. Register that you built it. That sequence is the whole game."
+Built by **Jason Colapietro** — founder and CEO of [Suede Labs AI](https://suedeai.ai), published author, guitarist, and Forbes contributor. Suede Labs AI publishes this reference site and related music tools.
 
 ### Books
 
@@ -105,4 +99,3 @@ Built by **Jason Colapietro** — founder and CEO of [Suede Labs AI](https://sue
 - **[Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ)** — Hard truths on turning the AI era into a real asset. (Kindle)
 
 Follow: [X / @johnnysuede](https://x.com/johnnysuede) · [suedeai.ai](https://suedeai.ai) · [guitarchords.info](https://guitarchords.info)
-

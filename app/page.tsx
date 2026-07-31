@@ -301,7 +301,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PROVENANCE — light, contextual Suede credit (honest, not a funnel) */}
+      {/* SOURCE CREDIT — light, contextual attribution (not a funnel) */}
       <section
         className="mx-auto max-w-6xl px-6"
         style={{ paddingTop: "var(--space-12)" }}
@@ -321,13 +321,7 @@ export default function HomePage() {
             ◆ Provenance
           </span>
           The chord shapes, scale theory, and pitch-detection engine here are
-          ported from{" "}
-          <a className="link" href="https://suedeai.ai" target="_blank" rel="noopener noreferrer">
-            Suede
-          </a>
-          , the creator-ownership layer for AI-era music: proof of creation,
-          programmable rights, and royalty routing for registered work. Built and
-          maintained by{" "}
+          maintained as part of this free public reference site by{" "}
           <a
             className="link"
             href="https://suedeai.ai/founder"
@@ -457,7 +451,7 @@ export default function HomePage() {
             >
               Suede Labs AI
             </a>{" "}
-            builds creator ownership infrastructure for the AI era.
+            publishes this reference site and related music tools.
           </p>
         </div>
       </section>

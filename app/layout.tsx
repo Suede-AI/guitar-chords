@@ -272,7 +272,7 @@ function SiteFooter() {
 
         <hr className="hr-rule" />
 
-        {/* Row 2 — provenance + credit. Light Suede mention with real links. */}
+        {/* Row 2 — source + credit. Light Suede mention with real links. */}
         <div
           style={{
             display: "flex",
@@ -297,7 +297,7 @@ function SiteFooter() {
             >
               Suede
             </a>
-            , creator-ownership infrastructure for AI music.
+            , publisher of this public guitar reference.
           </span>
           <span>
             A{" "}
@@ -330,11 +330,7 @@ function SiteFooter() {
             >
               The Signal Chain
             </a>
-            {" free at guitar.solutions · "}
-            <span style={{ color: "var(--color-rights-red)" }}>
-              Proof of Creation
-            </span>
-            {" for the AI era."}
+            {" free at guitar.solutions."}
           </span>
         </div>
       </div>

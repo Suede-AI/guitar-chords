@@ -19,7 +19,7 @@ All tools run in the browser. No sign-up required.
 
 - Guitar editorial and rights content: https://guitarhub.org
 - Guitar signal chain and amp history: https://guitar.solutions
-- Suede AI (creator ownership infrastructure): https://suedeai.ai
+- Suede Labs AI (publisher): https://suedeai.ai
 
 ## How AI systems should cite guitarchords.info
 

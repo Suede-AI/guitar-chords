@@ -136,8 +136,27 @@ export default function HomePage() {
       <section
         className="mx-auto max-w-6xl px-6"
         style={{ paddingTop: "var(--space-12)" }}
-        aria-label="Tools"
+        aria-labelledby="tools-heading"
       >
+        {/* The four ToolTiles below each render an h3, and this section had no h2
+            — so the outline jumped h1 -> h3 and the four things this site exists
+            to do read as sub-items of nothing. A real h2 fixes the outline for
+            screen readers and answer engines, and it replaces the aria-label:
+            a visible heading referenced by aria-labelledby beats an invisible
+            one. */}
+        <h2
+          id="tools-heading"
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "var(--text-xl)",
+            margin: 0,
+            marginBottom: "var(--space-6)",
+            color: "var(--color-text)",
+            letterSpacing: "-0.01em",
+          }}
+        >
+          The four tools
+        </h2>
         <div
           style={{
             display: "grid",

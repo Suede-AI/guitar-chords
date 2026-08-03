@@ -108,6 +108,38 @@ const WEBSITE_JSON_LD = {
       alternateName: "Johnny Suede",
       url: SUEDE_FOUNDER_URL,
     },
+    // The graph identified who publishes the site but never what it does. There
+    // was no application node, no feature list, and no price — even though
+    // "free", "no sign-up" and "no paywall" are the whole pitch and appear in the
+    // meta description. This site competes for high-intent generic queries
+    // ("free guitar chord chart"), which is exactly the shape a
+    // SoftwareApplication with a zero-price Offer describes.
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://guitarchords.info/#app",
+      name: "Guitar Chords",
+      url: "https://guitarchords.info",
+      applicationCategory: "MusicApplication",
+      operatingSystem: "Web Browser",
+      browserRequirements:
+        "Requires JavaScript; the tuner also needs microphone access",
+      isPartOf: { "@id": "https://guitarchords.info/#website" },
+      publisher: { "@id": SUEDE_ORG_ID },
+      featureList: [
+        "Chord library with fingering diagrams",
+        "Scale trainer across the full fretboard",
+        "Chromatic tuner (Web Audio, YIN detector)",
+        "Metronome with tap tempo",
+      ],
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+        description:
+          "Free to use. No account, no paywall, and no analytics.",
+      },
+    },
   ],
 };
 

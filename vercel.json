@@ -2,6 +2,17 @@
   "ignoreCommand": "[ \"$VERCEL_ENV\" != \"production\" ] && exit 0 || exit 1",
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.guitarchords.info"
+        }
+      ],
+      "destination": "https://guitarchords.info/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {

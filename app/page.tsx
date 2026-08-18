@@ -232,7 +232,7 @@ export default function HomePage() {
       </section>
 
 
-      {/* SIGNAL CHAIN — cross-promo for the free book */}
+      {/* SIGNAL CHAIN — cross-promo. Paid book; strumly.suedeai.ai/book owns the offer and the price. */}
       <section
         className="mx-auto max-w-6xl px-6"
         style={{ paddingTop: "var(--space-section)" }}
@@ -421,7 +421,7 @@ export default function HomePage() {
             >
               The Signal Chain
             </a>
-            {" "}(free at guitar.solutions), The Guitar Without a Number,{" "}
+            {", "}The Guitar Without a Number,{" "}
             <a
               className="link"
               href="https://www.amazon.com/dp/B0GD5FX6N6"

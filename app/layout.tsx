@@ -362,7 +362,7 @@ function SiteFooter() {
             >
               The Signal Chain
             </a>
-            {" free at guitar.solutions."}
+            {" at guitar.solutions."}
           </span>
         </div>
       </div>

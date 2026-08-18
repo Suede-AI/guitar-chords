@@ -271,7 +271,7 @@ export default function HomePage() {
                 marginTop: "var(--space-2)",
               }}
             >
-              46 chapters · 3 editions · free
+              46 chapters · complete edition
             </span>
           </div>
           <div
@@ -314,7 +314,7 @@ export default function HomePage() {
                 gap: "0.4rem",
               }}
             >
-              Read free at guitar.solutions&nbsp;→
+              Read more at guitar.solutions&nbsp;→
             </a>
           </div>
         </div>

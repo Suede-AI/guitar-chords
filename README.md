@@ -97,5 +97,6 @@ Built by **Jason Colapietro** — founder and CEO of [Suede Labs AI](https://sue
 - **The Guitar Without a Number** — Memoir-driven guitar instruction for the self-taught player. Theory, tone, and the IP rights chapter no other guitar book includes.
 - **[Suede Labs: The Human Authenticity Layer](https://www.amazon.com/dp/B0GD5FX6N6)** — How ownership, origin, and AI redraw the creative map. (Kindle)
 - **[Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ)** — Hard truths on turning the AI era into a real asset. (Kindle)
+- **[The Screenshot: Why AI Recommends Your Competitors, and How to Fix It](https://seo.suedeai.ai/book)** — How answer engines decide who to name, how to see your own gap with your own eyes, and how to repair the pages the machines misread. Eleven chapters, in full on the web. (seo.suedeai.ai)
 
 Follow: [X / @johnnysuede](https://x.com/johnnysuede) · [suedeai.ai](https://suedeai.ai) · [guitarchords.info](https://guitarchords.info)

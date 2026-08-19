@@ -441,7 +441,7 @@ export default function HomePage() {
             >
               Proof as Infrastructure
             </a>
-            , and{" "}
+            ,{" "}
             <a
               className="link"
               href="https://www.amazon.com/dp/B0GRG8LGQQ"
@@ -450,6 +450,16 @@ export default function HomePage() {
               style={{ color: "var(--color-registry-cyan)" }}
             >
               Stake Your Claim
+            </a>
+            , and{" "}
+            <a
+              className="link"
+              href="https://seo.suedeai.ai/book"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "var(--color-registry-cyan)" }}
+            >
+              The Screenshot
             </a>
             .
           </p>

@@ -1,0 +1,4 @@
+export const GOOGLE_SITE_VERIFICATION_TOKENS = [
+  "clfDRrM2Zm6t8oKxvMRL-dDL-TSAFjnIEtdDp0N1Mi0",
+  "5T1fbA82KWV1Cb6lZQOWbbiktvZkpkgW7KzMxMHe9LA",
+];

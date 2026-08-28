@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Link from "next/link";
+import { GOOGLE_SITE_VERIFICATION_TOKENS } from "@/lib/google-site-verification";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://guitarchords.info"),
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   creator: "Jason Colapietro",
   publisher: "Suede Labs AI",
   alternates: { canonical: "https://guitarchords.info" },
-  verification: { google: "clfDRrM2Zm6t8oKxvMRL-dDL-TSAFjnIEtdDp0N1Mi0" },
+  verification: { google: GOOGLE_SITE_VERIFICATION_TOKENS },
   openGraph: {
     type: "website",
     locale: "en_US",

@@ -101,6 +101,15 @@ const WEBSITE_JSON_LD = {
       "@id": SUEDE_ORG_ID,
       name: "Suede Labs AI",
       url: SUEDE_URL,
+      foundingDate: "2024",
+      sameAs: [
+        "https://suedeai.org/",
+        "https://github.com/Suede-AI",
+        "https://x.com/AISUEDE",
+        "https://www.crunchbase.com/organization/suede-labs-ai",
+        "https://www.linkedin.com/company/suede-labs-ai",
+        "https://www.wikidata.org/wiki/Q141169484",
+      ],
     },
     {
       "@type": "Person",

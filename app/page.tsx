@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://guitarchords.info" },
   openGraph: {
+    type: "website",
     title: "Guitar Chords — Free Chord Library, Scales & Tuner",
     description:
       "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
@@ -363,7 +364,7 @@ export default function HomePage() {
           <span className="eyebrow eyebrow--cyan" style={{ marginRight: "0.6rem" }}>
             ⊕ Reading
           </span>
-          <a className="link" href="https://guitarhub.org/fender-stratocaster-lawsuit" target="_blank" rel="noopener noreferrer">
+          <a className="link" href="https://strumly.suedeai.ai/guides/fender-stratocaster-lawsuit" target="_blank" rel="noopener noreferrer">
             The Fender Stratocaster lawsuit, explained &rarr;
           </a>
           {" · more on "}

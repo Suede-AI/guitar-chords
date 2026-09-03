@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://guitarchords.info/metronome" },
   openGraph: {
+    type: "website",
     title: "Free Online Metronome — Tap Tempo, BPM, Time Signatures",
     description:
       "Free online metronome with tap tempo, adjustable BPM, and time signature support. Sample-accurate Web Audio scheduling. No download, no sign-up.",

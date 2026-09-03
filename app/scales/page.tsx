@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://guitarchords.info/scales" },
   openGraph: {
+    type: "website",
     title: "Guitar Scales Chart — All Keys & Modes",
     description:
       "Interactive guitar scale chart for all 12 keys. Major, minor, pentatonics, blues, and all 7 modes. Full neck visualization. Free, no sign-up.",

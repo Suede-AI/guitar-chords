@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://guitarchords.info/tuner" },
   openGraph: {
+    type: "website",
     title: "Free Online Guitar Tuner — Chromatic, No Download",
     description:
       "Free online chromatic guitar tuner. Works in the browser via Web Audio API — no app download, no sign-up. YIN pitch detection, sub-cent accuracy.",

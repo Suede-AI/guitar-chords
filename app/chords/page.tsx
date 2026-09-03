@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://guitarchords.info/chords" },
   openGraph: {
+    type: "website",
     title: "Guitar Chord Chart & Library — Free Fingering Diagrams",
     description:
       "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.",

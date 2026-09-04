@@ -89,7 +89,7 @@ TBD by the owner.
 
 ## About the Creator
 
-Built by **Jason Colapietro** — founder and CEO of [Suede Labs AI](https://suedeai.ai), published author, guitarist, and Forbes contributor. Suede Labs AI publishes this reference site and related music tools.
+Built by **Jason Colapietro** — founder and CEO of [Suede Labs AI](https://suedeai.ai), published author, and guitarist. Suede Labs AI publishes this reference site and related music tools.
 
 ### Books
 

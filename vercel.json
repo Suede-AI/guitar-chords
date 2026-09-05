@@ -22,6 +22,26 @@
       ],
       "destination": "https://guitarchords.info/:path*",
       "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "https://suedeai.ai/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "https://suedeai.ai/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "https://suedeai.ai/terms",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "https://suedeai.ai/contact",
+      "permanent": true
     }
   ]
 }

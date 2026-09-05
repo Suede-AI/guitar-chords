@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Tuner } from "./Tuner";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Free Online Guitar Tuner — Chromatic, No Download",
@@ -53,14 +55,8 @@ const SOFTWARE_APP_JSON_LD = {
   description: "Free online chromatic guitar tuner. No download required.",
 };
 
-const BREADCRUMB_JSON_LD = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://guitarchords.info" },
-    { "@type": "ListItem", position: 2, name: "Guitar Tuner", item: "https://guitarchords.info/tuner" },
-  ],
-};
+const BREADCRUMB_TRAIL = trailFor("Guitar Tuner", "/tuner");
+const BREADCRUMB_JSON_LD = breadcrumbJsonLd(BREADCRUMB_TRAIL);
 
 export default function TunerPage() {
   return (
@@ -73,6 +69,7 @@ export default function TunerPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SOFTWARE_APP_JSON_LD) }}
       />
+      <Breadcrumb trail={BREADCRUMB_TRAIL} widthClassName="max-w-4xl" />
       <Tuner />
     </>
   );

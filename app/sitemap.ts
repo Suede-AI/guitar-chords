@@ -7,14 +7,14 @@ const BASE = "https://guitarchords.info";
  * when its page or dependencies change, and bump the shared date when the root
  * layout changes because every route renders it.
  */
-const SHARED_LAYOUT_LAST_MODIFIED = "2026-09-03";
+const SHARED_LAYOUT_LAST_MODIFIED = "2026-09-05";
 
 const ROUTE_LAST_MODIFIED = {
   "/": "2026-09-03",
-  "/chords": "2026-09-03",
-  "/scales": "2026-09-03",
-  "/tuner": "2026-09-03",
-  "/metronome": "2026-09-03",
+  "/chords": "2026-09-05",
+  "/scales": "2026-09-05",
+  "/tuner": "2026-09-05",
+  "/metronome": "2026-09-05",
 } as const;
 
 type Route = keyof typeof ROUTE_LAST_MODIFIED;

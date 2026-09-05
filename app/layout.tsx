@@ -78,6 +78,14 @@ const SOCIAL_URL =
   "https://social.suedeai.ai/?utm_source=guitarchords.info&utm_medium=site_nav&utm_campaign=guitar_tools_to_social&utm_content=global_nav";
 const SIGNAL_CHAIN_URL = "https://guitar.solutions";
 
+// This site publishes no policy of its own. The tuner asks for a microphone,
+// so the footer points at the Suede Labs AI pages that already cover the
+// estate's apps and websites, plus the published address, on every route.
+const PRIVACY_URL = "https://suedeai.ai/privacy";
+const TERMS_URL = "https://suedeai.ai/terms";
+const CONTACT_URL = "https://suedeai.ai/contact";
+const CONTACT_EMAIL = "info@suedeai.ai";
+
 // Canonical @ids mirror suedeai.ai/#organization and suedeai.ai/founder#person
 // so crawlers merge guitarchords.info entities into the shared Suede graph.
 const SUEDE_ORG_ID = "https://suedeai.ai/#organization";
@@ -373,6 +381,68 @@ function SiteFooter() {
               The Signal Chain
             </a>
             {" at guitar.solutions."}
+          </span>
+        </div>
+
+        <hr className="hr-rule" />
+
+        {/* Row 3 — policy + contact. Linked, not restated, on every route. */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "0.4rem 1rem",
+            justifyContent: "space-between",
+            alignItems: "baseline",
+            color: "var(--color-text-dim)",
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.78rem",
+            letterSpacing: "0.08em",
+          }}
+        >
+          <nav
+            aria-label="Policies and contact"
+            style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
+          >
+            <a
+              className="link"
+              href={PRIVACY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              Privacy
+            </a>
+            <a
+              className="link"
+              href={TERMS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              Terms
+            </a>
+            <a
+              className="link"
+              href={CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              Contact
+            </a>
+          </nav>
+          <span>
+            Policies and contact are published by Suede Labs AI, which covers
+            this site. Reach the team at{" "}
+            <a
+              className="link"
+              href={`mailto:${CONTACT_EMAIL}`}
+              style={{ textDecoration: "none" }}
+            >
+              {CONTACT_EMAIL}
+            </a>
+            .
           </span>
         </div>
       </div>

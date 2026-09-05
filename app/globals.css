@@ -20,7 +20,11 @@
   /* text */
   --color-text: oklch(96% 0.005 260);
   --color-text-muted: oklch(72% 0.01 260);
-  --color-text-dim: oklch(52% 0.01 260);
+  /* oklch(52% …) resolved to #66696f, which is 3.72:1 on --color-ink and
+     3.57:1 on --color-ink-raised, under the 4.5:1 AA floor for body text.
+     64% resolves to #898c92: 6.09:1 on ink, 5.85:1 on raised, 5.49:1 on
+     hover. Keep captions, eyebrows and placeholders at or above this. */
+  --color-text-dim: oklch(64% 0.01 260);
 
   /* brand */
   --color-rights-red: #9f101a;

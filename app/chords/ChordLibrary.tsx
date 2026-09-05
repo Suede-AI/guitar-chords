@@ -34,7 +34,9 @@ export function ChordLibrary() {
     <section
       className="mx-auto max-w-6xl px-6"
       style={{
-        paddingTop: "var(--space-section)",
+        // The page's top gap now sits on the breadcrumb wrapper above this
+        // section, so only the space between the trail and the H1 remains here.
+        paddingTop: "var(--space-6)",
         display: "flex",
         flexDirection: "column",
         gap: "var(--space-8)",

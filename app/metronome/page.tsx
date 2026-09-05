@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Metronome } from "./Metronome";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Free Online Metronome — Tap Tempo, BPM, Time Signatures",
@@ -53,14 +55,8 @@ const SOFTWARE_APP_JSON_LD = {
   description: "Free online metronome for guitar practice. Tap tempo, adjustable BPM.",
 };
 
-const BREADCRUMB_JSON_LD = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://guitarchords.info" },
-    { "@type": "ListItem", position: 2, name: "Metronome", item: "https://guitarchords.info/metronome" },
-  ],
-};
+const BREADCRUMB_TRAIL = trailFor("Metronome", "/metronome");
+const BREADCRUMB_JSON_LD = breadcrumbJsonLd(BREADCRUMB_TRAIL);
 
 export default function MetronomePage() {
   return (
@@ -73,6 +69,7 @@ export default function MetronomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SOFTWARE_APP_JSON_LD) }}
       />
+      <Breadcrumb trail={BREADCRUMB_TRAIL} widthClassName="max-w-3xl" />
       <Metronome />
     </>
   );

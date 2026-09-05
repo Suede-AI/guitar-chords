@@ -29,10 +29,10 @@ test("sitemap dates include route and shared-layout changes", async () => {
   );
 
   assert.deepEqual(datesByUrl, {
-    "https://guitarchords.info": "2026-09-03",
-    "https://guitarchords.info/chords": "2026-09-03",
-    "https://guitarchords.info/scales": "2026-09-03",
-    "https://guitarchords.info/tuner": "2026-09-03",
-    "https://guitarchords.info/metronome": "2026-09-03",
+    "https://guitarchords.info": "2026-09-05",
+    "https://guitarchords.info/chords": "2026-09-05",
+    "https://guitarchords.info/scales": "2026-09-05",
+    "https://guitarchords.info/tuner": "2026-09-05",
+    "https://guitarchords.info/metronome": "2026-09-05",
   });
 });

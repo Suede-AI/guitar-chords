@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { ScaleTrainer } from "./ScaleTrainer";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Guitar Scales Chart — All Keys & Modes",
@@ -42,14 +44,8 @@ export const metadata: Metadata = {
   },
 };
 
-const BREADCRUMB_JSON_LD = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://guitarchords.info" },
-    { "@type": "ListItem", position: 2, name: "Guitar Scales", item: "https://guitarchords.info/scales" },
-  ],
-};
+const BREADCRUMB_TRAIL = trailFor("Guitar Scales", "/scales");
+const BREADCRUMB_JSON_LD = breadcrumbJsonLd(BREADCRUMB_TRAIL);
 
 export default function ScalesPage() {
   return (
@@ -58,6 +54,7 @@ export default function ScalesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
       />
+      <Breadcrumb trail={BREADCRUMB_TRAIL} widthClassName="max-w-6xl" />
       <ScaleTrainer />
     </>
   );

@@ -57,7 +57,7 @@ export const SCALES: Record<string, ScaleDef> = {
   major:           { name: "Major",            intervals: [0, 2, 4, 5, 7, 9, 11], description: "Bright, happy, the default for most pop and folk." },
   minor:           { name: "Natural minor",    intervals: [0, 2, 3, 5, 7, 8, 10], description: "Darker, melancholy. Sad ballads, minor-key rock." },
   pentatonicMajor: { name: "Major pentatonic", intervals: [0, 2, 4, 7, 9],        description: "Country, classic rock, melodic solos." },
-  pentatonicMinor: { name: "Minor pentatonic", intervals: [0, 3, 5, 7, 10],       description: "Rock and blues default — most lead guitar lives here." },
+  pentatonicMinor: { name: "Minor pentatonic", intervals: [0, 3, 5, 7, 10],       description: "Rock and blues default: most lead guitar lives here." },
   blues:           { name: "Blues",             intervals: [0, 3, 5, 6, 7, 10],   description: "Minor pentatonic + the b5 “blue note.”" },
   dorian:          { name: "Dorian",            intervals: [0, 2, 3, 5, 7, 9, 10], description: "Jazz, funk, jam-band staple. Minor with a raised 6th." },
   phrygian:        { name: "Phrygian",          intervals: [0, 1, 3, 5, 7, 8, 10], description: "Dark minor mode with a flat 2. Spanish and metal color." },

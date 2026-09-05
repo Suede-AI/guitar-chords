@@ -65,7 +65,7 @@ export function ScaleTrainer() {
           }}
         >
           Pick a key and a scale. The fretboard highlights the root in cyan and
-          outlines every scale tone across the neck.
+          outlines each scale tone across the neck.
         </p>
       </header>
 

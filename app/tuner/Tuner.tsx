@@ -53,7 +53,7 @@ export function Tuner() {
           }}
         >
           Click below, grant mic access, and pluck a string. Audio is analysed
-          locally by a YIN pitch detector and never leaves the page.
+          locally by a YIN pitch detector and is not uploaded.
         </p>
       </header>
 

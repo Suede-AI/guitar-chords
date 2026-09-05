@@ -4,7 +4,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Free Online Metronome — Tap Tempo, BPM, Time Signatures",
+  title: "Free Online Metronome: Tap Tempo, BPM, Time Signatures",
   description:
     "Free online metronome with tap tempo, adjustable BPM, and time signature support. Sample-accurate Web Audio scheduling. No download, no sign-up.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://guitarchords.info/metronome" },
   openGraph: {
     type: "website",
-    title: "Free Online Metronome — Tap Tempo, BPM, Time Signatures",
+    title: "Free Online Metronome: Tap Tempo, BPM, Time Signatures",
     description:
       "Free online metronome with tap tempo, adjustable BPM, and time signature support. Sample-accurate Web Audio scheduling. No download, no sign-up.",
     url: "https://guitarchords.info/metronome",
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "guitarchords.info — free online metronome with tap tempo and BPM control",
+        alt: "guitarchords.info: free online metronome with tap tempo and BPM control",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Online Metronome — Tap Tempo, BPM, Time Signatures",
+    title: "Free Online Metronome: Tap Tempo, BPM, Time Signatures",
     description:
       "Free online metronome with tap tempo, adjustable BPM, and time signature support. Sample-accurate Web Audio scheduling. No download, no sign-up.",
     images: ["/opengraph-image"],

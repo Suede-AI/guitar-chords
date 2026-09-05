@@ -82,7 +82,7 @@ export function ChordLibrary() {
           }}
         >
           The shapes a player actually reaches for. Filter by category, search
-          by name. Diagrams render in SVG — readable at any zoom.
+          by name. Diagrams render in SVG, readable at any zoom.
         </p>
       </header>
 

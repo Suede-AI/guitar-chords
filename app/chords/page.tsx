@@ -4,7 +4,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Guitar Chord Chart & Library — Free Fingering Diagrams",
+  title: "Guitar Chord Chart & Library: Free Fingering Diagrams",
   description:
     "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.",
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://guitarchords.info/chords" },
   openGraph: {
     type: "website",
-    title: "Guitar Chord Chart & Library — Free Fingering Diagrams",
+    title: "Guitar Chord Chart & Library: Free Fingering Diagrams",
     description:
       "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.",
     url: "https://guitarchords.info/chords",
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "guitarchords.info — free guitar chord chart with fingering diagrams",
+        alt: "guitarchords.info: free guitar chord chart with fingering diagrams",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guitar Chord Chart & Library — Free Fingering Diagrams",
+    title: "Guitar Chord Chart & Library: Free Fingering Diagrams",
     description:
       "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.",
     images: ["/opengraph-image"],

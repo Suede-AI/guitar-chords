@@ -66,7 +66,7 @@ export function Metronome() {
           }}
         >
           Sample-accurate scheduling with a Chris Wilson lookahead loop. Drag
-          the BPM, tap the tempo, or pick a time signature — the downbeat rings
+          the BPM, tap the tempo, or pick a time signature: the downbeat rings
           higher than the rest.
         </p>
       </header>

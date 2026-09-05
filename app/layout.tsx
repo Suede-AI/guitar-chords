@@ -6,7 +6,7 @@ import { GOOGLE_SITE_VERIFICATION_TOKENS } from "@/lib/google-site-verification"
 export const metadata: Metadata = {
   metadataBase: new URL("https://guitarchords.info"),
   title: {
-    default: "Guitar Chords — Free Chord Library, Scales & Tuner | guitarchords.info",
+    default: "Guitar Chords: Free Chord Library, Scales & Tuner | guitarchords.info",
     template: "%s | guitarchords.info",
   },
   description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Guitar Chords — Free Chord Library, Scales & Tuner",
+    title: "Guitar Chords: Free Chord Library, Scales & Tuner",
     description:
       "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
     siteName: "guitarchords.info",
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "guitarchords.info — free chord library, scale trainer, tuner, and metronome",
+        alt: "guitarchords.info: free chord library, scale trainer, tuner, and metronome",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guitar Chords — Free Chord Library, Scales & Tuner",
+    title: "Guitar Chords: Free Chord Library, Scales & Tuner",
     description:
       "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
     creator: "@johnnysuede",
@@ -127,7 +127,7 @@ const WEBSITE_JSON_LD = {
       url: SUEDE_FOUNDER_URL,
     },
     // The graph identified who publishes the site but never what it does. There
-    // was no application node, no feature list, and no price — even though
+    // was no application node, no feature list, and no price, even though
     // "free", "no sign-up" and "no paywall" are the whole pitch and appear in the
     // meta description. This site competes for high-intent generic queries
     // ("free guitar chord chart"), which is exactly the shape a
@@ -281,7 +281,7 @@ function SiteFooter() {
         className="mx-auto max-w-6xl px-6 py-10"
         style={{ display: "grid", gap: "var(--space-6)" }}
       >
-        {/* Row 1 — promise + site links */}
+        {/* Row 1: promise + site links */}
         <div
           style={{
             display: "flex",
@@ -295,7 +295,7 @@ function SiteFooter() {
           }}
         >
           <span>
-            guitarchords.info — a public reference site. No accounts, no
+            guitarchords.info: a public reference site. No accounts, no
             tracking, no paywall.
           </span>
           <nav
@@ -322,7 +322,7 @@ function SiteFooter() {
 
         <hr className="hr-rule" />
 
-        {/* Row 2 — source + credit. Light Suede mention with real links. */}
+        {/* Row 2: source + credit. Light Suede mention with real links. */}
         <div
           style={{
             display: "flex",
@@ -386,7 +386,7 @@ function SiteFooter() {
 
         <hr className="hr-rule" />
 
-        {/* Row 3 — policy + contact. Linked, not restated, on every route. */}
+        {/* Row 3: policy + contact. Linked, not restated, on every route. */}
         <div
           style={{
             display: "flex",

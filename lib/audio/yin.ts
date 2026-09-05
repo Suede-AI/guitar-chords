@@ -1,4 +1,4 @@
-// YIN pitch detector — monophonic fundamental-frequency estimation.
+// YIN pitch detector: monophonic fundamental-frequency estimation.
 // de Cheveigné & Kawahara (2002), "YIN, a fundamental frequency estimator
 // for speech and music." Ported from Strumly.
 

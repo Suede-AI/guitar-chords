@@ -3,7 +3,7 @@
 // available, then posts the concatenated Float32Array to the main thread for
 // YIN pitch detection.
 //
-// Worklet code is plain ES2017 — no imports. Served from /tuner-audio-processor.js.
+// Worklet code is plain ES2017, no imports. Served from /tuner-audio-processor.js.
 
 const FRAME_SIZE = 8192;
 

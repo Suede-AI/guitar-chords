@@ -5,7 +5,7 @@ import { SCALES } from "@/lib/music/scales";
 import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 
 export const metadata: Metadata = {
-  title: "Guitar Chords — Free Chord Library, Scales & Tuner",
+  title: "Guitar Chords: Free Chord Library, Scales & Tuner",
   description:
     "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://guitarchords.info" },
   openGraph: {
     type: "website",
-    title: "Guitar Chords — Free Chord Library, Scales & Tuner",
+    title: "Guitar Chords: Free Chord Library, Scales & Tuner",
     description:
       "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
     url: "https://guitarchords.info",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "guitarchords.info — free chord library, scale trainer, tuner, and metronome",
+        alt: "guitarchords.info: free chord library, scale trainer, tuner, and metronome",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guitar Chords — Free Chord Library, Scales & Tuner",
+    title: "Guitar Chords: Free Chord Library, Scales & Tuner",
     description:
       "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
     images: ["/opengraph-image"],
@@ -59,7 +59,7 @@ const TOOLS = [
     code: "02",
     title: "Scale Trainer",
     sub: `${Object.keys(SCALES).length} scales · full fretboard`,
-    body: "Pick a root, pick a mode. The entire neck lights up — root in cyan, scale tones outlined. Modes from Ionian to Locrian, plus blues and pentatonics.",
+    body: "Pick a root, pick a mode. The entire neck lights up: root in cyan, scale tones outlined. Modes from Ionian to Locrian, plus blues and pentatonics.",
     accent: "cyan" as const,
   },
   {
@@ -83,7 +83,7 @@ const TOOLS = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO — editorial broadsheet, NOT a centered card */}
+      {/* HERO: editorial broadsheet, NOT a centered card */}
       <section
         className="mx-auto max-w-6xl px-6"
         style={{ paddingTop: "var(--space-section)" }}
@@ -133,14 +133,14 @@ export default function HomePage() {
         <hr className="hr-rule" />
       </div>
 
-      {/* TOOL DOSSIER — staggered two-column editorial grid */}
+      {/* TOOL DOSSIER: staggered two-column editorial grid */}
       <section
         className="mx-auto max-w-6xl px-6"
         style={{ paddingTop: "var(--space-12)" }}
         aria-labelledby="tools-heading"
       >
         {/* The four ToolTiles below each render an h3, and this section had no h2
-            — so the outline jumped h1 -> h3 and the four things this site exists
+            so the outline jumped h1 -> h3 and the four things this site exists
             to do read as sub-items of nothing. A real h2 fixes the outline for
             screen readers and answer engines, and it replaces the aria-label:
             a visible heading referenced by aria-labelledby beats an invisible
@@ -225,7 +225,7 @@ export default function HomePage() {
               fontSize: "var(--text-base)",
             }}
           >
-            <ManifestoItem n="i" body="The tools run on your machine. The tuner and metronome use Web Audio; nothing leaves the page." />
+            <ManifestoItem n="i" body="The tools run on your machine. The tuner and metronome use Web Audio; audio stays in the browser and is not uploaded." />
             <ManifestoItem n="ii" body="The chord and scale data are TypeScript files in this repository. Read them, fork them, port them." />
             <ManifestoItem n="iii" body="No sign-up, no email capture, no funnel. A reference works only if you can use it without trading anything." />
           </ul>
@@ -233,7 +233,7 @@ export default function HomePage() {
       </section>
 
 
-      {/* SIGNAL CHAIN — cross-promo. Paid book; strumly.suedeai.ai/book owns the offer and the price. */}
+      {/* SIGNAL CHAIN: cross-promo. Paid book; strumly.suedeai.ai/book owns the offer and the price. */}
       <section
         className="mx-auto max-w-6xl px-6"
         style={{ paddingTop: "var(--space-section)" }}
@@ -294,7 +294,7 @@ export default function HomePage() {
             >
               A player&rsquo;s history of amplifiers, effects, and the pursuit of
               electric guitar tone. Forty-six chapters covering the signal path from
-              pickup to speaker — how the gear was designed, why it sounds the way
+              pickup to speaker: how the gear was designed, why it sounds the way
               it does, and how working players have used it. Written by the same
               author who built this tool set.
             </p>
@@ -321,7 +321,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SOURCE CREDIT — light, contextual attribution (not a funnel) */}
+      {/* SOURCE CREDIT: light, contextual attribution (not a funnel) */}
       <section
         className="mx-auto max-w-6xl px-6"
         style={{ paddingTop: "var(--space-12)" }}
@@ -374,7 +374,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* AUTHOR CREDIT — compact footer attribution */}
+      {/* AUTHOR CREDIT: compact footer attribution */}
       <section
         className="mx-auto max-w-6xl px-6"
         style={{
@@ -412,7 +412,7 @@ export default function HomePage() {
             >
               Built by
             </span>
-            Jason Colapietro — guitarist, founder of Suede Labs AI, author of{" "}
+            Jason Colapietro, guitarist, founder of Suede Labs AI, author of{" "}
             <a
               className="link"
               href="https://guitar.solutions"

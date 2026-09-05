@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ──────────────────────────────────────────────────────────────────────────
-   Suede Institutional IP Terminal — guitarchords.info
+   Suede Institutional IP Terminal: guitarchords.info
    Anchor palette:
      Rights Red    #9f101a
      Registry Cyan #22d3ee
@@ -100,7 +100,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Subtle film of registry-cyan + rights-red beneath everything — terminal feel,
+/* Subtle film of registry-cyan + rights-red beneath everything. Terminal feel,
    not a generic dark gradient. */
 body {
   background-image:
@@ -136,7 +136,7 @@ body {
 .terminal-card {
   background: var(--color-ink-raised);
   border: 1px solid var(--color-rule-muted);
-  border-radius: 2px; /* terminal feel — not pill-soft */
+  border-radius: 2px; /* terminal feel, not pill-soft */
   transition: border-color var(--duration-fast) var(--ease-out-cubic),
               transform var(--duration-fast) var(--ease-out-cubic),
               background-color var(--duration-fast) var(--ease-out-cubic);
@@ -288,7 +288,7 @@ a.link:hover { color: var(--color-text); }
   }
 }
 
-/* Reduced motion — drop transitions everywhere. */
+/* Reduced motion. Drop transitions everywhere. */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -1,6 +1,6 @@
 # guitarchords.info
 
-> guitarchords.info is a free, open guitar reference tool. No accounts, no tracking, no paywall. It provides chord diagrams, a scale trainer, a chromatic tuner, and a metronome — all in the browser.
+> guitarchords.info is a free, open guitar reference tool. No accounts, no tracking, no paywall. It provides chord diagrams, a scale trainer, a chromatic tuner, and a metronome, all in the browser.
 
 - Publisher: Suede Labs AI (https://suedeai.ai)
 - Creator: Jason Colapietro (also known as Johnny Suede)

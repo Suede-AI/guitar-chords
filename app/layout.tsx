@@ -6,7 +6,7 @@ import { GOOGLE_SITE_VERIFICATION_TOKENS } from "@/lib/google-site-verification"
 export const metadata: Metadata = {
   metadataBase: new URL("https://guitarchords.info"),
   title: {
-    default: "Guitar Chords: Free Chord Library, Scales & Tuner | guitarchords.info",
+    default: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner | guitarchords.info",
     template: "%s | guitarchords.info",
   },
   description:
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Guitar Chords: Free Chord Library, Scales & Tuner",
+    title: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
     description:
       "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
     siteName: "guitarchords.info",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guitar Chords: Free Chord Library, Scales & Tuner",
+    title: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
     description:
       "Free chord chart, scale trainer, chromatic tuner, and metronome. No sign-up.",
     creator: "@johnnysuede",

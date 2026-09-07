@@ -5,7 +5,7 @@ import { SCALES } from "@/lib/music/scales";
 import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 
 export const metadata: Metadata = {
-  title: "Guitar Chords: Free Chord Library, Scales & Tuner",
+  title: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
   description:
     "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://guitarchords.info" },
   openGraph: {
     type: "website",
-    title: "Guitar Chords: Free Chord Library, Scales & Tuner",
+    title: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
     description:
       "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
     url: "https://guitarchords.info",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guitar Chords: Free Chord Library, Scales & Tuner",
+    title: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
     description:
       "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
     images: ["/opengraph-image"],

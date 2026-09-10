@@ -110,6 +110,7 @@ const WEBSITE_JSON_LD = {
       name: "Suede Labs AI",
       url: SUEDE_URL,
       foundingDate: "2024",
+      founder: { "@id": JASON_PERSON_ID },
       sameAs: [
         "https://suedeai.org/",
         "https://github.com/Suede-AI",

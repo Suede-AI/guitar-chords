@@ -2,23 +2,13 @@ import type { Metadata } from "next";
 import { ChordLibrary } from "./ChordLibrary";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
+import { keywordsFor } from "@/lib/keywords";
 
 export const metadata: Metadata = {
   title: "Guitar Chord Chart & Library: Free Fingering Diagrams",
   description:
     "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.",
-  keywords: [
-    "guitar chord chart",
-    "guitar fingering diagrams",
-    "open chords guitar",
-    "barre chords",
-    "guitar chord library",
-    "maj7 guitar chord",
-    "sus chord guitar",
-    "power chords",
-    "free chord chart",
-    "guitar chord diagrams",
-  ],
+  keywords: keywordsFor("/chords"),
   alternates: { canonical: "https://guitarchords.info/chords" },
   openGraph: {
     type: "website",

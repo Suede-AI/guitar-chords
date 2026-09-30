@@ -2,23 +2,13 @@ import type { Metadata } from "next";
 import { Tuner } from "./Tuner";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
+import { keywordsFor } from "@/lib/keywords";
 
 export const metadata: Metadata = {
   title: "Free Online Guitar Tuner: Chromatic, No Download",
   description:
     "Free online chromatic guitar tuner. Works in the browser via Web Audio API, no app download, no sign-up. YIN pitch detection, sub-cent accuracy.",
-  keywords: [
-    "online guitar tuner",
-    "free guitar tuner",
-    "chromatic guitar tuner",
-    "browser guitar tuner",
-    "guitar tuner no download",
-    "YIN pitch detection",
-    "web audio guitar tuner",
-    "tune guitar online",
-    "guitar pitch detector",
-    "chromatic tuner free",
-  ],
+  keywords: keywordsFor("/tuner"),
   alternates: { canonical: "https://guitarchords.info/tuner" },
   openGraph: {
     type: "website",

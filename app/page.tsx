@@ -3,23 +3,13 @@ import Link from "next/link";
 import { FINGERINGS } from "@/lib/chords/fingerings";
 import { SCALES } from "@/lib/music/scales";
 import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
+import { keywordsFor } from "@/lib/keywords";
 
 export const metadata: Metadata = {
   title: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
   description:
     "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
-  keywords: [
-    "guitar chords",
-    "guitar chord chart",
-    "guitar scales",
-    "online guitar tuner",
-    "free metronome",
-    "guitar fingering diagrams",
-    "guitar tools",
-    "guitar reference",
-    "free guitar resources",
-    "guitarchords.info",
-  ],
+  keywords: keywordsFor("/"),
   alternates: { canonical: "https://guitarchords.info" },
   openGraph: {
     type: "website",

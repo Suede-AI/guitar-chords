@@ -2,23 +2,13 @@ import type { Metadata } from "next";
 import { ScaleTrainer } from "./ScaleTrainer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
+import { keywordsFor } from "@/lib/keywords";
 
 export const metadata: Metadata = {
   title: "Guitar Scales Chart: All Keys & Modes",
   description:
     "Interactive guitar scale chart for all 12 keys. Major, minor, pentatonics, blues, and all 7 modes. Full neck visualization. Free, no sign-up.",
-  keywords: [
-    "guitar scales chart",
-    "guitar modes",
-    "pentatonic scale guitar",
-    "blues scale guitar",
-    "major scale guitar",
-    "minor scale guitar",
-    "guitar fretboard scale",
-    "Ionian Dorian Phrygian guitar",
-    "guitar scale trainer",
-    "free guitar scales",
-  ],
+  keywords: keywordsFor("/scales"),
   alternates: { canonical: "https://guitarchords.info/scales" },
   openGraph: {
     type: "website",

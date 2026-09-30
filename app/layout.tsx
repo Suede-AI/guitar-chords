@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Link from "next/link";
 import { GOOGLE_SITE_VERIFICATION_TOKENS } from "@/lib/google-site-verification";
+import { keywordsFor } from "@/lib/keywords";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://guitarchords.info"),
@@ -11,23 +12,7 @@ export const metadata: Metadata = {
   },
   description:
     "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking. A Suede Labs reference site.",
-  keywords: [
-    "guitar chords",
-    "guitar chord chart",
-    "guitar fingering diagrams",
-    "guitar scales",
-    "guitar scale trainer",
-    "online guitar tuner",
-    "chromatic tuner",
-    "online metronome",
-    "free guitar tools",
-    "barre chords",
-    "open chords",
-    "guitar modes",
-    "pentatonic scale guitar",
-    "tap tempo metronome",
-    "Suede Labs",
-  ],
+  keywords: keywordsFor("/"),
   applicationName: "guitarchords.info",
   authors: [{ name: "Jason Colapietro", url: "https://suedeai.ai/founder" }],
   creator: "Jason Colapietro",

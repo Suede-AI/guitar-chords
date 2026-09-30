@@ -2,23 +2,13 @@ import type { Metadata } from "next";
 import { Metronome } from "./Metronome";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
+import { keywordsFor } from "@/lib/keywords";
 
 export const metadata: Metadata = {
   title: "Free Online Metronome: Tap Tempo, BPM, Time Signatures",
   description:
     "Free online metronome with tap tempo, adjustable BPM, and time signature support. Sample-accurate Web Audio scheduling. No download, no sign-up.",
-  keywords: [
-    "online metronome",
-    "free metronome",
-    "tap tempo metronome",
-    "BPM metronome",
-    "guitar metronome",
-    "metronome no download",
-    "time signature metronome",
-    "browser metronome",
-    "web audio metronome",
-    "practice metronome",
-  ],
+  keywords: keywordsFor("/metronome"),
   alternates: { canonical: "https://guitarchords.info/metronome" },
   openGraph: {
     type: "website",

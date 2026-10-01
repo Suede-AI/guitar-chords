@@ -402,7 +402,7 @@ export default function HomePage() {
             >
               Built by
             </span>
-            Jason Colapietro, guitarist, founder of Suede Labs AI, author of{" "}
+            Jason Colapietro, guitarist, founder of Suede AI, author of{" "}
             <a
               className="link"
               href="https://guitar.solutions"
@@ -469,7 +469,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}
             >
-              Suede Labs AI
+              Suede AI
             </a>{" "}
             publishes this reference site and related music tools.
           </p>

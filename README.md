@@ -2,7 +2,7 @@
 
 ### 🎸 [Open the live tools → **guitarchords.info**](https://guitarchords.info)
 
-> **A free tool by [Suede Labs AI](https://suedeai.ai) · Built by [Jason Colapietro](https://suedeai.ai/founder)**
+> **A free tool by [Suede AI](https://suedeai.ai) · Built by [Jason Colapietro](https://suedeai.ai/founder)**
 
 A zero-auth public reference site for guitar players — chord library, scale
 trainer, in-browser tuner, and metronome. No accounts, no analytics, no
@@ -89,7 +89,7 @@ TBD by the owner.
 
 ## About the Creator
 
-Built by **Jason Colapietro** — founder and CEO of [Suede Labs AI](https://suedeai.ai), published author, and guitarist. Suede Labs AI publishes this reference site and related music tools.
+Built by **Jason Colapietro** — founder and CEO of [Suede AI](https://suedeai.ai), published author, and guitarist. Suede AI publishes this reference site and related music tools.
 
 ### Books
 

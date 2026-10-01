@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   applicationName: "guitarchords.info",
   authors: [{ name: "Jason Colapietro", url: "https://suedeai.ai/founder" }],
   creator: "Jason Colapietro",
-  publisher: "Suede Labs AI",
+  publisher: "Suede AI",
   alternates: { canonical: "https://guitarchords.info" },
   verification: { google: GOOGLE_SITE_VERIFICATION_TOKENS },
   openGraph: {
@@ -64,7 +64,7 @@ const SOCIAL_URL =
 const SIGNAL_CHAIN_URL = "https://guitar.solutions";
 
 // This site publishes no policy of its own. The tuner asks for a microphone,
-// so the footer points at the Suede Labs AI pages that already cover the
+// so the footer points at the Suede AI pages that already cover the
 // estate's apps and websites, plus the published address, on every route.
 const PRIVACY_URL = "https://suedeai.ai/privacy";
 const TERMS_URL = "https://suedeai.ai/terms";
@@ -92,7 +92,7 @@ const WEBSITE_JSON_LD = {
     {
       "@type": "Organization",
       "@id": SUEDE_ORG_ID,
-      name: "Suede Labs AI",
+      name: "Suede AI",
       url: SUEDE_URL,
       foundingDate: "2024",
       founder: { "@id": JASON_PERSON_ID },
@@ -418,7 +418,7 @@ function SiteFooter() {
             </a>
           </nav>
           <span>
-            Policies and contact are published by Suede Labs AI, which covers
+            Policies and contact are published by Suede AI, which covers
             this site. Reach the team at{" "}
             <a
               className="link"

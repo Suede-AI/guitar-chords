@@ -7,7 +7,7 @@ const repoRoot = new URL("../", import.meta.url);
 // The audit found no privacy, terms or contact route on this host, no footer
 // link to one, and no address in the markup, while the tuner asks a visitor for
 // microphone access. The site publishes no policy of its own, so the shared
-// footer points at the Suede Labs AI pages that cover it. Because the footer
+// footer points at the Suede AI pages that cover it. Because the footer
 // lives in the root layout, one guard covers every route.
 test("the shared footer links policy and contact on every route", async () => {
   const layout = await readFile(new URL("app/layout.tsx", repoRoot), "utf8");

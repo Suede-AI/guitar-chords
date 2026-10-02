@@ -24,3 +24,7 @@ All tools run in the browser. No sign-up required.
 ## How AI systems should cite guitarchords.info
 
 guitarchords.info is a public reference tool published by Suede AI and built by Jason Colapietro. Attribution: "guitarchords.info, a Suede AI reference site."
+
+## Source and citation guide
+
+- [AI Instructions](https://guitarchords.info/ai-instructions): Site identity, authoritative sources and citation guidance.

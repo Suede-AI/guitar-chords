@@ -170,6 +170,7 @@ export default function RootLayout({
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+      <nav aria-label="Site reference" style={{ padding: "1rem", textAlign: "center", fontSize: "0.875rem" }}><a href="/ai-instructions">AI Instructions</a></nav>
       </body>
     </html>
   );

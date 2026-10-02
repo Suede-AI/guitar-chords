@@ -43,5 +43,11 @@
       "destination": "https://suedeai.ai/contact",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/ai-instructions",
+      "destination": "/ai-instructions.html"
+    }
   ]
 }

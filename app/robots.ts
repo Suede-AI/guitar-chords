@@ -38,6 +38,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: '*', allow: '/' },
       { userAgent: AI_CRAWLERS, allow: '/' },
     ],
-    sitemap: 'https://guitarchords.info/sitemap.xml',
+    sitemap: ['https://guitarchords.info/sitemap.xml', "https://guitarchords.info/ai-instructions-sitemap.xml"],
   }
 }

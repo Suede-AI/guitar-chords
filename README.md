@@ -43,7 +43,9 @@ app/
   page.tsx            # editorial landing with four tool tiles
   globals.css         # design tokens (Rights Red / Registry Cyan / Deep Ink)
   chords/             # chord library route
+  chords/[chord]/     # one static page per chord in lib/chords/fingerings.ts
   scales/             # scale trainer route
+  scales/[scale]/     # one static page per scale in lib/music/scales.ts
   tuner/              # chromatic tuner route (Web Audio + YIN)
   metronome/          # metronome route (Web Audio scheduler)
 components/
@@ -51,8 +53,11 @@ components/
   Fretboard.tsx       # SVG fretboard for the scale trainer
 lib/
   chords/fingerings.ts  # chord-shape data (open/barre/7/maj7/m7/sus/power)
+  chords/pages.ts       # chord tones, slugs and related chords for /chords/[chord]
   music/scales.ts       # scale theory primitives (12 scales)
   music/fretboard.ts    # pitch-class math for standard tuning
+  music/spelling.ts     # letter-based note spelling (Bb, not A#, in G minor)
+  music/scale-pages.ts  # formulas, 12-key spellings and related scales for /scales/[scale]
   audio/note.ts         # Hz <-> note math, standard-tuning reference
   audio/yin.ts          # YIN pitch detector
   audio/use-tuner.ts    # React hook for the tuner

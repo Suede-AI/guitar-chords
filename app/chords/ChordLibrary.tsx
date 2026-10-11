@@ -7,7 +7,9 @@ import {
   CATEGORY_ORDER,
   type ChordCategory,
 } from "@/lib/chords/fingerings";
+import Link from "next/link";
 import { ChordDiagram } from "@/components/ChordDiagram";
+import { chordDisplayName, chordPath } from "@/lib/chords/pages";
 import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 
 export function ChordLibrary() {
@@ -82,7 +84,8 @@ export function ChordLibrary() {
           }}
         >
           The shapes a player actually reaches for. Filter by category, search
-          by name. Diagrams render in SVG, readable at any zoom.
+          by name. Diagrams render in SVG, readable at any zoom. Open a chord
+          for its notes, intervals and related chords.
         </p>
       </header>
 
@@ -147,7 +150,13 @@ export function ChordLibrary() {
         >
           {entries.map(([name]) => (
             <li key={name} style={{ display: "flex" }}>
-              <ChordDiagram chord={name} />
+              <Link
+                href={chordPath(name)}
+                aria-label={`${chordDisplayName(name)} guitar chord: notes, intervals and related chords`}
+                style={{ display: "flex", width: "100%", textDecoration: "none" }}
+              >
+                <ChordDiagram chord={name} />
+              </Link>
             </li>
           ))}
         </ul>

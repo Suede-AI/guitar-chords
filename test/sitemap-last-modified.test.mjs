@@ -1,22 +1,9 @@
 import assert from "node:assert/strict";
-import { Buffer } from "node:buffer";
-import { readFile } from "node:fs/promises";
 import { test } from "node:test";
-import ts from "typescript";
-
-const sitemapModule = new URL("../app/sitemap.ts", import.meta.url);
+import { importTs } from "./support/load-ts.mjs";
 
 async function loadSitemap() {
-  const source = await readFile(sitemapModule, "utf8");
-  const javascript = ts.transpileModule(source, {
-    compilerOptions: {
-      module: ts.ModuleKind.ESNext,
-      target: ts.ScriptTarget.ES2022,
-    },
-  }).outputText;
-  const moduleUrl = `data:text/javascript;base64,${Buffer.from(javascript).toString("base64")}`;
-
-  return (await import(moduleUrl)).default;
+  return (await importTs("app/sitemap.ts")).default;
 }
 
 test("sitemap dates include route and shared-layout changes", async () => {
@@ -28,11 +15,24 @@ test("sitemap dates include route and shared-layout changes", async () => {
     ]),
   );
 
-  assert.deepEqual(datesByUrl, {
+  const coreRoutes = Object.fromEntries(
+    Object.entries(datesByUrl).filter(
+      ([url]) => !/\/(chords|scales)\/[^/]+$/.test(url),
+    ),
+  );
+  assert.deepEqual(coreRoutes, {
     "https://guitarchords.info": "2026-09-05",
-    "https://guitarchords.info/chords": "2026-09-05",
-    "https://guitarchords.info/scales": "2026-09-05",
+    "https://guitarchords.info/chords": "2026-10-11",
+    "https://guitarchords.info/scales": "2026-10-11",
     "https://guitarchords.info/tuner": "2026-09-05",
     "https://guitarchords.info/metronome": "2026-09-05",
   });
+
+  const referencePages = Object.entries(datesByUrl).filter(([url]) =>
+    /\/(chords|scales)\/[^/]+$/.test(url),
+  );
+  assert.ok(referencePages.length > 0, "chord and scale pages are in the sitemap");
+  for (const [url, date] of referencePages) {
+    assert.equal(date, "2026-10-11", url);
+  }
 });

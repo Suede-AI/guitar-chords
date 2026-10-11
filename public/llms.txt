@@ -12,6 +12,8 @@
 - **Scale trainer**: Modes and scales with fretboard visualization
 - **Online tuner**: Chromatic tuner that works in the browser with no installation
 - **Metronome**: Tap-tempo metronome with adjustable BPM
+- **Chord pages**: One page per chord in the library with its fingering chart, chord tones, intervals and related chords, for example https://guitarchords.info/chords/c-major
+- **Scale pages**: One page per scale in the trainer with its formula, notes in all 12 keys, fretboard positions and related scales, for example https://guitarchords.info/scales/major
 
 All tools run in the browser. No sign-up required.
 

@@ -30,6 +30,11 @@ export function trailFor(name: string, path: string): Crumb[] {
   ];
 }
 
+/** A trail through a section page, e.g. Home / Guitar Chord Chart / C major. */
+export function nestedTrailFor(section: Crumb, name: string, path: string): Crumb[] {
+  return [{ name: "Home", path: "/" }, section, { name, path }];
+}
+
 export function breadcrumbJsonLd(trail: Crumb[]) {
   return {
     "@context": "https://schema.org",

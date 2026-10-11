@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ScaleTrainer } from "./ScaleTrainer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
 import { keywordsFor } from "@/lib/keywords";
+import { SCALES, SCALE_ORDER } from "@/lib/music/scales";
+import { scaleFormula, scalePath } from "@/lib/music/scale-pages";
 
 export const metadata: Metadata = {
   title: "Guitar Scales Chart: All Keys & Modes",
@@ -46,6 +49,47 @@ export default function ScalesPage() {
       />
       <Breadcrumb trail={BREADCRUMB_TRAIL} widthClassName="max-w-6xl" />
       <ScaleTrainer />
+      <section
+        className="mx-auto max-w-6xl px-6"
+        aria-labelledby="scale-pages-heading"
+        style={{ paddingTop: "var(--space-12)", display: "grid", gap: "var(--space-4)" }}
+      >
+        <h2
+          id="scale-pages-heading"
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "var(--text-xl)",
+            margin: 0,
+            letterSpacing: "-0.01em",
+          }}
+        >
+          Scale reference pages
+        </h2>
+        <p style={{ margin: 0, color: "var(--color-text-muted)", fontSize: "var(--text-sm)", maxWidth: "70ch" }}>
+          Formula, notes in all 12 keys, fretboard positions and related scales for each scale in the trainer.
+        </p>
+        <ul
+          style={{
+            listStyle: "none",
+            padding: 0,
+            margin: 0,
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+            gap: "var(--space-2) var(--space-4)",
+            fontSize: "var(--text-sm)",
+            color: "var(--color-text-muted)",
+          }}
+        >
+          {SCALE_ORDER.map((id) => (
+            <li key={id}>
+              <Link href={scalePath(id)} className="link">
+                {SCALES[id].name} scale
+              </Link>
+              {`: ${scaleFormula(id).join(" ")}`}
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   );
 }

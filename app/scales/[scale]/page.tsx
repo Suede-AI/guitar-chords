@@ -131,6 +131,9 @@ export default async function ScalePage({ params }: { params: Promise<Params> })
   const exampleRootPc = pitchClassOfName(EXAMPLE_ROOT);
   const examplePcs = buildScale(exampleRootPc, id);
   const exampleNotes = spellScale(EXAMPLE_ROOT, id);
+  const exampleLabels = Object.fromEntries(
+    exampleNotes.map((note) => [pitchClassOfName(note), note]),
+  );
   const fittingChords = CHORD_NAMES.filter((name) =>
     containsAll(examplePcs, formulaPitchClasses(name)),
   );
@@ -257,7 +260,11 @@ export default async function ScalePage({ params }: { params: Promise<Params> })
             root frets in the table above.
           </p>
           <div style={{ overflowX: "auto" }}>
-            <Fretboard highlightedPcs={examplePcs} rootPc={exampleRootPc} />
+            <Fretboard
+              highlightedPcs={examplePcs}
+              rootPc={exampleRootPc}
+              noteLabels={exampleLabels}
+            />
           </div>
           <p style={BODY_STYLE}>
             Pick another root in the{" "}

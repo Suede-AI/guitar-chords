@@ -12,6 +12,12 @@ interface Props {
   frets?: number;
   /** Whether to display the note letter inside each dot. */
   showNoteNames?: boolean;
+  /**
+   * Spelled note names keyed by pitch class (e.g. 3 -> "Eb"), so a diagram
+   * can match a scale's spelling. Pitch classes without a label fall back to
+   * the sharp names.
+   */
+  noteLabels?: Readonly<Partial<Record<number, string>>>;
 }
 
 const STRING_LABELS = ["E", "A", "D", "G", "B", "e"] as const;
@@ -28,6 +34,7 @@ export function Fretboard({
   rootPc,
   frets = 15,
   showNoteNames = true,
+  noteLabels,
 }: Props) {
   const width = NUT_X + FRET_W * frets + 20;
   const height = STRING_Y0 + STRING_GAP * 5 + 30;
@@ -170,7 +177,7 @@ export function Fretboard({
                   fill={isRoot ? "var(--color-ink)" : "var(--color-text)"}
                   fontFamily="var(--font-mono)"
                 >
-                  {NOTE_NAMES[pc]}
+                  {noteLabels?.[pc] ?? NOTE_NAMES[pc]}
                 </text>
               )}
             </g>

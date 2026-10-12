@@ -20,6 +20,7 @@ const AI_CRAWLERS = [
   'Google-Extended',
   'Applebot-Extended',
   'Amazonbot',
+  'DuckAssistBot',
   'FacebookBot',
   'Twitterbot',
   'LinkedInBot',
@@ -38,6 +39,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: '*', allow: '/' },
       { userAgent: AI_CRAWLERS, allow: '/' },
     ],
-    sitemap: ['https://guitarchords.info/sitemap.xml', "https://guitarchords.info/ai-instructions-sitemap.xml"],
+    sitemap: ['https://guitarchords.info/sitemap.xml', 'https://guitarchords.info/ai-instructions-sitemap.xml'],
   }
 }

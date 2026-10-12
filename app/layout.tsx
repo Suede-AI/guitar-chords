@@ -7,11 +7,11 @@ import { keywordsFor } from "@/lib/keywords";
 export const metadata: Metadata = {
   metadataBase: new URL("https://guitarchords.info"),
   title: {
-    default: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner | guitarchords.info",
+    default: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
     template: "%s | guitarchords.info",
   },
   description:
-    "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking. A Suede Labs reference site.",
+    "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking. A Suede AI reference site.",
   keywords: keywordsFor("/"),
   applicationName: "guitarchords.info",
   authors: [{ name: "Jason Colapietro", url: "https://suedeai.ai/founder" }],
@@ -93,6 +93,7 @@ const WEBSITE_JSON_LD = {
       "@type": "Organization",
       "@id": SUEDE_ORG_ID,
       name: "Suede AI",
+      alternateName: ["Suede Labs"],
       url: SUEDE_URL,
       foundingDate: "2024",
       founder: { "@id": JASON_PERSON_ID },
@@ -344,7 +345,7 @@ function SiteFooter() {
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              Suede Labs
+              Suede AI
             </a>
             {" project by "}
             <a

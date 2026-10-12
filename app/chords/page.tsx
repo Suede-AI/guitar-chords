@@ -3,18 +3,21 @@ import { ChordLibrary } from "./ChordLibrary";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
 import { keywordsFor } from "@/lib/keywords";
+import { pageTitle, webPageJsonLd } from "@/lib/seo";
+
+const TITLE = pageTitle("Guitar Chord Chart & Library: Free Fingering Diagrams");
+const DESCRIPTION =
+  "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.";
 
 export const metadata: Metadata = {
-  title: "Guitar Chord Chart & Library: Free Fingering Diagrams",
-  description:
-    "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.",
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
   keywords: keywordsFor("/chords"),
   alternates: { canonical: "https://guitarchords.info/chords" },
   openGraph: {
     type: "website",
-    title: "Guitar Chord Chart & Library: Free Fingering Diagrams",
-    description:
-      "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://guitarchords.info/chords",
     images: [
       {
@@ -27,15 +30,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guitar Chord Chart & Library: Free Fingering Diagrams",
-    description:
-      "Free guitar chord chart with SVG fingering diagrams for open chords, barre chords, 7ths, maj7, min7, sus, and power chords. Standard tuning. No sign-up.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/opengraph-image"],
   },
 };
 
 const BREADCRUMB_TRAIL = trailFor("Guitar Chord Chart", "/chords");
 const BREADCRUMB_JSON_LD = breadcrumbJsonLd(BREADCRUMB_TRAIL);
+const PAGE_JSON_LD = webPageJsonLd({
+  path: "/chords",
+  name: TITLE,
+  description: DESCRIPTION,
+  type: "CollectionPage",
+});
 
 export default function ChordsPage() {
   return (
@@ -43,6 +51,10 @@ export default function ChordsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PAGE_JSON_LD) }}
       />
       <Breadcrumb trail={BREADCRUMB_TRAIL} widthClassName="max-w-6xl" />
       <ChordLibrary />

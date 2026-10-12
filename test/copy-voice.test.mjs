@@ -74,11 +74,10 @@ function stripComments(source) {
 // their own count, and "All" is the chord-filter control label.
 const ABSOLUTES = /\b(every|nothing|never)\b/i;
 
-// Scoped to the page copy, not to public/llms.txt. That file still reads "Fingering
-// diagrams for every chord across all keys and voicings" on line 11. De-quantifying
-// it would change what the catalogue claims to cover, which is a content call rather
-// than the punctuation-and-wording sweep this guard exists for. Named here so the
-// remaining hit stays visible instead of hiding behind an exclusion list.
+// Scoped to the page copy, not to public/llms.txt. That file used to claim
+// "fingering diagrams for every chord across all keys and voicings"; it now states
+// the library's real counts (39 shapes, 12 scales), so it carries no absolute, but
+// it is still a hand-written index rather than page copy and stays out of scope.
 test("page copy uses no unbounded absolute", async () => {
   for (const [file, contents] of await pageCopy()) {
     for (const line of stripComments(contents).split("\n")) {

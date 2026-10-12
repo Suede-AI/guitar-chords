@@ -14,6 +14,7 @@ import {
 } from "@/lib/chords/pages";
 import { scalePath } from "@/lib/music/scale-pages";
 import { keywordsFor } from "@/lib/keywords";
+import { pageTitle, titleCase, webPageJsonLd } from "@/lib/seo";
 
 type Params = { chord: string };
 
@@ -27,7 +28,9 @@ export function generateStaticParams(): Params[] {
 function pageCopy(name: string) {
   const data = chordPageData(name);
   const notes = data.tones.map((t) => t.note).join(" ");
-  const title = `${data.displayName} guitar chord: fingering chart, notes and intervals`;
+  // Chord name first, then the intent. The longest name in the library (F#
+  // minor) still fits the branded form inside the 65-character budget.
+  const title = pageTitle(`${titleCase(data.displayName)} Guitar Chord: Chart, Notes & Formula`);
   const aside = data.displayName === data.name ? data.longName : data.name;
   const description = `${data.displayName} (${aside}) guitar chord in standard tuning: ${data.shape} fingering diagram, chord tones ${notes}, formula ${data.formula}, and related chords.`;
   return { data, title, description };
@@ -44,7 +47,7 @@ export async function generateMetadata({
   const { data, title, description } = pageCopy(name);
   const url = crumbUrl(data.path);
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: keywordsFor("/chords/[chord]"),
     alternates: { canonical: url },
@@ -129,7 +132,7 @@ export default async function ChordPage({ params }: { params: Promise<Params> })
   const name = chordNameForSlug(chord);
   if (!name) notFound();
 
-  const { data } = pageCopy(name);
+  const { data, title, description } = pageCopy(name);
   const related = relatedChords(name);
   const trail = nestedTrailFor(
     { name: "Guitar Chord Chart", path: "/chords" },
@@ -137,6 +140,7 @@ export default async function ChordPage({ params }: { params: Promise<Params> })
     data.path,
   );
   const jsonLd = breadcrumbJsonLd(trail);
+  const pageJsonLd = webPageJsonLd({ path: data.path, name: title, description });
   const omitted = data.tones.filter((t) => !t.inShape);
 
   return (
@@ -144,6 +148,10 @@ export default async function ChordPage({ params }: { params: Promise<Params> })
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
       <Breadcrumb trail={trail} widthClassName="max-w-6xl" />
       <article

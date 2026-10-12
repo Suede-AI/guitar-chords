@@ -23,6 +23,7 @@ import {
 } from "@/lib/music/scale-pages";
 import { pitchClassOfName } from "@/lib/music/spelling";
 import { keywordsFor } from "@/lib/keywords";
+import { pageTitle, titleCase, webPageJsonLd } from "@/lib/seo";
 
 type Params = { scale: string };
 
@@ -33,11 +34,22 @@ export function generateStaticParams(): Params[] {
   return SCALE_SLUGS.map((scale) => ({ scale }));
 }
 
+const DESCRIPTION_MAX = 160;
+
 function pageCopy(id: ScaleId) {
   const def = SCALES[id];
   const formula = scaleFormula(id).join(" ");
-  const title = `${def.name} scale on guitar: notes, formula and fretboard positions`;
-  const description = `${def.name} scale formula ${formula} (${scaleSteps(id).join(" ")}), its notes in all 12 keys, fretboard positions and related scales. ${def.description}`;
+  const title = pageTitle(`${titleCase(def.name)} Scale on Guitar: Notes, Formula & Positions`);
+  // The longest wording that keeps the snippet inside 160 characters. Scale
+  // descriptions vary in length, so the shorter forms drop the step pattern
+  // and then the related-scales mention before they drop the scale's color.
+  const candidates = [
+    `${def.name} scale formula ${formula} (${scaleSteps(id).join(" ")}), its notes in all 12 keys, fretboard positions and related scales. ${def.description}`,
+    `${def.name} scale on guitar: formula ${formula}, notes in all 12 keys, fretboard positions and related scales. ${def.description}`,
+    `${def.name} scale on guitar: formula ${formula}, notes in all 12 keys and fretboard positions. ${def.description}`,
+  ];
+  const description =
+    candidates.find((text) => text.length <= DESCRIPTION_MAX) ?? candidates[candidates.length - 1];
   return { def, formula, title, description };
 }
 
@@ -52,7 +64,7 @@ export async function generateMetadata({
   const { def, title, description } = pageCopy(id);
   const url = crumbUrl(scalePath(id));
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: keywordsFor("/scales/[scale]"),
     alternates: { canonical: url },
@@ -121,7 +133,7 @@ export default async function ScalePage({ params }: { params: Promise<Params> })
   const id = scaleIdForSlug(scale);
   if (!id) notFound();
 
-  const { def, formula } = pageCopy(id);
+  const { def, formula, title, description } = pageCopy(id);
   const steps = scaleSteps(id);
   const formulaLabels = scaleFormula(id);
   const keys = scaleInAllKeys(id);
@@ -144,12 +156,17 @@ export default async function ScalePage({ params }: { params: Promise<Params> })
     scalePath(id),
   );
   const jsonLd = breadcrumbJsonLd(trail);
+  const pageJsonLd = webPageJsonLd({ path: scalePath(id), name: title, description });
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
       <Breadcrumb trail={trail} widthClassName="max-w-6xl" />
       <article

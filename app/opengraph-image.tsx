@@ -92,7 +92,7 @@ export default function OgImage() {
             textTransform: "uppercase",
           }}
         >
-          No sign-up · No tracking · Suede Labs
+          No sign-up · No tracking · Suede AI
         </div>
       </div>
     ),

@@ -4,18 +4,21 @@ import { FINGERINGS } from "@/lib/chords/fingerings";
 import { SCALES } from "@/lib/music/scales";
 import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 import { keywordsFor } from "@/lib/keywords";
+import { webPageJsonLd } from "@/lib/seo";
+
+const TITLE = "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner";
+const DESCRIPTION =
+  "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.";
 
 export const metadata: Metadata = {
-  title: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
-  description:
-    "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
   keywords: keywordsFor("/"),
   alternates: { canonical: "https://guitarchords.info" },
   openGraph: {
     type: "website",
-    title: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
-    description:
-      "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://guitarchords.info",
     images: [
       {
@@ -28,9 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner",
-    description:
-      "Free guitar chord chart with fingering diagrams, scale trainer, chromatic tuner, and metronome. No sign-up, no tracking.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/opengraph-image"],
   },
 };
@@ -70,9 +72,15 @@ const TOOLS = [
   },
 ];
 
+const PAGE_JSON_LD = webPageJsonLd({ path: "/", name: TITLE, description: DESCRIPTION });
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PAGE_JSON_LD) }}
+      />
       {/* HERO: editorial broadsheet, NOT a centered card */}
       <section
         className="mx-auto max-w-6xl px-6"

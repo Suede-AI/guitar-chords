@@ -4,20 +4,23 @@ import { ScaleTrainer } from "./ScaleTrainer";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { breadcrumbJsonLd, trailFor } from "@/lib/breadcrumbs";
 import { keywordsFor } from "@/lib/keywords";
+import { pageTitle, webPageJsonLd } from "@/lib/seo";
 import { SCALES, SCALE_ORDER } from "@/lib/music/scales";
 import { scaleFormula, scalePath } from "@/lib/music/scale-pages";
 
+const TITLE = pageTitle("Guitar Scales Chart: All Keys & Modes");
+const DESCRIPTION =
+  "Interactive guitar scale chart for all 12 keys. Major, minor, pentatonics, blues, and all 7 modes. Full neck visualization. Free, no sign-up.";
+
 export const metadata: Metadata = {
-  title: "Guitar Scales Chart: All Keys & Modes",
-  description:
-    "Interactive guitar scale chart for all 12 keys. Major, minor, pentatonics, blues, and all 7 modes. Full neck visualization. Free, no sign-up.",
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
   keywords: keywordsFor("/scales"),
   alternates: { canonical: "https://guitarchords.info/scales" },
   openGraph: {
     type: "website",
-    title: "Guitar Scales Chart: All Keys & Modes",
-    description:
-      "Interactive guitar scale chart for all 12 keys. Major, minor, pentatonics, blues, and all 7 modes. Full neck visualization. Free, no sign-up.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://guitarchords.info/scales",
     images: [
       {
@@ -30,15 +33,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guitar Scales Chart: All Keys & Modes",
-    description:
-      "Interactive guitar scale chart for all 12 keys. Major, minor, pentatonics, blues, and all 7 modes. Full neck visualization. Free, no sign-up.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/opengraph-image"],
   },
 };
 
 const BREADCRUMB_TRAIL = trailFor("Guitar Scales", "/scales");
 const BREADCRUMB_JSON_LD = breadcrumbJsonLd(BREADCRUMB_TRAIL);
+const PAGE_JSON_LD = webPageJsonLd({
+  path: "/scales",
+  name: TITLE,
+  description: DESCRIPTION,
+  type: "CollectionPage",
+});
 
 export default function ScalesPage() {
   return (
@@ -46,6 +54,10 @@ export default function ScalesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_JSON_LD) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PAGE_JSON_LD) }}
       />
       <Breadcrumb trail={BREADCRUMB_TRAIL} widthClassName="max-w-6xl" />
       <ScaleTrainer />

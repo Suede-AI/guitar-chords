@@ -39,9 +39,9 @@ export function Tuner() {
             letterSpacing: "-0.01em",
           }}
         >
-          One mic.{" "}
+          Online guitar tuner.{" "}
           <span style={{ color: "var(--color-registry-cyan)" }}>
-            Zero servers.
+            Find your pitch.
           </span>
         </h1>
         <p

@@ -54,7 +54,7 @@ export function Metronome() {
             letterSpacing: "-0.01em",
           }}
         >
-          A click track.{" "}
+          Online metronome.{" "}
           <span style={{ color: "var(--color-rights-red)" }}>Locked in.</span>
         </h1>
         <p

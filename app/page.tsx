@@ -270,7 +270,7 @@ export default function HomePage() {
                 marginTop: "var(--space-2)",
               }}
             >
-              46 chapters · complete edition
+              66 chapters · 111 workshops · complete edition
             </span>
           </div>
           <div
@@ -291,9 +291,9 @@ export default function HomePage() {
               }}
             >
               A player&rsquo;s history of amplifiers, effects, and the pursuit of
-              electric guitar tone. Forty-six chapters covering the signal path from
-              pickup to speaker: how the gear was designed, why it sounds the way
-              it does, and how working players have used it. Written by the same
+              electric guitar tone. Sixty-six chapters and 111 song workshops covering
+              the signal path from pickup to speaker: how the gear was designed, why
+              it sounds the way it does, and how working players have used it. Written by the same
               author who built this tool set.
             </p>
             <a

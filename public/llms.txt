@@ -20,8 +20,8 @@ All tools run in the browser. No sign-up required.
 
 ## Related properties
 
-- Guitar editorial and rights content: https://guitarhub.org
-- Guitar signal chain and amp history: https://guitar.solutions
+- GuitarHub, guitar lessons and practice tools: https://guitarhub.org
+- The Signal Chain, Jason Colapietro's book on electric guitar tone (66 chapters, 111 song workshops): https://guitar.solutions
 - Directory of Jason Colapietro's guitar books and tools: https://guitar.services
 - Strumly, the Suede AI guitar coach: https://strumly.suedeai.ai
 - Suede AI (publisher): https://suedeai.ai

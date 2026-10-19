@@ -350,3 +350,84 @@ export function relatedChords(name: string): RelatedChords {
 
   return { sameRoot, relative, key, inKey };
 }
+
+// Shape facts and chord changes ------------------------------------------------
+//
+// Both are read off the frets alone, so every page gets guidance specific to
+// its own shape without a sentence anyone had to write per chord. A "fretted
+// note that stays in place" is the same fret on the same string in both
+// shapes: the pivot players use for C to Am (4th string fret 2 and 2nd string
+// fret 1 stay down) or G to Em.
+
+export interface ShapeFacts {
+  sounded: number;
+  open: number;
+  muted: number;
+  fretted: number;
+  /** Lowest and highest fretted positions, or null for an all-open shape. */
+  span: { low: number; high: number } | null;
+}
+
+export function shapeFacts(fingering: Fingering): ShapeFacts {
+  const frets = fingering.frets;
+  const fretted = frets.filter((f): f is number => typeof f === "number" && f > 0);
+  return {
+    sounded: frets.filter((f) => f !== "x").length,
+    open: frets.filter((f) => f === 0 || f === null).length,
+    muted: frets.filter((f) => f === "x").length,
+    fretted: fretted.length,
+    span: fretted.length ? { low: Math.min(...fretted), high: Math.max(...fretted) } : null,
+  };
+}
+
+export interface HeldNote {
+  string: string;
+  fret: number;
+}
+
+export interface ChordChange {
+  name: string;
+  path: string;
+  /** Fretted notes both shapes share (same string, same fret). */
+  held: HeldNote[];
+  /** Fretted notes the destination shape adds. */
+  added: number;
+  /** Chord tones (pitch classes) the two shapes have in common. */
+  commonTones: number;
+}
+
+/**
+ * The library chords that are quickest to reach from `name`: the most fretted
+ * notes left in place first, then the fewest new notes to fret, then the most
+ * shared chord tones, then library order. Only changes that keep at least one
+ * fretted note in place qualify.
+ */
+export function smoothestChanges(name: string, limit = 4): ChordChange[] {
+  const from = FINGERINGS[name];
+  if (!from) throw new Error(`No fingering for ${name}`);
+  const fromPcs = soundingPitchClasses(from);
+  const changes: (ChordChange & { order: number })[] = [];
+  CHORD_NAMES.forEach((other, order) => {
+    if (other === name) return;
+    const to = FINGERINGS[other];
+    const held: HeldNote[] = [];
+    let toFretted = 0;
+    to.frets.forEach((f, i) => {
+      if (typeof f !== "number" || f <= 0) return;
+      toFretted += 1;
+      if (from.frets[i] === f) held.push({ string: STRING_NAMES[i], fret: f });
+    });
+    if (held.length === 0) return;
+    let commonTones = 0;
+    for (const pc of soundingPitchClasses(to)) if (fromPcs.has(pc)) commonTones += 1;
+    changes.push({ name: other, path: chordPath(other), held, added: toFretted - held.length, commonTones, order });
+  });
+  changes.sort(
+    (a, b) =>
+      b.held.length - a.held.length ||
+      a.added - b.added ||
+      b.commonTones - a.commonTones ||
+      a.order - b.order,
+  );
+  return changes.slice(0, limit).map(({ order: _order, ...c }) => c);
+}

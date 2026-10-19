@@ -154,7 +154,7 @@ ${guideSection(METRONOME_GUIDE)}
 
 - The Signal Chain, Jason Colapietro's book on electric guitar tone: https://guitar.solutions
 - Strumly, the Suede AI guitar coach: https://strumly.suedeai.ai
-- GuitarHub, guitar lessons and editorial: https://guitarhub.org
+- GuitarHub, guitar lessons and practice tools: https://guitarhub.org
 - guitar.services, a directory of Jason Colapietro's guitar books and tools: https://guitar.services
 
 ## Citing guitarchords.info

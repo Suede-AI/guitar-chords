@@ -12,7 +12,7 @@ const BASE = "https://guitarchords.info";
 const SHARED_LAYOUT_LAST_MODIFIED = "2026-09-05";
 
 const ROUTE_LAST_MODIFIED = {
-  "/": "2026-10-12",
+  "/": "2026-10-18",
   "/chords": "2026-10-12",
   "/scales": "2026-10-12",
   "/tuner": "2026-10-12",
@@ -26,6 +26,9 @@ const ROUTE_LAST_MODIFIED = {
  * page templates change.
  */
 const REFERENCE_PAGES_LAST_MODIFIED = "2026-10-12";
+
+/** The chord template gained its chord-change section on 2026-10-18. */
+const CHORD_PAGES_LAST_MODIFIED = "2026-10-18";
 
 type Route = keyof typeof ROUTE_LAST_MODIFIED;
 
@@ -53,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/ai-instructions`, lastModified: lastModified("/ai-instructions"), changeFrequency: "yearly", priority: 0.3 },
     ...CHORD_SLUGS.map((slug) => ({
       url: `${BASE}/chords/${slug}`,
-      lastModified: laterOf(REFERENCE_PAGES_LAST_MODIFIED),
+      lastModified: laterOf(CHORD_PAGES_LAST_MODIFIED),
       changeFrequency: "yearly" as const,
       priority: 0.6,
     })),

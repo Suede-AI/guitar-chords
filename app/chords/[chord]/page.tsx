@@ -10,7 +10,11 @@ import {
   chordNameForSlug,
   chordPageData,
   relatedChords,
+  shapeFacts,
+  smoothestChanges,
+  type ChordChange,
   type RelatedChord,
+  type ShapeFacts,
 } from "@/lib/chords/pages";
 import { scalePath } from "@/lib/music/scale-pages";
 import { keywordsFor } from "@/lib/keywords";
@@ -101,6 +105,30 @@ const H2_STYLE = {
   letterSpacing: "-0.01em",
 } as const;
 
+const COUNT_WORDS = ["no", "one", "two", "three", "four", "five", "six"] as const;
+const countWord = (n: number) => COUNT_WORDS[n] ?? String(n);
+const plural = (n: number, one: string, many: string) => `${countWord(n)} ${n === 1 ? one : many}`;
+
+/** One sentence describing the shape, read off its frets. */
+function shapeSentence(name: string, facts: ShapeFacts): string {
+  const parts = [`${name} sounds ${plural(facts.sounded, "string", "strings")}`];
+  if (facts.muted > 0) parts[0] += ` with ${plural(facts.muted, "string", "strings")} muted`;
+  const fretted = plural(facts.fretted, "fretted position", "fretted positions");
+  const where = facts.span
+    ? facts.span.low === facts.span.high
+      ? `all at fret ${facts.span.low}`
+      : `between frets ${facts.span.low} and ${facts.span.high}`
+    : "";
+  const open = facts.open > 0 ? `, plus ${plural(facts.open, "open string", "open strings")}` : "";
+  return `${parts[0]}: ${fretted} ${where}${open}.`.replace(/ +/g, " ").replace(" .", ".");
+}
+
+function changeLabel(c: ChordChange): string {
+  const held = c.held.map((h) => `${h.string.split(" ")[0]} string fret ${h.fret}`).join(", ");
+  const added = `${plural(c.added, "new position", "new positions")} to fret`;
+  return `keep ${plural(c.held.length, "fretted note", "fretted notes")} in place (${held}), ${added}`;
+}
+
 function ChordLinkList({ items }: { items: RelatedChord[] }) {
   return (
     <ul
@@ -142,6 +170,8 @@ export default async function ChordPage({ params }: { params: Promise<Params> })
   const jsonLd = breadcrumbJsonLd(trail);
   const pageJsonLd = webPageJsonLd({ path: data.path, name: title, description });
   const omitted = data.tones.filter((t) => !t.inShape);
+  const facts = shapeFacts(data.fingering);
+  const changes = smoothestChanges(name);
 
   return (
     <>
@@ -267,6 +297,39 @@ export default async function ChordPage({ params }: { params: Promise<Params> })
               ))}
             </tbody>
           </table>
+        </section>
+
+        <section aria-labelledby="changes-heading" style={{ display: "grid", gap: "var(--space-3)" }}>
+          <h2 id="changes-heading" style={H2_STYLE}>
+            Changing chords from {data.name}
+          </h2>
+          <p style={{ margin: 0, color: "var(--color-text-muted)", maxWidth: "62ch" }}>
+            {shapeSentence(data.name, facts)} The quickest changes leave fretted
+            notes where they are, so the hand pivots instead of lifting off the
+            neck. These are the chords in this library that share the most
+            fretted notes with the {data.name} shape.
+          </p>
+          <ul
+            style={{
+              margin: 0,
+              paddingLeft: "1.1rem",
+              display: "grid",
+              gap: "var(--space-2)",
+              fontSize: "var(--text-sm)",
+              color: "var(--color-text-muted)",
+              maxWidth: "70ch",
+            }}
+          >
+            {changes.map((c) => (
+              <li key={c.name}>
+                {data.name} to{" "}
+                <Link href={c.path} className="link">
+                  {c.name}
+                </Link>
+                {`: ${changeLabel(c)}.`}
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section aria-labelledby="related-heading" style={{ display: "grid", gap: "var(--space-4)" }}>

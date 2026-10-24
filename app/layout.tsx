@@ -117,9 +117,9 @@ const WEBSITE_JSON_LD = {
     // "free", "no sign-up" and "no paywall" are the whole pitch and appear in the
     // meta description. This site competes for high-intent generic queries
     // ("free guitar chord chart"), which is exactly the shape a
-    // SoftwareApplication with a zero-price Offer describes.
+    // WebApplication with a zero-price Offer describes.
     {
-      "@type": "SoftwareApplication",
+      "@type": "WebApplication",
       "@id": "https://guitarchords.info/#app",
       name: "Guitar Chords",
       url: "https://guitarchords.info",

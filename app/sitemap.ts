@@ -9,7 +9,7 @@ const BASE = "https://guitarchords.info";
  * when its page or dependencies change, and bump the shared date when the root
  * layout changes because every route renders it.
  */
-const SHARED_LAYOUT_LAST_MODIFIED = "2026-09-05";
+const SHARED_LAYOUT_LAST_MODIFIED = "2026-10-24";
 
 const ROUTE_LAST_MODIFIED = {
   "/": "2026-10-18",
@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/metronome`, lastModified: lastModified("/metronome"), changeFrequency: "yearly", priority: 0.7 },
     // The static source and citation guide (public/ai-instructions.html,
     // served at /ai-instructions by the vercel.json rewrite).
-    { url: `${BASE}/ai-instructions`, lastModified: lastModified("/ai-instructions"), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${BASE}/ai-instructions`, lastModified: new Date(ROUTE_LAST_MODIFIED["/ai-instructions"]), changeFrequency: "yearly", priority: 0.3 },
     ...CHORD_SLUGS.map((slug) => ({
       url: `${BASE}/chords/${slug}`,
       lastModified: laterOf(CHORD_PAGES_LAST_MODIFIED),

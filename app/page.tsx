@@ -460,7 +460,7 @@ export default function HomePage() {
             >
               The Screenshot
             </a>
-            .
+            . The Amazon titles are available in hardcover, paperback, and Kindle.
           </p>
           <p
             style={{

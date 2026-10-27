@@ -98,10 +98,9 @@ Built by **Jason Colapietro** — founder and CEO of [Suede AI](https://suedeai.
 
 ### Books
 
-- **[The Signal Chain](https://guitar.solutions)** — Illustrated history of electric guitar tone: 46 chapters, complete edition. The book that maps the signal chain and the IP chain side by side. (guitar.solutions)
-- **The Guitar Without a Number** — Memoir-driven guitar instruction for the self-taught player. Theory, tone, and the IP rights chapter no other guitar book includes.
-- **[Suede Labs: The Human Authenticity Layer](https://www.amazon.com/dp/B0GD5FX6N6)** — How ownership, origin, and AI redraw the creative map. (Available in hardcover, paperback, and Kindle)
-- **[Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ)** — Hard truths on turning the AI era into a real asset. (Available in hardcover, paperback, and Kindle)
-- **[The Screenshot: Why AI Recommends Your Competitors, and How to Fix It](https://seo.suedeai.ai/book)** — How answer engines decide who to name, how to see your own gap with your own eyes, and how to repair the pages the machines misread. Eleven chapters, in full on the web. (seo.suedeai.ai)
+- <img src="https://suedeai.ai/books/the-signal-chain-cover.webp" alt="Cover of The Signal Chain" width="80"><br>**[The Signal Chain](https://guitar.solutions)** — Illustrated history of electric guitar tone: 46 chapters, complete edition. The book that maps the signal chain and the IP chain side by side. (guitar.solutions) Includes the former *The Guitar Without a Number*.
+- <img src="https://suedeai.ai/books/human-authenticity-layer-cover.jpg" alt="Cover of The Human Authenticity Layer" width="80"><br>**[Suede Labs: The Human Authenticity Layer](https://www.amazon.com/dp/B0GD5FX6N6)** — How ownership, origin, and AI redraw the creative map. (Available in hardcover, paperback, and Kindle)
+- <img src="https://suedeai.ai/books/stake-your-claim-cover.jpg" alt="Cover of Stake Your Claim" width="80"><br>**[Stake Your Claim](https://www.amazon.com/dp/B0GRG8LGQQ)** — Hard truths on turning the AI era into a real asset. (Available in hardcover, paperback, and Kindle)
+- <img src="https://suedeai.ai/books/the-screenshot-cover.jpg" alt="Cover of The Screenshot" width="80"><br>**[The Screenshot: Why AI Recommends Your Competitors, and How to Fix It](https://seo.suedeai.ai/book)** — How answer engines decide who to name, how to see your own gap with your own eyes, and how to repair the pages the machines misread. Eleven chapters, in full on the web. (seo.suedeai.ai)
 
 Follow: [X / @johnnysuede](https://x.com/johnnysuede) · [suedeai.ai](https://suedeai.ai) · [guitarchords.info](https://guitarchords.info)

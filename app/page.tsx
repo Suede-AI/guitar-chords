@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FINGERINGS } from "@/lib/chords/fingerings";
@@ -5,6 +6,8 @@ import { SCALES } from "@/lib/music/scales";
 import { SuedeSocialBridge, socialAction } from "@/components/SuedeSocialBridge";
 import { keywordsFor } from "@/lib/keywords";
 import { webPageJsonLd } from "@/lib/seo";
+
+
 
 const TITLE = "Guitar Chords: Free Chord Finder, Chart, Scales & Tuner";
 const DESCRIPTION =
@@ -73,6 +76,34 @@ const TOOLS = [
 ];
 
 const PAGE_JSON_LD = webPageJsonLd({ path: "/", name: TITLE, description: DESCRIPTION });
+
+const AUTHOR_BOOKS = [
+  [
+    "the-signal-chain",
+    "The Signal Chain",
+    "https://guitar.solutions"
+  ],
+  [
+    "human-authenticity-layer",
+    "The Human Authenticity Layer",
+    "https://www.amazon.com/dp/B0GD5FX6N6"
+  ],
+  [
+    "proof-as-infrastructure",
+    "Proof as Infrastructure",
+    "https://www.amazon.com/dp/B0GMB2VLXQ"
+  ],
+  [
+    "stake-your-claim",
+    "Stake Your Claim",
+    "https://www.amazon.com/dp/B0GRG8LGQQ"
+  ],
+  [
+    "the-screenshot",
+    "The Screenshot",
+    "https://seo.suedeai.ai/book"
+  ]
+];
 
 export default function HomePage() {
   return (
@@ -420,7 +451,7 @@ export default function HomePage() {
             >
               The Signal Chain
             </a>
-            {", "}The Guitar Without a Number,{" "}
+            {" (including The Guitar Without a Number), "}
             <a
               className="link"
               href="https://www.amazon.com/dp/B0GD5FX6N6"
@@ -462,6 +493,19 @@ export default function HomePage() {
             </a>
             . The Amazon titles are available in hardcover, paperback, and Kindle.
           </p>
+          <div aria-label="Books by Jason Colapietro" style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "1.5rem" }}>
+            {AUTHOR_BOOKS.map(([slug, title, url]) => (
+              <a key={slug} href={url} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={`/books/${slug}-cover.${slug === "the-signal-chain" ? "webp" : "jpg"}`}
+                  alt={`Cover of ${title}`}
+                  width={80}
+                  height={128}
+                  style={{ display: "block", width: "80px", height: "128px", objectFit: "contain" }}
+                />
+              </a>
+            ))}
+          </div>
           <p
             style={{
               margin: 0,

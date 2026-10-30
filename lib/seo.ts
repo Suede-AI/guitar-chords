@@ -2,7 +2,8 @@
 //
 // Titles lead with the page's own keyword (the chord or scale name, or the
 // tool) and carry the " | guitarchords.info" brand only when the whole title
-// still fits in TITLE_MAX characters, so search results show it untruncated.
+// still fits in TITLE_MAX (60) characters, so search results show it
+// untruncated.
 // Pages pass the result as `title: { absolute }` so the layout template cannot
 // append the brand a second time.
 
@@ -11,7 +12,7 @@ import { SITE_ORIGIN, crumbUrl } from "./breadcrumbs";
 export { SITE_ORIGIN };
 
 export const BRAND_SUFFIX = " | guitarchords.info";
-export const TITLE_MAX = 65;
+export const TITLE_MAX = 60;
 
 export const WEBSITE_ID = `${SITE_ORIGIN}/#website`;
 export const APP_ID = `${SITE_ORIGIN}/#app`;

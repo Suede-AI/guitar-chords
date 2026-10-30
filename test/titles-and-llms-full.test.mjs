@@ -17,17 +17,19 @@ const { SCALES, SCALE_ORDER } = await importTs("lib/music/scales.ts");
 
 test("pageTitle keeps the brand only when the title fits", () => {
   assert.equal(seo.pageTitle("Short"), "Short | guitarchords.info");
-  const long = "x".repeat(60);
+  assert.equal(seo.TITLE_MAX, 60);
+  const long = "x".repeat(50);
   assert.equal(seo.pageTitle(long), long);
   assert.equal(seo.titleCase("F# minor"), "F# Minor");
   assert.equal(seo.titleCase("major pentatonic"), "Major Pentatonic");
 });
 
-test("chord and scale titles are unique, name-first and within 65 characters", () => {
+test("chord and scale titles are unique, name-first and within 60 characters", () => {
   const titles = [
     ...chords.CHORD_NAMES.map((name) => {
       const display = chords.chordPageData(name).displayName;
-      return [display, seo.pageTitle(`${seo.titleCase(display)} Guitar Chord: Chart, Notes & Formula`)];
+      const chordName = seo.titleCase(display);
+      return [display, seo.pageTitle(`${chordName} Guitar Chord: How to Play ${chordName}`)];
     }),
     ...SCALE_ORDER.map((id) => [
       SCALES[id].name,

@@ -34,13 +34,14 @@ export function generateStaticParams(): Params[] {
   return SCALE_SLUGS.map((scale) => ({ scale }));
 }
 
-const DESCRIPTION_MAX = 160;
+// Google shows about 155 characters of a description before it cuts the line.
+const DESCRIPTION_MAX = 155;
 
 function pageCopy(id: ScaleId) {
   const def = SCALES[id];
   const formula = scaleFormula(id).join(" ");
   const title = pageTitle(`${titleCase(def.name)} Scale on Guitar: Notes, Formula & Positions`);
-  // The longest wording that keeps the snippet inside 160 characters. Scale
+  // The longest wording that keeps the snippet inside 155 characters. Scale
   // descriptions vary in length, so the shorter forms drop the step pattern
   // and then the related-scales mention before they drop the scale's color.
   const candidates = [

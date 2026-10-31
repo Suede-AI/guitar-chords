@@ -32,9 +32,10 @@ export function generateStaticParams(): Params[] {
 function pageCopy(name: string) {
   const data = chordPageData(name);
   const notes = data.tones.map((t) => t.note).join(" ");
-  // Chord name first, then the intent. The longest name in the library (F#
-  // minor) still fits the branded form inside the 65-character budget.
-  const title = pageTitle(`${titleCase(data.displayName)} Guitar Chord: Chart, Notes & Formula`);
+  // Chord name first, then the "how to play" intent people search with. The
+  // brand rides along only when the whole title fits in 60 characters.
+  const chordName = titleCase(data.displayName);
+  const title = pageTitle(`${chordName} Guitar Chord: How to Play ${chordName}`);
   const aside = data.displayName === data.name ? data.longName : data.name;
   const description = `${data.displayName} (${aside}) guitar chord in standard tuning: ${data.shape} fingering diagram, chord tones ${notes}, formula ${data.formula}, and related chords.`;
   return { data, title, description };
@@ -205,7 +206,7 @@ export default async function ChordPage({ params }: { params: Promise<Params> })
               letterSpacing: "-0.01em",
             }}
           >
-            {data.displayName} guitar chord
+            How to play the {data.displayName} chord on guitar
           </h1>
           <p
             style={{

@@ -54,8 +54,8 @@ export function Metronome() {
             letterSpacing: "-0.01em",
           }}
         >
-          Online metronome.{" "}
-          <span style={{ color: "var(--color-rights-red)" }}>Locked in.</span>
+          Free online metronome{" "}
+          <span style={{ color: "var(--color-rights-red)" }}>with tap tempo</span>
         </h1>
         <p
           style={{

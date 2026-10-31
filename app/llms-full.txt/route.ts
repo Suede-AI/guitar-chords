@@ -124,7 +124,7 @@ This file carries the full text of the site's reference pages. The shorter index
 - [Guitar chords home](${SITE_ORIGIN}/): the four tools and what the site is.
 - [Guitar chord chart](${SITE_ORIGIN}/chords): ${CHORD_NAMES.length} chord shapes with SVG fingering diagrams, filterable by category and searchable by name.
 - [Guitar scales chart](${SITE_ORIGIN}/scales): interactive scale trainer that highlights any of ${SCALE_ORDER.length} scales in any of the 12 keys across the whole neck.
-- [Online guitar tuner](${SITE_ORIGIN}/tuner): chromatic tuner using the microphone and a YIN pitch detector. Audio is analysed in the browser and is not uploaded.
+- [Online guitar tuner](${SITE_ORIGIN}/tuner): chromatic tuner using the microphone and a YIN pitch detector. Audio is analyzed in the browser and is not uploaded.
 - [Online metronome](${SITE_ORIGIN}/metronome): 30–280 BPM, tap tempo, 2, 3, 4 or 6 beats per bar, with a higher click on the downbeat.
 - One page per chord at ${SITE_ORIGIN}/chords/{slug} and one page per scale at ${SITE_ORIGIN}/scales/{slug}, listed below.
 

@@ -52,9 +52,8 @@ export function ScaleTrainer() {
             letterSpacing: "-0.01em",
           }}
         >
-          A root.{" "}
-          <span style={{ color: "var(--color-registry-cyan)" }}>A mode.</span>{" "}
-          The whole neck.
+          Guitar scales chart:{" "}
+          <span style={{ color: "var(--color-registry-cyan)" }}>all 12 keys and modes</span>
         </h1>
         <p
           style={{

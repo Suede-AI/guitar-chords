@@ -39,10 +39,8 @@ export function Tuner() {
             letterSpacing: "-0.01em",
           }}
         >
-          Online guitar tuner.{" "}
-          <span style={{ color: "var(--color-registry-cyan)" }}>
-            Find your pitch.
-          </span>
+          Free online{" "}
+          <span style={{ color: "var(--color-registry-cyan)" }}>guitar tuner</span>
         </h1>
         <p
           style={{
@@ -52,7 +50,7 @@ export function Tuner() {
             maxWidth: "60ch",
           }}
         >
-          Click below, grant mic access, and pluck a string. Audio is analysed
+          Click below, grant mic access, and pluck a string. Audio is analyzed
           locally by a YIN pitch detector and is not uploaded.
         </p>
       </header>

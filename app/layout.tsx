@@ -90,10 +90,14 @@ const WEBSITE_JSON_LD = {
       publisher: { "@id": SUEDE_ORG_ID },
     },
     {
+      "parentOrganization": {"@type":"Organization","@id":"https://jcinvestmentgroup.ventures/#organization","name":"JC Investment Group LLC","url":"https://jcinvestmentgroup.ventures/"},
+      "address": {"@type":"PostalAddress","streetAddress":"138 Victorian Lane","addressLocality":"Jupiter","addressRegion":"FL","postalCode":"33458","addressCountry":"US"},
+      "hasMerchantReturnPolicy": {"@type":"MerchantReturnPolicy","@id":"https://suedeai.ai/terms#money-back-policy","name":"90-day money-back policy","returnPolicyCategory":"https://schema.org/MerchantReturnFiniteReturnWindow","merchantReturnDays":90,"returnFees":"https://schema.org/FreeReturn","refundType":"https://schema.org/FullRefund","merchantReturnLink":"https://suedeai.ai/terms#money-back-policy"},
+
       "@type": "Organization",
       "@id": SUEDE_ORG_ID,
       name: "Suede AI",
-      alternateName: ["Suede Labs"],
+      alternateName: ["Suede Labs AI","Suede Labs","Suede"],
       url: SUEDE_URL,
       foundingDate: "2024",
       founder: { "@id": JASON_PERSON_ID },

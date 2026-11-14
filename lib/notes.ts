@@ -133,7 +133,7 @@ export const NOTES: Note[] = [
       { kind: "h2", text: "Titles that fit and headings that name the topic" },
       {
         kind: "p",
-        text: "An audit on October 12, 2026 found 53 of 56 titles on this site running past 70 characters. The chord and scale templates now lead with the chord or scale name and add the brand only when the whole title stays at or under 60 characters. On October 30, slogan headings on the tuner and metronome pages were replaced with H1s in the words people search, such as \"Free online guitar tuner\". Small edits, and they decide whether a search result gets the click. Suede treats them as part of the build, not as polish for later.",
+        text: "An audit on October 12, 2026 found 53 of 56 titles on this site running past 70 characters. The chord and scale templates now lead with the chord or scale name and add the brand only when the whole title stays at or under 60 characters. On October 31, slogan headings on the tuner and metronome pages were replaced with H1s in the words people search, such as \"Free online guitar tuner\". Small edits, and they decide whether a search result gets the click. Suede treats them as part of the build, not as polish for later.",
       },
       { kind: "h2", text: "Why an engineer's public record matters" },
       {
@@ -238,7 +238,7 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "Track three numbers in a notebook each day: clean chord changes per minute, metronome tempo, and days practiced this week. Progress you can measure is progress you keep.",
+        text: "Track three numbers in a notebook each day: clean chord changes per minute, metronome tempo, and days practiced this week. Progress you can measure is progress you keep, and it is the same rule Suede AI applies to client sites: pick the numbers first, then track them each week.",
       },
       { kind: "h2", text: "Playing with people in Palm Beach County" },
       {

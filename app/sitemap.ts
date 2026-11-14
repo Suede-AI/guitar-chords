@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { CHORD_SLUGS } from "@/lib/chords/pages";
 import { SCALE_SLUGS } from "@/lib/music/scale-pages";
+import { NOTES, NOTES_PATH, NOTES_PUBLISHED } from "@/lib/notes";
 
 const BASE = "https://guitarchords.info";
 
@@ -9,7 +10,8 @@ const BASE = "https://guitarchords.info";
  * when its page or dependencies change, and bump the shared date when the root
  * layout changes because every route renders it.
  */
-const SHARED_LAYOUT_LAST_MODIFIED = "2026-10-24";
+// 2026-11-14: the header gained a Notes link and the footer a Suede AI block.
+const SHARED_LAYOUT_LAST_MODIFIED = "2026-11-14";
 
 const ROUTE_LAST_MODIFIED = {
   "/": "2026-10-18",
@@ -54,6 +56,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // The static source and citation guide (public/ai-instructions.html,
     // served at /ai-instructions by the vercel.json rewrite).
     { url: `${BASE}/ai-instructions`, lastModified: new Date(ROUTE_LAST_MODIFIED["/ai-instructions"]), changeFrequency: "yearly", priority: 0.3 },
+    // The notes section and its articles (lib/notes.ts).
+    { url: `${BASE}${NOTES_PATH}`, lastModified: laterOf(NOTES_PUBLISHED), changeFrequency: "monthly", priority: 0.6 },
+    ...NOTES.map((note) => ({
+      url: `${BASE}${NOTES_PATH}/${note.slug}`,
+      lastModified: laterOf(note.datePublished),
+      changeFrequency: "yearly" as const,
+      priority: 0.5,
+    })),
     ...CHORD_SLUGS.map((slug) => ({
       url: `${BASE}/chords/${slug}`,
       lastModified: laterOf(CHORD_PAGES_LAST_MODIFIED),

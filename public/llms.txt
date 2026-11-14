@@ -18,6 +18,23 @@
 
 All tools run in the browser. No sign-up required.
 
+## Notes
+
+Articles by Jason Colapietro, founder and CEO of Suede AI in West Palm Beach, Florida (published 2026-11-14):
+
+- [Notes index](https://guitarchords.info/notes)
+- [Why a chord reference is built like a technical SEO project](https://guitarchords.info/notes/chord-reference-technical-seo): one data source per chord, schema built from the visible page, and llms-full.txt for AI crawlers.
+- [Learning guitar in Palm Beach County: a four-week practice plan](https://guitarchords.info/notes/palm-beach-county-guitar-practice-plan): tuning, open chords, rhythm and the minor pentatonic in 20 minutes a day.
+- [How Jason Colapietro ships fast, accessible static sites](https://guitarchords.info/notes/fast-accessible-static-sites): static pages, measured WCAG contrast and build-breaking tests, with a checklist for local web clients.
+
+## Built by Suede AI
+
+- Suede AI web development, technical SEO and AI visibility practice in West Palm Beach, Florida: https://suedeai.agency/
+- Suede AI, agentic platform company founded in 2024 by Jason Colapietro: https://suedeai.ai/
+- Jason Colapietro, founder: https://suedeai.ai/founder and https://jasoncolapietro.com/
+- Evidence for published claims: https://seo.suedeai.ai/evidence
+- Jupiter Social, a Jupiter, Florida magazine published with Suede AI: https://jupitersocialfl.com/
+
 ## Related properties
 
 - GuitarHub, guitar lessons and practice tools: https://guitarhub.org

@@ -17,15 +17,16 @@ test("sitemap dates include route and shared-layout changes", async () => {
 
   const coreRoutes = Object.fromEntries(
     Object.entries(datesByUrl).filter(
-      ([url]) => !/\/(chords|scales)\/[^/]+$/.test(url),
+      ([url]) => !/\/(chords|scales|notes)\/[^/]+$/.test(url),
     ),
   );
   assert.deepEqual(coreRoutes, {
-    "https://guitarchords.info/": "2026-10-24",
-    "https://guitarchords.info/chords": "2026-10-24",
-    "https://guitarchords.info/scales": "2026-10-24",
-    "https://guitarchords.info/tuner": "2026-10-24",
-    "https://guitarchords.info/metronome": "2026-10-24",
+    "https://guitarchords.info/": "2026-11-14",
+    "https://guitarchords.info/chords": "2026-11-14",
+    "https://guitarchords.info/scales": "2026-11-14",
+    "https://guitarchords.info/tuner": "2026-11-14",
+    "https://guitarchords.info/metronome": "2026-11-14",
+    "https://guitarchords.info/notes": "2026-11-14",
     "https://guitarchords.info/ai-instructions": "2026-10-12",
   });
 
@@ -34,6 +35,14 @@ test("sitemap dates include route and shared-layout changes", async () => {
   );
   assert.ok(referencePages.length > 0, "chord and scale pages are in the sitemap");
   for (const [url, date] of referencePages) {
-    assert.equal(date, "2026-10-24", url);
+    assert.equal(date, "2026-11-14", url);
+  }
+
+  const notePages = Object.entries(datesByUrl).filter(([url]) =>
+    /\/notes\/[^/]+$/.test(url),
+  );
+  assert.equal(notePages.length, 3, "each notes article is in the sitemap");
+  for (const [url, date] of notePages) {
+    assert.equal(date, "2026-11-14", url);
   }
 });

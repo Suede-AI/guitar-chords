@@ -90,6 +90,22 @@ export const ROUTE_KEYWORDS = {
     "practice metronome",
     "web audio metronome",
   ],
+  "/notes": [
+    "guitar practice notes",
+    "guitar practice plan",
+    "technical SEO West Palm Beach",
+    "web development Palm Beach County",
+    "AI search optimization Florida",
+    "Jason Colapietro",
+  ],
+  "/notes/[slug]": [
+    "guitar practice",
+    "guitar chord reference",
+    "West Palm Beach web development",
+    "Jupiter FL SEO",
+    "generative engine optimization",
+    "Jason Colapietro",
+  ],
 } as const satisfies Record<string, readonly string[]>;
 
 export type KeywordRoute = keyof typeof ROUTE_KEYWORDS;

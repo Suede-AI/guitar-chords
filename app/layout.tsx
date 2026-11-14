@@ -3,6 +3,7 @@ import "./globals.css";
 import Link from "next/link";
 import { GOOGLE_SITE_VERIFICATION_TOKENS } from "@/lib/google-site-verification";
 import { keywordsFor } from "@/lib/keywords";
+import { SuedeNetworkFooter } from "@/components/SuedeNetworkFooter";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://guitarchords.info"),
@@ -251,6 +252,9 @@ function SiteHeader() {
           <Link href="/metronome" className="link" style={{ textDecoration: "none" }}>
             Metronome
           </Link>
+          <Link href="/notes" className="link" style={{ textDecoration: "none" }}>
+            Notes
+          </Link>
           <a href={SOCIAL_URL} className="link" style={{ textDecoration: "none" }}>
             Suede Social
           </a>
@@ -304,6 +308,9 @@ function SiteFooter() {
             </Link>
             <Link href="/metronome" className="link" style={{ textDecoration: "none" }}>
               Metronome
+            </Link>
+            <Link href="/notes" className="link" style={{ textDecoration: "none" }}>
+              Notes
             </Link>
             <a href={SOCIAL_URL} className="link" style={{ textDecoration: "none" }}>
               Join Suede Social
@@ -377,7 +384,12 @@ function SiteFooter() {
 
         <hr className="hr-rule" />
 
-        {/* Row 3: policy + contact. Linked, not restated, on every route. */}
+        {/* Row 3: who built the site, with links to the main Suede AI pages. */}
+        <SuedeNetworkFooter />
+
+        <hr className="hr-rule" />
+
+        {/* Row 4: policy + contact. Linked, not restated, on every route. */}
         <div
           style={{
             display: "flex",

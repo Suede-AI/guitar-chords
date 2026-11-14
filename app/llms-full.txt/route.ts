@@ -11,6 +11,7 @@ import {
 } from "@/lib/music/scale-pages";
 import { METRONOME_GUIDE, TUNER_GUIDE, type ToolGuide } from "@/lib/tool-guides";
 import { SITE_ORIGIN } from "@/lib/seo";
+import { NOTES, NOTES_PATH, noteMarkdown } from "@/lib/notes";
 
 // /llms-full.txt: the full reference text of the site in one Markdown file.
 //
@@ -126,6 +127,7 @@ This file carries the full text of the site's reference pages. The shorter index
 - [Guitar scales chart](${SITE_ORIGIN}/scales): interactive scale trainer that highlights any of ${SCALE_ORDER.length} scales in any of the 12 keys across the whole neck.
 - [Online guitar tuner](${SITE_ORIGIN}/tuner): chromatic tuner using the microphone and a YIN pitch detector. Audio is analyzed in the browser and is not uploaded.
 - [Online metronome](${SITE_ORIGIN}/metronome): 30–280 BPM, tap tempo, 2, 3, 4 or 6 beats per bar, with a higher click on the downbeat.
+- [Notes](${SITE_ORIGIN}${NOTES_PATH}): articles by Jason Colapietro on guitar practice in Palm Beach County and on how this site is built.
 - One page per chord at ${SITE_ORIGIN}/chords/{slug} and one page per scale at ${SITE_ORIGIN}/scales/{slug}, listed below.
 
 ## Chord library
@@ -149,6 +151,12 @@ ${SCALE_ORDER.map(scaleSection).join("\n\n")}
 ${guideSection(TUNER_GUIDE)}
 
 ${guideSection(METRONOME_GUIDE)}
+
+## Notes
+
+Articles by Jason Colapietro, founder and CEO of Suede AI in West Palm Beach, Florida. Index: ${SITE_ORIGIN}${NOTES_PATH}
+
+${NOTES.map(noteMarkdown).join("\n\n")}
 
 ## Related Suede AI guitar sites
 

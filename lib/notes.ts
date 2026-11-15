@@ -14,6 +14,8 @@ export const NOTES_PATH = "/notes";
 export const NOTES_PUBLISHED = "2026-11-14";
 /** 2026-11-15: the Clutch Top 30 Florida / Top 50 US ranking was added. */
 export const NOTES_MODIFIED = "2026-11-15";
+/** Round four: two depth articles published 2026-11-15. */
+export const NOTES_ROUND_FOUR = "2026-11-15";
 
 export type NoteBlock =
   | { kind: "h2"; text: string }
@@ -34,7 +36,15 @@ export type Note = {
   /** Last content change; BlogPosting dateModified and the sitemap lastmod. */
   dateModified: string;
   keywords: string[];
+  /** Extra places this article is about, added to the shared NOTE_PLACES. */
+  places?: NotePlace[];
   blocks: NoteBlock[];
+};
+
+export type NotePlace = {
+  "@type": "City" | "AdministrativeArea";
+  name: string;
+  containedInPlace?: { "@type": "State"; name: string };
 };
 
 export const PROOF = {
@@ -365,6 +375,206 @@ export const NOTES: Note[] = [
       },
     ],
   },
+  {
+    slug: "delray-beach-open-mic-chords",
+    title: "Ten Guitar Chords for Delray Beach Open Mics, in Order",
+    headline: "Ten chords that cover most songs at Delray Beach open mics: voicings and a practice order",
+    description:
+      "The ten open chords behind most songs at a Delray Beach open mic, with exact voicings, a practice order built on shared fingers, and capo math for singers.",
+    dek: "G, C, D, Em, Am, E, A, Dm, Fmaj7 and B7. The exact shapes, the order that makes them stick, and the five progressions to rehearse before you sign up.",
+    datePublished: NOTES_ROUND_FOUR,
+    dateModified: NOTES_ROUND_FOUR,
+    keywords: [
+      "open mic guitar chords",
+      "Delray Beach open mic",
+      "beginner guitar chords",
+      "guitar chord practice order",
+      "capo chart",
+      "Palm Beach County guitar",
+    ],
+    places: [{ "@type": "City", name: "Delray Beach", containedInPlace: { "@type": "State", name: "Florida" } }],
+    blocks: [
+      {
+        kind: "p",
+        text: "Put your name on an open mic sheet in Delray Beach and the first thing a sideman or a cajon player will ask is \"what key?\" If your hands know ten specific chords, you can answer that for a large share of the pop, rock, folk and country covers that turn up on those stages, and this note gives you the ten, the exact voicings, and the order to learn them in.",
+      },
+      {
+        kind: "p",
+        text: "The list comes from Jason Colapietro, the engineer who founded Suede AI in West Palm Beach in 2024 and built the [chord chart](/chords) on this site. Delray Beach is a short drive down I-95 from West Palm Beach, and its open mic scene runs from downtown bar stages to coffee-shop corners. The rooms differ. The chords people reach for are close to identical.",
+      },
+      { kind: "h2", text: "Why ten chords get you on stage" },
+      {
+        kind: "p",
+        text: "Most covers lean on four chords in one key: the I, IV, V and vi. Guitarists play those songs in a handful of keys where the open shapes are easy, mainly G, C, D, A and E, and they use a capo for the rest. Pick the ten chords that fill those five keys and you have the core of a working set. In G you need G, C, D and Em. In C you need C, F, G and Am, plus Dm and Em. In A you need A, D and E. In E you need E, A and B7. Add Dm for minor-key songs and the list closes at ten.",
+      },
+      { kind: "h2", text: "The ten voicings" },
+      {
+        kind: "p",
+        text: "Each voicing below is written low E string to high E string. An x is a muted string, 0 is an open string, and a number is the fret. Each name links to its page in the library, which shows the note on each string and the smoothest changes to other shapes.",
+      },
+      {
+        kind: "ul",
+        items: [
+          "[G major](/chords/g-major), 320003: the home chord for a long list of acoustic covers.",
+          "[C major](/chords/c-major), x32010: keep the low E string quiet.",
+          "[D major](/chords/d-major), xx0232: strum the top four strings only.",
+          "[E minor](/chords/e-minor), 022000: two fingers, and the easiest shape in the set.",
+          "[A minor](/chords/a-minor), x02210: the vi chord in C and the home chord in A minor.",
+          "[E major](/chords/e-major), 022100: the A minor shape moved over one string set.",
+          "[A major](/chords/a-major), x02220: three fingers in a row on the 2nd fret.",
+          "[D minor](/chords/d-minor), xx0231: D major with one note lowered.",
+          "[F major seventh](/chords/fmaj7), xx3210: a stand-in for the F barre chord until your index finger is ready.",
+          "[B7](/chords/b7), x21202: the V chord in E, and the one that takes the longest.",
+        ],
+      },
+      { kind: "h2", text: "A practice order built on shared fingers" },
+      {
+        kind: "p",
+        text: "Learn the chords in pairs that share notes, so each new shape reuses a finger you already placed. At Suede, Jason Colapietro built the change data on each chord page for exactly this: the page lists which notes stay put between two shapes, computed from the frets.",
+      },
+      {
+        kind: "ul",
+        items: [
+          "Days 1 to 3: E minor and G. Both press the 2nd fret on the A string. Then add C and A minor, which keep two fretted notes in common, so one finger moves.",
+          "Days 4 to 6: D, then the full G, D, Em, C loop. Four beats per chord at 60 BPM on the [metronome](/metronome).",
+          "Days 7 to 9: E major and A minor. Same three-finger shape, shifted one string set. Then A major.",
+          "Days 10 and 11: D and D minor. Only the high E string changes, from the 2nd fret to the 1st.",
+          "Days 12 to 14: F major seventh from C, keeping the 1st fret on the B string in place, then B7 last.",
+        ],
+      },
+      {
+        kind: "p",
+        text: "When a pair is clean at four beats per chord, drop to two beats, then raise the tempo 10 BPM. A change that lands on time at 80 BPM will survive a nervous first song.",
+      },
+      { kind: "h2", text: "Five progressions to rehearse before sign-up" },
+      {
+        kind: "ul",
+        items: [
+          "G, D, Em, C: the I-V-vi-IV loop under a long run of pop and acoustic covers.",
+          "C, Am, Fmaj7, G: the 1950s doo-wop loop, still common in ballads.",
+          "D, G, A: three-chord rock and country in D.",
+          "E, A, B7: the twelve-bar blues in E, four bars of E, two of A, two of E, then B7, A, E and B7.",
+          "Am, Dm, E: a minor-key progression where E major gives the turnaround its pull.",
+        ],
+      },
+      { kind: "h2", text: "Capo math for singers" },
+      {
+        kind: "p",
+        text: "Each fret of a capo raises the shapes one half step. Play the G shapes with a capo on the 2nd fret and the song sounds in A; on the 4th fret it sounds in B. The C shapes at the 2nd fret sound in D. If the singer cannot reach a melody, keep your fingers on the same shapes and move the capo instead of learning a new key. Two minutes with the [online tuner](/tuner) after you clip the capo on keeps the strings from pulling sharp.",
+      },
+      { kind: "h2", text: "Before your slot in Delray Beach" },
+      {
+        kind: "p",
+        text: "Write the key and the capo fret next to each song on your set list, and plan for two or three songs, the slot many sign-up sheets allow. Patio stages near the coast swing in heat and salt air, which is why a guitar that was in tune at home drifts by the second chorus. The guitar.services note on [guitar humidity and the signal chain in South Florida](https://guitar.services/notes/south-florida-humidity-signal-chain) explains what that weather does to strings, necks and cables. To find people to rehearse with before you go, GuitarHub's guide to [guitar players in Jupiter and Palm Beach Gardens](https://guitarhub.org/notes/guitar-players-jupiter-palm-beach-gardens) covers lessons, jams and online practice across the north county.",
+      },
+      { kind: "h2", text: "Who put this list together" },
+      {
+        kind: "p",
+        text: "Jason Colapietro is an engineer and guitarist, and the founder and CEO of Suede AI, an agentic platform company in West Palm Beach. He wrote The Signal Chain, a history of electric guitar tone at [guitar.solutions](https://guitar.solutions), and has [54 pull requests merged across 46 open-source repositories he does not maintain](https://github.com/search?q=is%3Apr+author%3AJasonColapietro+is%3Amerged+-user%3AJasonColapietro+-user%3ASuede-AI&type=pullrequests), including Jest and Adobe React Spectrum. The guitar tools are a side line for the Suede Labs team; the main work is agent platforms and the [Suede AI web, SEO and AI search practice](https://suedeai.agency/) for businesses across Palm Beach County.",
+      },
+      {
+        kind: "p",
+        text: "Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). Jason Colapietro has also shipped [nine iOS apps under his own Apple developer account](https://apps.apple.com/us/developer/jason-colapietro/id1895958699), and Suede's [evidence page](https://seo.suedeai.ai/evidence) links a receipt for each claim here.",
+      },
+      { kind: "h2", text: "Next step" },
+      {
+        kind: "p",
+        text: "Open the [chord chart](/chords), start with E minor and G today, and give the list two weeks before your first Delray Beach sign-up. If you run a venue, a music shop or any Palm Beach County business and want people to find you in Google and in AI answers, start with the [Suede AI assessment](https://suedeai.agency/assessment), and read [Jason Colapietro's founder page](https://suedeai.ai/founder) to see who you would work with at Suede.",
+      },
+    ],
+  },
+  {
+    slug: "wellington-adult-guitar-scales-path",
+    title: "Scales for Improvising: A Wellington Adult Learner Path",
+    headline: "Scales for improvising: a beginner path for Wellington adult learners using the free scale tool",
+    description:
+      "A six-stage path from one pentatonic box to Dorian and Mixolydian for adult learners in Wellington, Florida, using the free guitarchords.info scale trainer.",
+    dek: "One box, then phrases, then the major sound, the blue note and two modes. A scale path sized for adults who practice twenty minutes after work.",
+    datePublished: NOTES_ROUND_FOUR,
+    dateModified: NOTES_ROUND_FOUR,
+    keywords: [
+      "guitar scales for improvising",
+      "adult guitar lessons Wellington FL",
+      "minor pentatonic scale",
+      "Dorian mode guitar",
+      "scale trainer",
+      "Palm Beach County guitar",
+    ],
+    places: [{ "@type": "City", name: "Wellington", containedInPlace: { "@type": "State", name: "Florida" } }],
+    blocks: [
+      {
+        kind: "p",
+        text: "Adult beginners tend to stall on improvising at the same moment: they can run a scale up and down, and then a backing track starts and their hands freeze. This path fixes that in six stages with the free [scale trainer](/scales) Suede publishes on this site, and it is written with one reader in mind: an adult in Wellington, Florida with a day job, a guitar on a stand, and twenty minutes after dinner.",
+      },
+      {
+        kind: "p",
+        text: "Jason Colapietro, founder of Suede AI in West Palm Beach, built the trainer so a learner in Wellington, Royal Palm Beach or Loxahatchee Groves could open it in a browser with no account and no download. Each stage below names the exact setting to use and the one skill to take from it.",
+      },
+      { kind: "h2", text: "What the scale trainer shows you" },
+      {
+        kind: "p",
+        text: "Pick a root from the twelve keys and a scale from the twelve in the library. The fretboard marks the root in solid cyan and outlines each scale tone across the neck, and a \"Show note names\" switch prints the letter on each dot. Each scale also has its own page with the formula, the notes in all 12 keys, the root's fret on the 6th and 5th strings, the positions in A, and the chords from the library that fit.",
+      },
+      { kind: "h2", text: "Stage 1: one box of A minor pentatonic" },
+      {
+        kind: "p",
+        text: "Set the root to A and the scale to [minor pentatonic](/scales/minor-pentatonic). Find the cyan A on the 6th string at the 5th fret and play the box that starts there: two notes per string, A, C, D, E and G. Play it up and down at 60 BPM on the [metronome](/metronome), then start from the top and play it backward. Stay in this one box for a full week. Adults often want to move on after two days; the box only becomes useful once you stop thinking about it.",
+      },
+      { kind: "h2", text: "Stage 2: phrases instead of runs" },
+      {
+        kind: "p",
+        text: "Turn on \"Show note names\" and make a rule: each phrase ends on an A. Play three or four notes, land on a root, then rest for a bar. At 70 BPM, play for two bars and rest for two. The rest is the part beginners skip, and it is what makes a line sound like a sentence. Record one minute of an Am chord on your phone and phrase over it until ending on the root feels automatic.",
+      },
+      { kind: "h2", text: "Stage 3: the same shape, a major sound" },
+      {
+        kind: "p",
+        text: "Switch the scale to [major pentatonic](/scales/major-pentatonic) with A as the root and find the box you already know on the fretboard, moved down three frets to start at the 2nd fret. That works because F sharp minor pentatonic and A major pentatonic share all five notes. Play it over a loop of [A major](/chords/a-major), D and E, and the sound turns bright and country. One shape, two moods, chosen by where you put it.",
+      },
+      { kind: "h2", text: "Stage 4: the blue note" },
+      {
+        kind: "p",
+        text: "Set the scale to [blues](/scales/blues). It is the minor pentatonic plus one note, the flat fifth, which in A is E flat. Use it as a passing note between D and E, not a place to rest. Practice over a twelve-bar blues in A built from [A7](/chords/a7), [D7](/chords/d7) and [E7](/chords/e7) at 70 BPM.",
+      },
+      { kind: "h2", text: "Stage 5: two modes for jam nights" },
+      {
+        kind: "p",
+        text: "Jam sessions around Palm Beach County often sit on a two-chord vamp, and two modes handle the common ones. Over a vamp between [Am7](/chords/am7) and D7, set the trainer to [Dorian](/scales/dorian) in A: natural minor with a raised 6th, F sharp, which is the third of D7, so the scale and the chords agree. Over a single A7 groove, switch to [Mixolydian](/scales/mixolydian) in A: a major scale with a flat 7, G. On the fretboard, Dorian is the minor pentatonic plus B and F sharp, and Mixolydian is the major pentatonic plus D and G.",
+      },
+      { kind: "h2", text: "Stage 6: hear the scale inside the chords" },
+      {
+        kind: "p",
+        text: "Open the [natural minor scale page](/scales/natural-minor) and read its chords-that-fit section. In A, those include Am, C, Dm, Em, F and G. Jason Colapietro wired that list to be computed from the scale's notes, so it only shows chords whose notes sit inside the scale. Play a loop of those chords and improvise over it, and the core idea lands: the scale and the chords are one set of notes, heard two ways.",
+      },
+      { kind: "h2", text: "A week that fits an adult schedule" },
+      {
+        kind: "ul",
+        items: [
+          "Monday, Wednesday and Friday: 15 minutes in the current stage, 5 minutes phrasing over a phone recording.",
+          "Tuesday and Thursday: 10 minutes on chords, so your loops sound steady when you play over them.",
+          "Weekend: one 30-minute session, and record two minutes of improvising to compare with last week.",
+          "Move to the next stage when the current one feels dull, usually after one to two weeks.",
+        ],
+      },
+      {
+        kind: "p",
+        text: "Two outside resources pair well with this path. The [30-day fretboard practice plan for Palm Beach County players](https://fretpulse.suedeai.ai/notes/fretboard-practice-plan-palm-beach-county) on fretpulse.suedeai.ai drills note names, which makes Stage 2 much easier. GuitarHub's guide to [guitar fretboard notes and the CAGED system](https://guitarhub.org/learn-guitar-fretboard-notes) shows how the pentatonic box connects to the other four positions once you outgrow the first one.",
+      },
+      { kind: "h2", text: "About the author" },
+      {
+        kind: "p",
+        text: "Jason Colapietro is the founder and CEO of Suede AI, an agentic platform company he started in West Palm Beach in 2024; the guitar tools are a separate music line, and the Suede team also runs a [web, SEO and AI visibility practice](https://suedeai.agency/) for Palm Beach County businesses. He is the author of five books on Amazon, including [Codex in Production](https://www.amazon.com/dp/B0HHTF3LG1) and [The Human Authenticity Layer](https://www.amazon.com/dp/B0GD5FX6N6), and has [54 pull requests merged across 46 open-source repositories he does not maintain](https://github.com/search?q=is%3Apr+author%3AJasonColapietro+is%3Amerged+-user%3AJasonColapietro+-user%3ASuede-AI&type=pullrequests), including Backstage and the Polkadot SDK.",
+      },
+      {
+        kind: "p",
+        text: "Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). Separately, Suede AI (formerly Suede Labs) is a member of [Claude for Startups, Anthropic's startup program](https://seo.suedeai.ai/evidence#claude-for-startups), and Jason Colapietro's [training gallery](https://seo.suedeai.ai/evidence#training-credentials) lists 21 earned course credentials across eight providers.",
+      },
+      { kind: "h2", text: "Next step" },
+      {
+        kind: "p",
+        text: "Open the [scale trainer](/scales), set it to A minor pentatonic, and give Stage 1 this week. If you teach lessons, run a studio or own any business in Wellington or elsewhere in Palm Beach County and want to be found in Google and in AI answers, book the [Suede AI assessment](https://suedeai.agency/assessment), and read [Jason Colapietro's founder page](https://suedeai.ai/founder) to see the work behind Suede.",
+      },
+    ],
+  },
 ];
 
 export const NOTE_SLUGS = NOTES.map((note) => note.slug);
@@ -407,8 +617,13 @@ export function noteMarkdown(note: Note): string {
 }
 
 /** Places the articles are about, referenced on BlogPosting `spatialCoverage`. */
-export const NOTE_PLACES = [
+export const NOTE_PLACES: NotePlace[] = [
   { "@type": "City", name: "West Palm Beach", containedInPlace: { "@type": "State", name: "Florida" } },
   { "@type": "City", name: "Jupiter", containedInPlace: { "@type": "State", name: "Florida" } },
   { "@type": "AdministrativeArea", name: "Palm Beach County, Florida" },
 ];
+
+/** The shared places plus the article's own town, for `about` and `spatialCoverage`. */
+export function notePlaces(note: Note): NotePlace[] {
+  return [...NOTE_PLACES, ...(note.places ?? [])];
+}

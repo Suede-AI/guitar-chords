@@ -41,7 +41,7 @@ test("sitemap dates include route and shared-layout changes", async () => {
   const notePages = Object.entries(datesByUrl).filter(([url]) =>
     /\/notes\/[^/]+$/.test(url),
   );
-  assert.equal(notePages.length, 3, "each notes article is in the sitemap");
+  assert.equal(notePages.length, 5, "each notes article is in the sitemap");
   for (const [url, date] of notePages) {
     assert.equal(date, "2026-11-15", url);
   }

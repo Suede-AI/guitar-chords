@@ -8,7 +8,7 @@ import { JASON_PERSON_ID, SITE_ORIGIN, SUEDE_ORG_ID, webPageJsonLd } from "@/lib
 
 const TITLE = "Guitar Notes from Suede AI, West Palm Beach, Florida";
 const DESCRIPTION =
-  "Notes from Jason Colapietro and Suede AI on building guitarchords.info, practicing guitar in Palm Beach County, and fast, accessible static sites.";
+  "Jason Colapietro and Suede AI on open mic chords, scales for improvising, guitar practice in Palm Beach County, and building fast, accessible sites.";
 const NOTES_URL = `${SITE_ORIGIN}${NOTES_PATH}`;
 
 export const metadata: Metadata = {
@@ -78,15 +78,16 @@ export default function NotesIndexPage() {
               letterSpacing: "-0.01em",
             }}
           >
-            Notes on guitar practice, technical SEO and building this site
+            Notes on chords, scales, guitar practice and building this site
           </h1>
           <p style={{ color: "var(--color-text-muted)", margin: 0, maxWidth: "62ch" }}>
             Written by Jason Colapietro, founder of{" "}
             <a className="link" href="https://suedeai.agency/" target="_blank" rel="noopener noreferrer">
               Suede AI in West Palm Beach, Florida
             </a>
-            . Practical notes for guitarists, and for Palm Beach County businesses
-            that want a site built the same way this one is.
+            . Practical notes for guitarists from Delray Beach to Wellington and
+            Jupiter, and for Palm Beach County businesses that want a site built
+            the same way this one is.
           </p>
         </header>
         <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "var(--space-4)" }}>

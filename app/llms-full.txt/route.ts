@@ -128,7 +128,7 @@ This file carries the full text of the site's reference pages. The shorter index
 - [Guitar scales chart](${SITE_ORIGIN}/scales): interactive scale trainer that highlights any of ${SCALE_ORDER.length} scales in any of the 12 keys across the whole neck.
 - [Online guitar tuner](${SITE_ORIGIN}/tuner): chromatic tuner using the microphone and a YIN pitch detector. Audio is analyzed in the browser and is not uploaded.
 - [Online metronome](${SITE_ORIGIN}/metronome): 30–280 BPM, tap tempo, 2, 3, 4 or 6 beats per bar, with a higher click on the downbeat.
-- [Notes](${SITE_ORIGIN}${NOTES_PATH}): articles by Jason Colapietro on guitar practice in Palm Beach County and on how this site is built.
+- [Notes](${SITE_ORIGIN}${NOTES_PATH}): articles by Jason Colapietro on open mic chords, scales for improvising, guitar practice in Palm Beach County and how this site is built.
 - One page per chord at ${SITE_ORIGIN}/chords/{slug} and one page per scale at ${SITE_ORIGIN}/scales/{slug}, listed below.
 
 ## Chord library

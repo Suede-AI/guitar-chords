@@ -10,11 +10,11 @@ import { keywordsFor } from "@/lib/keywords";
 import {
   NOTES,
   NOTES_PATH,
-  NOTE_PLACES,
   NOTE_SLUGS,
   getNote,
   notePath,
   noteUrl,
+  notePlaces,
   noteWordCount,
 } from "@/lib/notes";
 import { JASON_PERSON_ID, SITE_ORIGIN, SUEDE_ORG_ID, WEBSITE_ID } from "@/lib/seo";
@@ -74,6 +74,7 @@ export default async function NotePage({ params }: { params: Promise<Params> }) 
   const url = noteUrl(note.slug);
   const trail = nestedTrailFor({ name: "Notes", path: NOTES_PATH }, note.headline, notePath(note.slug));
   const jsonLd = breadcrumbJsonLd(trail);
+  const places = notePlaces(note);
   const postJsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -91,8 +92,8 @@ export default async function NotePage({ params }: { params: Promise<Params> }) 
     author: { "@id": JASON_PERSON_ID },
     publisher: { "@id": SUEDE_ORG_ID },
     isPartOf: [{ "@id": `${SITE_ORIGIN}${NOTES_PATH}#blog` }, { "@id": WEBSITE_ID }],
-    about: [{ "@id": SUEDE_ORG_ID }, ...NOTE_PLACES],
-    spatialCoverage: NOTE_PLACES,
+    about: [{ "@id": SUEDE_ORG_ID }, ...places],
+    spatialCoverage: places,
   };
   const others = NOTES.filter((n) => n.slug !== note.slug);
 

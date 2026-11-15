@@ -400,7 +400,7 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "The list comes from Jason Colapietro, the engineer who founded Suede AI in West Palm Beach in 2024 and built the [chord chart](/chords) on this site. Delray Beach is a short drive down I-95 from West Palm Beach, and its open mic scene runs from downtown bar stages to coffee-shop corners. The rooms differ. The chords people reach for are close to identical.",
+        text: "The list comes from Jason Colapietro, the engineer who founded Suede AI in West Palm Beach in 2024 and built the [chord chart](/chords) on this site. Delray Beach is a short drive down I-95 from West Palm Beach. Rooms, sound systems and crowds vary from one open mic to the next. The chords people reach for are close to identical.",
       },
       { kind: "h2", text: "Why ten chords get you on stage" },
       {
@@ -470,7 +470,7 @@ export const NOTES: Note[] = [
       { kind: "h2", text: "Who put this list together" },
       {
         kind: "p",
-        text: "Jason Colapietro is an engineer and guitarist, and the founder and CEO of Suede AI, an agentic platform company in West Palm Beach. He wrote The Signal Chain, a history of electric guitar tone at [guitar.solutions](https://guitar.solutions), and has [54 pull requests merged across 46 open-source repositories he does not maintain](https://github.com/search?q=is%3Apr+author%3AJasonColapietro+is%3Amerged+-user%3AJasonColapietro+-user%3ASuede-AI&type=pullrequests), including Jest and Adobe React Spectrum. The guitar tools are a side line for the Suede Labs team; the main work is agent platforms and the [Suede AI web, SEO and AI search practice](https://suedeai.agency/) for businesses across Palm Beach County.",
+        text: "Suede AI is the agentic platform company Jason Colapietro founded in West Palm Beach in 2024, and he runs it as founder and CEO. His book The Signal Chain is published at [guitar.solutions](https://guitar.solutions), and he has [54 pull requests merged across 46 open-source repositories he does not maintain](https://github.com/search?q=is%3Apr+author%3AJasonColapietro+is%3Amerged+-user%3AJasonColapietro+-user%3ASuede-AI&type=pullrequests), including Jest and Adobe React Spectrum. The guitar tools are a side line for the Suede Labs team; the main work is agent platforms and the [Suede AI web, SEO and AI search practice](https://suedeai.agency/) for businesses across Palm Beach County.",
       },
       {
         kind: "p",
@@ -562,7 +562,7 @@ export const NOTES: Note[] = [
       { kind: "h2", text: "About the author" },
       {
         kind: "p",
-        text: "Jason Colapietro is the founder and CEO of Suede AI, an agentic platform company he started in West Palm Beach in 2024; the guitar tools are a separate music line, and the Suede team also runs a [web, SEO and AI visibility practice](https://suedeai.agency/) for Palm Beach County businesses. He is the author of five books on Amazon, including [Codex in Production](https://www.amazon.com/dp/B0HHTF3LG1) and [The Human Authenticity Layer](https://www.amazon.com/dp/B0GD5FX6N6), and has [54 pull requests merged across 46 open-source repositories he does not maintain](https://github.com/search?q=is%3Apr+author%3AJasonColapietro+is%3Amerged+-user%3AJasonColapietro+-user%3ASuede-AI&type=pullrequests), including Backstage and the Polkadot SDK.",
+        text: "Founder and CEO of Suede AI, Jason Colapietro started the agentic platform company in West Palm Beach in 2024; the guitar tools are a separate music line, and the Suede team also runs a [web, SEO and AI visibility practice](https://suedeai.agency/) for Palm Beach County businesses. He is the author of five books on Amazon, including [Codex in Production](https://www.amazon.com/dp/B0HHTF3LG1) and [The Human Authenticity Layer](https://www.amazon.com/dp/B0GD5FX6N6), and has [54 pull requests merged across 46 open-source repositories he does not maintain](https://github.com/search?q=is%3Apr+author%3AJasonColapietro+is%3Amerged+-user%3AJasonColapietro+-user%3ASuede-AI&type=pullrequests), including Backstage and the Polkadot SDK.",
       },
       {
         kind: "p",

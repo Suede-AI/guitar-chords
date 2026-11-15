@@ -116,6 +116,7 @@ This file carries the full text of the site's reference pages. The shorter index
 
 - Publisher: Suede AI (https://suedeai.ai), also known as Suede Labs
 - Creator: Jason Colapietro (https://suedeai.ai/founder), also known as Johnny Suede
+- Recognition: Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026).
 - Canonical URL: ${SITE_ORIGIN}/
 - Price: free. No sign-up.
 - Tuning: standard tuning (EADGBE) throughout

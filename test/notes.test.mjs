@@ -58,6 +58,17 @@ test("articles stay inside the verified claim list", () => {
       assert.match(raw, /October 31, 2026/, `${note.slug}: The Manifest claim needs its date`);
       assert.match(raw, /Florida AI Deployment/, `${note.slug}: The Manifest claim needs its category`);
     }
+    const text = bodyText(note);
+    assert.ok(
+      text.includes(
+        "Suede AI ranks among Clutch's Top 30 AI Consultants in Florida and Top 50 AI Consultants nationwide (November 2026).",
+      ),
+      `${note.slug}: needs the Clutch ranking sentence verbatim`,
+    );
+    assert.match(raw, /https:\/\/clutch\.co\/profile\/suede-ai-seo/, note.slug);
+    assert.match(raw, /https:\/\/clutch\.co\/consulting\/ai\/florida/, note.slug);
+    assert.match(raw, /https:\/\/clutch\.co\/us\/consulting\/ai/, note.slug);
+    assert.equal(note.dateModified, "2026-11-15", note.slug);
   }
 });
 

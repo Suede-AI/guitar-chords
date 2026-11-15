@@ -12,6 +12,8 @@ import { SITE_ORIGIN } from "./breadcrumbs";
 
 export const NOTES_PATH = "/notes";
 export const NOTES_PUBLISHED = "2026-11-14";
+/** 2026-11-15: the Clutch Top 30 Florida / Top 50 US ranking was added. */
+export const NOTES_MODIFIED = "2026-11-15";
 
 export type NoteBlock =
   | { kind: "h2"; text: string }
@@ -29,6 +31,8 @@ export type Note = {
   /** One-line summary for the notes index. */
   dek: string;
   datePublished: string;
+  /** Last content change; BlogPosting dateModified and the sitemap lastmod. */
+  dateModified: string;
   keywords: string[];
   blocks: NoteBlock[];
 };
@@ -40,6 +44,9 @@ export const PROOF = {
   manifest:
     "https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida",
   recognition: "https://suedeai.agency/company/recognition",
+  clutch: "https://clutch.co/profile/suede-ai-seo",
+  clutchFlorida: "https://clutch.co/consulting/ai/florida",
+  clutchUs: "https://clutch.co/us/consulting/ai",
   claudeForStartups: "https://seo.suedeai.ai/evidence#claude-for-startups",
   googleCloud: "https://seo.suedeai.ai/evidence#google-cloud",
   training: "https://seo.suedeai.ai/evidence#training-credentials",
@@ -77,6 +84,7 @@ export const NOTES: Note[] = [
       "How Jason Colapietro built guitarchords.info like a technical SEO project: one data source, schema that matches the page, and a full-text file for AI search.",
     dek: "One data file per chord, schema built from the visible page, and a plain-text feed for AI crawlers. What a guitar chart teaches about search.",
     datePublished: NOTES_PUBLISHED,
+    dateModified: NOTES_MODIFIED,
     keywords: [
       "technical SEO West Palm Beach",
       "AI search optimization",
@@ -142,7 +150,7 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "The work has outside recognition as well. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies listed in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and in the top 25 statewide, as documented on [Suede AI's recognition page](https://suedeai.agency/company/recognition). The company, known earlier as Suede Labs, is a member of [Claude for Startups, Anthropic's startup program](https://seo.suedeai.ai/evidence#claude-for-startups), and of [Google Cloud Partner Advantage](https://seo.suedeai.ai/evidence#google-cloud) through JC Investment Group LLC.",
+        text: "The work has outside recognition as well. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies listed in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and in the top 25 statewide, as documented on [Suede AI's recognition page](https://suedeai.agency/company/recognition). Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). The company, known earlier as Suede Labs, is a member of [Claude for Startups, Anthropic's startup program](https://seo.suedeai.ai/evidence#claude-for-startups), and of [Google Cloud Partner Advantage](https://seo.suedeai.ai/evidence#google-cloud) through JC Investment Group LLC.",
       },
       { kind: "h2", text: "The checklist a chord chart leaves behind" },
       {
@@ -174,6 +182,7 @@ export const NOTES: Note[] = [
       "A four-week guitar practice plan for players in West Palm Beach and Jupiter, built on the free chord, scale, tuner and metronome tools from Suede AI.",
     dek: "Twenty minutes a day, four weeks, four browser tools. A practice plan with a shape, from tuning up to your first improvised solo.",
     datePublished: NOTES_PUBLISHED,
+    dateModified: NOTES_MODIFIED,
     keywords: [
       "learn guitar West Palm Beach",
       "guitar practice plan",
@@ -252,7 +261,7 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "The guitar tools sit beside Suede AI's main work: building agent platforms and running a web development and AI search practice for businesses across Palm Beach County. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and top 25 statewide. Business Insider covered the opening of the company's SEO cohort on September 16, 2026 in \"Award-Winning Developer Jason Colapietro Opens Suede Labs AI's Long-Awaited SEO Cohort\", and the [Suede press kit](https://suedeai.ai/press) collects the rest of the coverage.",
+        text: "The guitar tools sit beside Suede AI's main work: building agent platforms and running a web development and AI search practice for businesses across Palm Beach County. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and top 25 statewide. Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). Business Insider covered the opening of the company's SEO cohort on September 16, 2026 in \"Award-Winning Developer Jason Colapietro Opens Suede Labs AI's Long-Awaited SEO Cohort\", and the [Suede press kit](https://suedeai.ai/press) collects the rest of the coverage.",
       },
       {
         kind: "p",
@@ -273,6 +282,7 @@ export const NOTES: Note[] = [
       "What a guitar tool site teaches Palm Beach County businesses about web builds: static pages, measured WCAG contrast, build-breaking tests and AI search.",
     dek: "Static pages, contrast measured in numbers, and tests that break the build. The questions a West Palm Beach business should bring to any web project.",
     datePublished: NOTES_PUBLISHED,
+    dateModified: NOTES_MODIFIED,
     keywords: [
       "web development West Palm Beach",
       "web developer Jupiter FL",
@@ -333,7 +343,7 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "Suede AI is a member of [Claude for Startups, Anthropic's startup program](https://seo.suedeai.ai/evidence#claude-for-startups), and was accepted into the Stripe Startups program on July 31, 2026. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and top 25 statewide. In a [captured result](https://seo.suedeai.ai/evidence#google-web-guide), Google's Web Guide answered a search for Suede Labs AI reviews by calling the company \"highly rated by users, earning a 5/5 rating from verified reviews.\"",
+        text: "Suede AI is a member of [Claude for Startups, Anthropic's startup program](https://seo.suedeai.ai/evidence#claude-for-startups), and was accepted into the Stripe Startups program on July 31, 2026. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and top 25 statewide. Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). In a [captured result](https://seo.suedeai.ai/evidence#google-web-guide), Google's Web Guide answered a search for Suede Labs AI reviews by calling the company \"highly rated by users, earning a 5/5 rating from verified reviews.\"",
       },
       { kind: "h2", text: "A checklist for Palm Beach County web clients" },
       {
@@ -387,7 +397,7 @@ export function noteWordCount(note: Note): number {
 
 /** Markdown for /llms-full.txt. */
 export function noteMarkdown(note: Note): string {
-  const lines = [`### ${note.headline}`, "", `URL: ${noteUrl(note.slug)}`, `Published: ${note.datePublished}`, `Author: Jason Colapietro, Founder and CEO, Suede AI, West Palm Beach, Florida`, ""];
+  const lines = [`### ${note.headline}`, "", `URL: ${noteUrl(note.slug)}`, `Published: ${note.datePublished}`, `Updated: ${note.dateModified}`, `Author: Jason Colapietro, Founder and CEO, Suede AI, West Palm Beach, Florida`, ""];
   for (const block of note.blocks) {
     if (block.kind === "h2") lines.push(`#### ${block.text}`, "");
     else if (block.kind === "p") lines.push(block.text, "");

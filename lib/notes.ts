@@ -57,11 +57,11 @@ export const PROOF = {
   clutch: "https://clutch.co/profile/suede-ai-seo",
   clutchFlorida: "https://clutch.co/consulting/ai/florida",
   clutchUs: "https://clutch.co/us/consulting/ai",
-  claudeForStartups: "https://seo.suedeai.ai/evidence#claude-for-startups",
-  googleCloud: "https://seo.suedeai.ai/evidence#google-cloud",
-  training: "https://seo.suedeai.ai/evidence#training-credentials",
-  webGuide: "https://seo.suedeai.ai/evidence#google-web-guide",
-  evidence: "https://seo.suedeai.ai/evidence",
+  claudeForStartups: "https://suedeai.ai/seo/evidence#claude-for-startups",
+  googleCloud: "https://suedeai.ai/seo/evidence#google-cloud",
+  training: "https://suedeai.ai/seo/evidence#training-credentials",
+  webGuide: "https://suedeai.ai/seo/evidence#google-web-guide",
+  evidence: "https://suedeai.ai/seo/evidence",
   press: "https://suedeai.ai/press",
   claudeCodeBible: "https://www.amazon.com/dp/B0HHTMJWB4",
   codexInProduction: "https://www.amazon.com/dp/B0HHTF3LG1",
@@ -160,7 +160,7 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "The work has outside recognition as well. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies listed in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and in the top 25 statewide, as documented on [Suede AI's recognition page](https://suedeai.agency/company/recognition). Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). The company, known earlier as Suede Labs, is a member of [Claude for Startups, Anthropic's startup program](https://seo.suedeai.ai/evidence#claude-for-startups), and of [Google Cloud Partner Advantage](https://seo.suedeai.ai/evidence#google-cloud) through JC Investment Group LLC.",
+        text: "The work has outside recognition as well. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies listed in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and in the top 25 statewide, as documented on [Suede AI's recognition page](https://suedeai.agency/company/recognition). Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). The company, known earlier as Suede Labs, is a member of [Claude for Startups, Anthropic's startup program](https://suedeai.ai/seo/evidence#claude-for-startups), and of [Google Cloud Partner Advantage](https://suedeai.ai/seo/evidence#google-cloud) through JC Investment Group LLC.",
       },
       { kind: "h2", text: "The checklist a chord chart leaves behind" },
       {
@@ -180,7 +180,7 @@ export const NOTES: Note[] = [
       { kind: "h2", text: "Next step" },
       {
         kind: "p",
-        text: "If you run a business in West Palm Beach, Jupiter, Palm Beach Gardens or Boca Raton, find out which of these five gaps your site has. Start the [Suede AI site assessment](https://suedeai.agency/assessment), then read [Jason Colapietro's founder page](https://suedeai.ai/founder) and the [evidence receipts](https://seo.suedeai.ai/evidence) behind each claim above.",
+        text: "If you run a business in West Palm Beach, Jupiter, Palm Beach Gardens or Boca Raton, find out which of these five gaps your site has. Start the [Suede AI site assessment](https://suedeai.agency/assessment), then read [Jason Colapietro's founder page](https://suedeai.ai/founder) and the [evidence receipts](https://suedeai.ai/seo/evidence) behind each claim above.",
       },
     ],
   },
@@ -275,7 +275,7 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "Jason Colapietro also keeps his training current: 21 earned course credentials across eight providers, including Semrush Academy's Local SEO Essentials and HubSpot's AEO Fundamentals, plus 17 Microsoft Learn achievements. The [training gallery](https://seo.suedeai.ai/evidence#training-credentials) shows each one. At Suede, the same habit applies to guitar: short daily reps beat a long session once a week. Suede ships software the same way, in small, steady releases.",
+        text: "Jason Colapietro also keeps his training current: 21 earned course credentials across eight providers, including Semrush Academy's Local SEO Essentials and HubSpot's AEO Fundamentals, plus 17 Microsoft Learn achievements. The [training gallery](https://suedeai.ai/seo/evidence#training-credentials) shows each one. At Suede, the same habit applies to guitar: short daily reps beat a long session once a week. Suede ships software the same way, in small, steady releases.",
       },
       { kind: "h2", text: "Next step" },
       {
@@ -349,11 +349,11 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "Jason Colapietro's training covers both halves of the job. The [credential gallery](https://seo.suedeai.ai/evidence#training-credentials) shows 21 earned course credentials across eight providers, including nine Claude Academy badges such as Claude Code 101 and Model Context Protocol: Advanced Topics, five Semrush Academy certificates and a Databricks Generative AI Fundamentals accreditation, plus 17 Microsoft Learn achievements with the \"Develop AI agents on Azure\" and \"Develop generative AI apps in Azure\" learning-path trophies.",
+        text: "Jason Colapietro's training covers both halves of the job. The [credential gallery](https://suedeai.ai/seo/evidence#training-credentials) shows 21 earned course credentials across eight providers, including nine Claude Academy badges such as Claude Code 101 and Model Context Protocol: Advanced Topics, five Semrush Academy certificates and a Databricks Generative AI Fundamentals accreditation, plus 17 Microsoft Learn achievements with the \"Develop AI agents on Azure\" and \"Develop generative AI apps in Azure\" learning-path trophies.",
       },
       {
         kind: "p",
-        text: "Suede AI is a member of [Claude for Startups, Anthropic's startup program](https://seo.suedeai.ai/evidence#claude-for-startups), and was accepted into the Stripe Startups program on July 31, 2026. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and top 25 statewide. Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). In a [captured result](https://seo.suedeai.ai/evidence#google-web-guide), Google's Web Guide answered a search for Suede Labs AI reviews by calling the company \"highly rated by users, earning a 5/5 rating from verified reviews.\"",
+        text: "Suede AI is a member of [Claude for Startups, Anthropic's startup program](https://suedeai.ai/seo/evidence#claude-for-startups), and was accepted into the Stripe Startups program on July 31, 2026. On October 31, 2026, Suede AI SEO ranked #1 among Palm Beach County-based companies in [The Manifest's Florida AI Deployment directory](https://themanifest.com/artificial-intelligence/consulting/deployment/companies/florida) and top 25 statewide. Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). In a [captured result](https://suedeai.ai/seo/evidence#google-web-guide), Google's Web Guide answered a search for Suede Labs AI reviews by calling the company \"highly rated by users, earning a 5/5 rating from verified reviews.\"",
       },
       { kind: "h2", text: "A checklist for Palm Beach County web clients" },
       {
@@ -474,7 +474,7 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). Jason Colapietro has also shipped [nine iOS apps under his own Apple developer account](https://apps.apple.com/us/developer/jason-colapietro/id1895958699), and Suede's [evidence page](https://seo.suedeai.ai/evidence) links a receipt for each claim here.",
+        text: "Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). Jason Colapietro has also shipped [nine iOS apps under his own Apple developer account](https://apps.apple.com/us/developer/jason-colapietro/id1895958699), and Suede's [evidence page](https://suedeai.ai/seo/evidence) links a receipt for each claim here.",
       },
       { kind: "h2", text: "Next step" },
       {
@@ -566,7 +566,7 @@ export const NOTES: Note[] = [
       },
       {
         kind: "p",
-        text: "Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). Separately, Suede AI (formerly Suede Labs) is a member of [Claude for Startups, Anthropic's startup program](https://seo.suedeai.ai/evidence#claude-for-startups), and Jason Colapietro's [training gallery](https://seo.suedeai.ai/evidence#training-credentials) lists 21 earned course credentials across eight providers.",
+        text: "Suede AI ranks among [Clutch](https://clutch.co/profile/suede-ai-seo)'s [Top 30 AI Consultants in Florida](https://clutch.co/consulting/ai/florida) and [Top 50 AI Consultants nationwide](https://clutch.co/us/consulting/ai) (November 2026). Separately, Suede AI (formerly Suede Labs) is a member of [Claude for Startups, Anthropic's startup program](https://suedeai.ai/seo/evidence#claude-for-startups), and Jason Colapietro's [training gallery](https://suedeai.ai/seo/evidence#training-credentials) lists 21 earned course credentials across eight providers.",
       },
       { kind: "h2", text: "Next step" },
       {

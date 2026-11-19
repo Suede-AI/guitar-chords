@@ -101,7 +101,7 @@ const AUTHOR_BOOKS = [
   [
     "the-screenshot",
     "The Screenshot",
-    "https://seo.suedeai.ai/book"
+    "https://suedeai.ai/seo/book"
   ]
 ];
 
@@ -484,7 +484,7 @@ export default function HomePage() {
             , and{" "}
             <a
               className="link"
-              href="https://seo.suedeai.ai/book"
+              href="https://suedeai.ai/seo/book"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--color-registry-cyan)" }}

@@ -12,7 +12,7 @@ type SuedeSocialBridgeProps = {
   secondary?: SocialAction;
 };
 
-const SOCIAL_BASE = "https://social.suedeai.ai";
+const SOCIAL_BASE = "https://suede.social";
 
 function socialUrl(path: string, source: string, content: string) {
   const url = new URL(path, SOCIAL_BASE);

@@ -20,7 +20,7 @@ export function AuthorBox() {
           jasoncolapietro.com
         </a>{" "}
         and the{" "}
-        <a className="link" href="https://seo.suedeai.ai/evidence" target="_blank" rel="noopener noreferrer">
+        <a className="link" href="https://suedeai.ai/seo/evidence" target="_blank" rel="noopener noreferrer">
           Suede AI evidence page
         </a>
         .

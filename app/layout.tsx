@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 const SUEDE_URL = "https://suedeai.ai";
 const SUEDE_FOUNDER_URL = "https://suedeai.ai/founder";
 const SOCIAL_URL =
-  "https://social.suedeai.ai/?utm_source=guitarchords.info&utm_medium=site_nav&utm_campaign=guitar_tools_to_social&utm_content=global_nav";
+  "https://suede.social/?utm_source=guitarchords.info&utm_medium=site_nav&utm_campaign=guitar_tools_to_social&utm_content=global_nav";
 const SIGNAL_CHAIN_URL = "https://guitar.solutions";
 
 // This site publishes no policy of its own. The tuner asks for a microphone,
